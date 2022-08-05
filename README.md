@@ -10,7 +10,8 @@
   </a>
 </p>
 
-![Group 8](https://user-images.githubusercontent.com/100887684/180819407-32069222-2a6a-41b9-8896-1210f7d18ac7.png)
+![Group 11](https://user-images.githubusercontent.com/100887684/182983477-2a8e4ee2-1564-4706-8ec9-dbf859a66fde.png)
+
 
 
 ## | Descrição |
