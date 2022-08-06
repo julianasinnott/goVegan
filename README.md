@@ -36,7 +36,7 @@ Este App foi criado com [Vite](https://vitejs.dev/) <br>
 
 ## | Layout no Figma | 
 
--- ainda não disponível --
+https://www.figma.com/file/Sxdwav78lwnCfy2E4Pmvbx/GoVegan?node-id=0%3A1
 
 ## | Como rodar |
 
