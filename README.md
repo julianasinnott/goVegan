@@ -28,7 +28,6 @@ Este App foi criado com [Vite](https://vitejs.dev/) <br>
 
 ## | Tecnologias |
 
-[TypeScript](https://www.typescriptlang.org/) <br>
 [ReactJS](https://reactjs.org/) <br>
 
 ## | Deploy |
@@ -37,7 +36,7 @@ Este App foi criado com [Vite](https://vitejs.dev/) <br>
 
 ## | Layout no Figma | 
 
-https://www.figma.com/file/Sxdwav78lwnCfy2E4Pmvbx/GoVegan?node-id=0%3A1
+- ainda não disponível -
 
 ## | Como rodar |
 
