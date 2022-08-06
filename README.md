@@ -36,7 +36,7 @@ Este App foi criado com [Vite](https://vitejs.dev/) <br>
 
 ## | Layout no Figma | 
 
-- ainda não disponível -
+-- ainda não disponível --
 
 ## | Como rodar |
 
