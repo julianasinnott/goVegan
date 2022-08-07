@@ -36,14 +36,14 @@
   height: min-content;
   cursor: pointer;
   font-size: 16px; 
-  color: #FFFFFF;
+  color: var(--white);
   padding-bottom: 2px;
 }
 
 .active-navbar-item {
-  color: #223929;
+  color: var(--dark-green);
   font-weight: bold;
-  border-bottom: 2px solid #223929;
+  border-bottom: 2px solid var(--dark-green);
 }
 
 .header__navbar__purple-btn {
@@ -53,12 +53,12 @@
 }
 
 .divisor {
-  border-right: 2px solid #223929;
+  border-right: 2px solid var(--dark-green);
   padding-right: 20px;
 }
 
 .purple-btn {
-  background-color: #780083;
+  background-color: var(--purple);
   border-radius: 25px;
   padding: 4px 10px;
 }
