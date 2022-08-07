@@ -8,5 +8,8 @@
   background: none;
   text-decoration: none;
   color: inherit;
+  --dark-green: #223929;
+  --purple: #780083;
+  --light-green: #81B289;
+  --white: #FFFF;
 }
-
