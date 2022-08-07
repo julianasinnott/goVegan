@@ -1,0 +1,21 @@
+.search {
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+}
+
+.search-input {
+  height: 40px;
+  width: 100%;
+  background-color: var(--light-green);
+  border-radius: 40px;
+}
+
+.search-icon {  
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background: var(--purple);
+  padding: 4px;
+  border-radius: 50%;  
+}
