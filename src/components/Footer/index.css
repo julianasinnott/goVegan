@@ -3,7 +3,7 @@
 }
 
 .footer__idealizers-section {
-  background: url(../../../public/assets/background-footer.png);
+  background: url(/assets/background-footer.png);
   padding: 40px 50px;
   display: flex;
   flex-direction: column;
@@ -17,15 +17,16 @@
 }
 
 .footer__idealizers-title {
-  color: #FFFFFF;
+  color: var(--white);
   padding-bottom: 2px;
-  border-bottom: 2px solid #81B289 ;
+  border-bottom: 2px solid var(--primary) ;
 }
 
 .contact-btn {
-  color: #FFFFFF;
+  color: var(--white);
   height: min-content;
   cursor: pointer;
+  box-shadow: var(--shadow)
 }
 
 .footer__idealizers-section__imgs {
@@ -38,7 +39,7 @@
 }
 
 .footer__logo {
-  border-top: 2px solid #81B289; 
+  border-top: 2px solid var(--primary); 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,5 +53,5 @@
 }
 .footer__copyright {
   font-size: 12px;
-  color: #223929
+  color: var(--secundary)
 }

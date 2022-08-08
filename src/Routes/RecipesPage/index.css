@@ -1,0 +1,28 @@
+.recipes__main {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  align-items: center;
+  text-align: center;
+  padding: 30px 80px;
+  color: var(--secundary);
+}
+
+.recipes__select-section {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.options-divisor {
+  font-size: 30px;
+  color: var(--tertiary);
+}
+
+.recipes-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
