@@ -93,8 +93,8 @@ export function PartnersPage() {
         ))}
         </section>
         <Button
-        value="Carregar mais"
-        color={theme.colors.secundary}
+          value="Carregar mais"
+          color={theme.colors.secundary}
         />
       </main>
       <Footer />

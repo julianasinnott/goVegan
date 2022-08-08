@@ -5,7 +5,7 @@
   align-items: center;
   text-align: center;
   padding: 30px 80px;
-  color: var(--dark-green);
+  color: var(--secundary);
 }
 
 .recipes__select-section {
@@ -16,7 +16,7 @@
 
 .options-divisor {
   font-size: 30px;
-  color: var(--purple);
+  color: var(--tertiary);
 }
 
 .recipes-section {

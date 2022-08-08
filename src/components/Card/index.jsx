@@ -1,5 +1,6 @@
 import './index.css'
 import { UserCircle } from 'phosphor-react'
+import { theme } from '../../utils/theme'
 
 export function Card({item}) {
   return(
@@ -13,10 +14,10 @@ export function Card({item}) {
             <UserCircle
               size={50}
               className='card__info__icon'
-              color="var(--dark-green)"
+              color={theme.colors.secundary}
               cursor="pointer"
             /> 
-          }       
+          }   
       </div>
     </div>
   )

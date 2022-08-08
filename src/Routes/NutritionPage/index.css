@@ -7,9 +7,8 @@
   padding: 50px 30px;
 }
 
-.nutrition__title, .nutrition__subtitle, .nutrition__info {
-  color: var(--dark-green);
+.nutrition__title,
+.nutrition__subtitle,
+.nutrition__info {
+  color: var(--secundary);
 }
-
-
-
