@@ -5,10 +5,10 @@ export function FoodCard({tableItem}) {
     <div className="food-card">
       <p className='food-name'>{tableItem.Descricao}</p>
       <div className="food-card__info">
-        <span>Calorias: {tableItem.Energia}</span>
-        <span>Carboidratos: {tableItem.CHO}</span>
-        <span>Proteinas: {tableItem.Proteina}</span>
-        <span>Gorduras: {tableItem.Lipideos}</span>
+        <span>Calorias: {tableItem.Energia.toFixed(1)} Kcal</span>
+        <span>Carboidratos: {tableItem.CHO.toFixed(1)} g</span>
+        <span>Proteinas: {tableItem.Proteina.toFixed(1)} g</span>
+        <span>Gorduras: {tableItem.Lipideos.toFixed(1)} g</span>
       </div>
     </div>
   )

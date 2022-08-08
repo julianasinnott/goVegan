@@ -34,7 +34,7 @@ export function NutritionPage() {
   return(
     <div>
       <Header />
-      <main className="main">
+      <main className="nutrition__main">
         <h1 className="nutrition__title">
           Dificuldade em escolher alimentos veganos na hora de montar seu prato?
         </h1>
