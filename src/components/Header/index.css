@@ -1,17 +1,14 @@
 .header {
-  width: 100%;
+  min-width: 100%;
   display: flex;
   justify-content: space-between;
   position: sticky;
   top: 0;
   z-index: 1;
-}
-
-.header__background {
-  width: 100%;
-  height: 120px;
-  position: absolute;
-  z-index: -1;
+  background: url(/assets/background-header.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 10px 20px 40px;
 }
 
 .header__logo {
@@ -31,6 +28,7 @@
   display: flex;
   align-items: center;
   gap: 40px;
+  flex-wrap: wrap;
 }
 
 .header__navbar__item {
@@ -42,24 +40,19 @@
 }
 
 .active-navbar-item {
-  color: var(--dark-green);
+  color: var(--secundary);
   font-weight: bold;
-  border-bottom: 2px solid var(--dark-green);
-}
-
-.header__navbar__purple-btn {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+  border-bottom: 2px solid var(--secundary);
 }
 
 .divisor {
-  border-right: 2px solid var(--dark-green);
+  border-right: 2px solid var(--secundary);
   padding-right: 20px;
 }
 
 .purple-btn {
-  background-color: var(--purple);
+  background-color: var(--tertiary);
   border-radius: 25px;
   padding: 4px 10px;
+  box-shadow: var(--shadow)
 }

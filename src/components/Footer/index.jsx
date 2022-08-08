@@ -1,9 +1,9 @@
 import '../../../global.css'
 import './index.css'
-import idealizer1 from '../../../public/assets/idealizer-1.png'
-import idealizer2 from '../../../public/assets/idealizer-2.png'
-import idealizer3 from '../../../public/assets/idealizer-3.png'
-import idealizer4 from '../../../public/assets/idealizer-4.png'
+import idealizer1 from '/assets/idealizer-1.png'
+import idealizer2 from '/assets/idealizer-2.png'
+import idealizer3 from '/assets/idealizer-3.png'
+import idealizer4 from '/assets/idealizer-4.png'
 
 export function Footer () {
   return(
