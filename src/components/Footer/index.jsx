@@ -7,24 +7,24 @@ import idealizer4 from '../../../public/assets/idealizer-4.png'
 
 export function Footer () {
   return(
-      <footer class="footer">
-        <section class="footer__idealizers-section">
-          <div class="footer__top">
-            <p class="footer__idealizers-title">IDEALIZADORES</p>
-            <button class="contact-btn purple-btn">
+      <footer className="footer">
+        <section className="footer__idealizers-section">
+          <div className="footer__top">
+            <p className="footer__idealizers-title">IDEALIZADORES</p>
+            <button className="contact-btn purple-btn">
               FALE CONOSCO
             </button>        
           </div>
-          <div class="footer__idealizers-section__imgs">
-            <img class="idealizers-img" src={idealizer1} alt=""/>
-            <img class="idealizers-img" src={idealizer2} alt=""/>
-            <img class="idealizers-img" src={idealizer3} alt=""/>
-            <img class="idealizers-img" src={idealizer4} alt=""/>
+          <div className="footer__idealizers-section__imgs">
+            <img className="idealizers-img" src={idealizer1} alt=""/>
+            <img className="idealizers-img" src={idealizer2} alt=""/>
+            <img className="idealizers-img" src={idealizer3} alt=""/>
+            <img className="idealizers-img" src={idealizer4} alt=""/>
           </div>
         </section>
-        <div class="footer__logo">
-          <img class="footer__logo-img" src="./assets/green-logo.png" alt=""/>
-          <p class="footer__copyright">
+        <div className="footer__logo">
+          <img className="footer__logo-img" src="./assets/green-logo.png" alt=""/>
+          <p className="footer__copyright">
             © Copyright - GoVegan
           </p>
         </div>

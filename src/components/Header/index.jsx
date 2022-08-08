@@ -6,29 +6,29 @@ import headerLogo from '../../../public/assets/white-logo.png'
 
 export function Header() {
   return(
-    <header class="header">
-        <img class="header__background" src={backgroundHeader} alt=""/>
-        <img class="header__logo" src={headerLogo} alt="Logo GoVegan"/>
-        <nav class="header__navbar">
-          <div class="header__navbar-section">
-            <button class="header__navbar__item" >
+    <header className="header">
+        <img className="header__background" src={backgroundHeader} alt=""/>
+        <img className="header__logo" src={headerLogo} alt="Logo GoVegan"/>
+        <nav className="header__navbar">
+          <div className="header__navbar-section">
+            <button className="header__navbar__item" >
               <Link to="/">Início</Link>
             </button>        
-            <button class="header__navbar__item">
+            <button className="header__navbar__item">
               <Link to="/blog">Blog</Link>
             </button>         
-            <button class="header__navbar__item">
+            <button className="header__navbar__item">
               <Link to="/receitas">Receitas</Link>              
             </button>       
-            <button class="header__navbar__item">
+            <button className="header__navbar__item">
               <Link to="/parceiros">Parceiros</Link>
             </button>       
-            <button class="header__navbar__item divisor">
+            <button className="header__navbar__item divisor">
               <Link to="/nutricao">Nutrição</Link>
             </button>     
           </div>
-          <div class="header__navbar__purple-btn">
-            <button class="header__navbar__item purple-btn">
+          <div className="header__navbar__purple-btn">
+            <button className="header__navbar__item purple-btn">
              <Link to="/cadastro">Cadastre-se</Link>              
             </button>
           </div>   
