@@ -9,6 +9,15 @@
   width: 100%;
   background-color: var(--light-green);
   border-radius: 40px;
+  padding: 0 20px;
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: var(--dark-green);
 }
 
 .search-icon {  
