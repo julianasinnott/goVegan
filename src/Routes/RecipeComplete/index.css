@@ -1,0 +1,51 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+main {
+  margin-bottom: 50px;
+}
+
+.image {
+  width: 55%;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+
+  margin: 42px;
+}
+
+.preparation {
+  max-width: 741.94px;
+  margin: auto;
+}
+
+.ingredients {
+  border-top: 3px solid #223929;
+
+  margin-top: 12px;
+  padding-top: 51px;
+  padding-bottom: 51px;
+}
+
+.ingredients li {
+  padding: 10px;
+}
+
+.preparation-mode {
+  border-top: 3px solid #223929;
+
+  margin-top: 12px;
+  padding: 20px 0px 0px 25px;
+  padding-top: 25px;
+  padding-left: 20px;
+}
