@@ -1,10 +1,6 @@
-.footer {
-  height:  min-content;
-}
-
 .footer__idealizers-section {
   background: url(/assets/background-footer.png);
-  padding: 40px 50px;
+  padding: 20px 50px;
   display: flex;
   flex-direction: column;
   gap: 30px;
