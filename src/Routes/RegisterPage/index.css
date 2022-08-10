@@ -1,7 +1,7 @@
 .register {
   width: 100vw;
   height: 100vh;
-  background: url(/assets/register-background.png) no-repeat center/100% 100% ;
+  background: url(/assets/register-background.png) no-repeat center/100%;
   display: flex;
   justify-content: end;
 }
