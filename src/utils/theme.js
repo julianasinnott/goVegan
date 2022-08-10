@@ -4,6 +4,7 @@ export const theme = {
     secundary: 'var(--secundary)',
     tertiary: 'var(--tertiary)',
     quaternary: 'var(--quaternary)',
+    formBackground: 'var(--formBackground)'
   },
   shadow: 'var(--shadow)',
 }
