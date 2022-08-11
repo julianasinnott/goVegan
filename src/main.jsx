@@ -17,6 +17,7 @@ import { PartnersAdmPage } from './Routes/PartnersAdmPage/index'
 import { RecipesAdmPage } from './Routes/RecipesAdmPage/index'
 import { RegisterPartnersAdmPage } from './Routes/RegisterPartnersAdmPage/index'
 import { RegisterRecipesAdmPage } from './Routes/RegisterRecipesAdmPage/index'
+import { ModalContact } from './Routes/ModalContact/index'
 import { ScrollToTop } from './Routes/ScrollToTop';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -29,13 +30,14 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path="receitas" element={<RecipesPage />} />
           <Route path="nutricao" element={<NutritionPage />} />
           <Route path="parceiros" element={<PartnersPage />} />
-          <Route path="cadastro" element={<RegisterPage />} />      
-          <Route path="login-adm" element={<LoginAdmPage />} />      
-          <Route path="painel-adm" element={<PainelAdmPage />} />      
-          <Route path="partners-adm" element={<PartnersAdmPage />} />      
-          <Route path="recipes-adm" element={<RecipesAdmPage />} />      
-          <Route path="register-partners-adm" element={<RegisterPartnersAdmPage />} />      
-          <Route path="register-recipes-adm" element={<RegisterRecipesAdmPage />} />      
+          <Route path="cadastro" element={<RegisterPage />} />
+          <Route path="login-adm" element={<LoginAdmPage />} />
+          <Route path="painel-adm" element={<PainelAdmPage />} />
+          <Route path="partners-adm" element={<PartnersAdmPage />} />
+          <Route path="recipes-adm" element={<RecipesAdmPage />} />
+          <Route path="register-partners-adm" element={<RegisterPartnersAdmPage />} />
+          <Route path="register-recipes-adm" element={<RegisterRecipesAdmPage />} />
+          <Route path="modal-contact" element={<ModalContact />} />
         </Routes>
       </ScrollToTop>
     </BrowserRouter>
