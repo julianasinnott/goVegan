@@ -7,14 +7,14 @@ import image from "../../assets/recipe-complete-1.png";
 
 export function RecipeComplete() {
   return (
-    <div>
+    <div className='container'>
       <Header />
       <main className='recipe-complete'>
         <div className='image-container'>
           <img className='image' src={image} alt="" />
         </div>
+        <h1>Avocado Toast</h1>
         <div className='preparation'>
-          <h1>Avocado Toast</h1>
           <h2>Ingredientes</h2>
           <ul className='ingredients'>
             <li>100 g de abacate</li>
