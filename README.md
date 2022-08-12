@@ -21,7 +21,7 @@ Site desenvolvido com o objetivo de facilitar o acesso a informações sobre veg
 
 ## | Visualize o projeto |
 
-🔗 https://go-vegan-three.vercel.app/ 🔗
+🔗 https://go-vegan-rosy.vercel.app/ 🔗
 
 ## | Create App |
 
