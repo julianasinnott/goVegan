@@ -1,7 +1,12 @@
+.footer {
+  position: relative;
+}
+
 .footer__idealizers-section {
   background: url(/assets/background-footer.png);
   padding: 20px 50px;
   display: flex;
+  min-height: 140px;
   flex-direction: column;
   gap: 30px;
 }
@@ -46,6 +51,7 @@
 
 .footer__logo-img {
   width: 100px;
+  height: auto;
 }
 .footer__copyright {
   font-size: 12px;
