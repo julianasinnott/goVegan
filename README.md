@@ -10,7 +10,8 @@
   </a>
 </p>
 
-![Group 11](https://user-images.githubusercontent.com/100887684/182983477-2a8e4ee2-1564-4706-8ec9-dbf859a66fde.png)
+![image](https://user-images.githubusercontent.com/100887684/183810311-3458c51b-2e43-49fe-85bb-c9a0286ed2ea.png)
+
 
 
 
@@ -20,23 +21,32 @@ Site desenvolvido com o objetivo de facilitar o acesso a informações sobre veg
 
 ## | Visualize o projeto |
 
-🔗 ainda não dispononível 🔗
+🔗 https://go-vegan-rosy.vercel.app/ 🔗
 
 ## | Create App |
 
 Este App foi criado com [Vite](https://vitejs.dev/) <br>
 
-## | Tecnologias |
+## | Techs |
 
+[JavaScript](https://www.javascript.com/) <br>
 [ReactJS](https://reactjs.org/) <br>
+[NodeJS](https://nodejs.org/en/) <br>
+[React Router](https://reactrouter.com/) <br>
+[Phospor Icons](https://phosphoricons.com/) <br>
+[CSS](https://www.w3.org/Style/CSS/Overview.en.html) <br>
 
 ## | Deploy |
 
 [Vercel](https://vercel.com/)
 
-## | Layout no Figma | 
+## | Layout | 
 
-https://www.figma.com/file/Sxdwav78lwnCfy2E4Pmvbx/GoVegan?node-id=0%3A1
+Desenvolvido no [Figma](https://www.figma.com/)
+
+Acesso:
+
+🔗 https://www.figma.com/file/Sxdwav78lwnCfy2E4Pmvbx/GoVegan?node-id=0%3A1 🔗
 
 ## | Como rodar |
 
@@ -58,5 +68,5 @@ $ `npm install`
 $ `npm run dev`
 <hr>
 
-#### Abra http://localhost:3000/ em seu navegador 
+#### Abra http://localhost:5173/ em seu navegador 
 

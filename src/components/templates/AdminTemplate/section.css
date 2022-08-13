@@ -1,0 +1,26 @@
+.main-adm {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: min-content;
+  color: var(--secundary);
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.main-adm__list__title {
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+
+.plus-icon {  
+  background-color: var(--secundary);
+  padding: 4px;
+  border-radius: 50%;  
+  box-shadow: var(--shadow);
+  cursor: pointer;
+}
+
