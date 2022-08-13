@@ -1,7 +1,7 @@
 .register {
   width: 100vw;
   height: 100vh;
-  background: url(/assets/register-background.png) no-repeat center/100% 100% ;
+  background: url(/assets/register-background.png) no-repeat center/100%;
   display: flex;
   justify-content: end;
 }
@@ -41,9 +41,6 @@
   font-size: 16px;
 }
 
-.input:focus {
-  outline: none;
-}
 .register__form__button {
   background-color: var(--tertiary);
   color: var(--white);
@@ -56,3 +53,4 @@
 .register__form__button:hover {
   opacity: 0.8;
 }
+
