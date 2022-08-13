@@ -1,11 +1,4 @@
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-  font-size: 16px;
-}
-
-.container {
+.container__modal-success {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,11 +17,11 @@
 
 }
 
-.close-modal {
+.close-modal__success {
   position: absolute;
 }
 
-.close-modal-icon {
+.background-icon-close__success {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -40,13 +33,12 @@
   background-color: #780083;
 
   position: relative;
-  /* left: -25px; */
   left: -36%;
   bottom: 15px;
 
 }
 
-.icon__close {
+.icon__close__modal-success {
   width: 18px;
   height: 18px;
 }
@@ -66,7 +58,7 @@
   margin-bottom: 30px;
 }
 
-.background-image-ok {
+.background-image-ok__modal-success {
   background-color: #81B289;
 
   width: 100px;
@@ -80,7 +72,7 @@
   margin-bottom: 45px;
 }
 
-.icon-ok {
+.icon-ok__modal-success {
   width: 80px;
 }
 
@@ -90,7 +82,7 @@
   margin-bottom: 25px;
 }
 
-.logo-go-vegan {
+.logo-go-vegan__modal-success {
   width: 150px;
 
   margin-bottom: 45px;

@@ -1,11 +1,4 @@
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-  font-size: 16px;
-}
-
-.container {
+.container__modal-contact {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,7 +31,7 @@
   align-items: center;
 }
 
-.input {
+.input__modal-contact {
   /* all: unset; */
 
   width: 297px;
@@ -52,7 +45,7 @@
   background-color: #E6ECEB;
 }
 
-.message {
+.message__modal-contact {
   all: unset;
 
   box-sizing: border-box;
@@ -67,7 +60,7 @@
   background-color: #E6ECEB;
 }
 
-.button-contact {
+.button__modal-contact {
   width: 297px;
   height: 55px;
   border-radius: 12px;
@@ -80,11 +73,11 @@
   font-size: 20px;
 }
 
-.close-modal {
+.close-modal__modal-contact {
   position: absolute;
 }
 
-.close-modal-icon {
+.close-modal-icon__modal-contact {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -102,7 +95,7 @@
 
 }
 
-.icon__close {
+.icon__close__modal-contact {
   width: 18px;
   height: 18px;
 }
