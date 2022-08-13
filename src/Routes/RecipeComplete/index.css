@@ -1,43 +1,32 @@
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-  font-size: 16px;
-}
-
-body {
-  overflow-x: hidden;
-}
-
-main {
+.recipe-complete {
   margin-bottom: 50px;
 }
 
-.image-container {
+.recipe-complete__image-container {
   height: 100%;
 }
 
-.image {
+.recipe-complete__image {
   width: 100%;
 }
 
 
-h1 {
+.recipe-complete__title {
   text-align: center;
   font-size: 35px;
   margin: 31.5px;
 }
 
-h2 {
+.recipe-complete__subtitle {
   font-size: 25px;
 }
 
-.preparation {
+.recipe-complete__preparation {
   max-width: 741.94px;
   margin: auto;
 }
 
-.ingredients {
+.recipe-complete__ingredients {
   border-top: 3px solid #223929;
 
   margin-top: 12px;
@@ -45,11 +34,11 @@ h2 {
   padding-bottom: 51px;
 }
 
-.ingredients li {
+.recipe-complete__item {
   padding: 10px;
 }
 
-.preparation-mode {
+.recipe-complete__preparation-mode {
   border-top: 3px solid #223929;
 
   margin-top: 12px;
