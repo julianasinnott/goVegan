@@ -5,6 +5,7 @@ import { SearchInput } from "../../components/SearchInput";
 import { Card } from "../../components/Card";
 import MockImg from "/assets/mock-img.png";
 import "./index.css";
+import "./responsive.css";
 import { theme } from "../../utils/theme";
 
 export function PartnersPage() {
@@ -77,8 +78,8 @@ export function PartnersPage() {
     <div>
       <Header type={"USER"} />
       <main className="partners__main">
-        <h2>Cadastre-se e garanta seu cupom de desconto</h2>
-        <h1>Parceiros na sua cidade</h1>
+        <h2 className="partners__subtitle">Cadastre-se e garanta seu cupom de desconto</h2>
+        <h1 className="partners__title"> Parceiros na sua cidade</h1>
         <SearchInput />
         <section className="partners__section">
           {partners?.map((partner, index) => (
