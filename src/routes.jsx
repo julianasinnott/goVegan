@@ -18,6 +18,8 @@ import { RecipesAdmin } from './pages/admin/RecipesAdmin/index'
 import { ScrollToTop } from './pages/ScrollToTop';
 import { PartnersAdmin } from './pages/admin/PartnersAdmin';
 import { LoginAdmPage } from './pages/admin/LoginAdmPage';
+import { RegisterPartnersAdmin } from './pages/admin/RegisterPartnersAdmin';
+import { RegisterRecipesAdmin } from './pages/admin/RegisterRecipesAdmin';
 
 
 export function RoutesGoVegan() {
@@ -38,6 +40,8 @@ export function RoutesGoVegan() {
           <Route path="login" element={<LoginAdmPage />} />
           <Route path="admin/receitas" element={<RecipesAdmin />} />
           <Route path="admin/parceiros" element={<PartnersAdmin />} />
+          <Route path="admin/cadastro-parceiros" element={<RegisterPartnersAdmin />} />
+          <Route path="admin/cadastro-receitas" element={<RegisterRecipesAdmin />} />
         </Routes>
       </ScrollToTop>
     </BrowserRouter>
