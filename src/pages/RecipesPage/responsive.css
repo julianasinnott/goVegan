@@ -1,0 +1,36 @@
+@media only screen and (max-width:650px) {
+  .recipes__title {
+    font-size: 28px;
+  }
+}
+
+@media only screen and (max-width:600px) {
+  .recipes__main {
+    padding: 10px 40px;
+    gap: 40px;
+  }
+  .recipes__title {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (max-width:550px) {
+  .recipes__main {
+    margin-top: 100px;
+  }
+  .recipes__title {
+    font-size: 22px;
+  }
+  .recipes__select-section {
+    gap: 10px;
+  }
+}
+
+@media only screen and (max-width:350px) {
+  .recipes__main {
+    margin-top: 90px;
+  }
+  .recipes__title {
+    font-size: 16px;
+  }
+}

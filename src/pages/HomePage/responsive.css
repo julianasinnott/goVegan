@@ -1,0 +1,85 @@
+@media only screen and (max-width:1400px) {
+  .home__purpose__img {
+    padding: 0 20px;
+  }
+}
+
+@media only screen and (max-width:980px) {
+  .home__about__picture-img {
+    width: 80%;
+    height: 50%;
+  }
+  .home__about {
+    padding: 10px;
+  }
+
+}
+
+@media only screen and (max-width:900px) {
+  .home__about {
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 40px;
+  }
+  .home__about__description {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width:800px) {
+  .home__background {
+    background-position: center top 76px;
+    height: 70vw;
+  }
+}
+
+@media only screen and (max-width:730px) {
+  .home__background {
+    height: 74vw;
+  }
+  .home__about__description {
+    gap: 30px;
+  }
+  .home__about__title {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width:650px) {
+  .home__background {
+    height: 72vw; 
+    background-position: center top 66px;
+  }
+}
+
+@media only screen and (max-width:550px) {
+  .home__background {
+    background-position: center top 50px;
+  }
+  .home__about__title {
+    font-size: 28px;
+  }
+}
+
+@media only screen and (max-width:500px) {
+  .home__about__description {
+    gap: 20px;
+  }
+  .home__about__title {
+    font-size: 24px;
+  }
+  .home__about__text {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width:450px) {
+  .home__background {
+    background-position: center;
+  }
+  .home__about {
+    margin-top: -10px;
+  }
+}
+
+
