@@ -8,6 +8,7 @@
 @media only screen and (max-width:350px) {
   .btn__component {
     width: 120px;  
-    font-size: 14px;    
+    font-size: 14px; 
+    padding: 5px 0;   
   }
 }

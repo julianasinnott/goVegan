@@ -1,0 +1,17 @@
+@media only screen and (max-width:880px) {
+  .food-card {
+    width: 98%; 
+  }
+}
+
+@media only screen and (max-width:630px) {
+  .food-card__name {
+    text-align: center;
+    font-size: 18px;
+  }
+  .food-card__info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 14px;
+  }
+}

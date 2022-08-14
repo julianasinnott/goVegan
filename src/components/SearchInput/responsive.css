@@ -1,0 +1,20 @@
+@media only screen and (max-width:630px) {
+  .search {
+    max-width: 300px;
+  }
+}
+
+@media only screen and (max-width:490px) {
+  .search {
+    max-width: 220px;
+  }
+  .search-input {
+    height: 30px;
+  }
+  .search-icon {
+    width: 28px;
+    height: 28px;
+    top: 1px;
+    right: 1px;
+  }
+}
