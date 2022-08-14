@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import { App } from './pages/HomePage'
 import { RecipesPage } from './pages/RecipesPage/index'
+import { BlogPage } from './pages/BlogPage/index'
 import { NutritionPage } from './pages/NutritionPage/index'
 import { PartnersPage } from './pages/PartnersPage/index'
 import { RegisterPage } from './pages/RegisterPage/index'
@@ -26,6 +27,7 @@ export function RoutesGoVegan() {
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="receitas" element={<RecipesPage />} />
+          <Route path="blog" element={<BlogPage />} />
           <Route path="nutricao" element={<NutritionPage />} />
           <Route path="parceiros" element={<PartnersPage />} />
           <Route path="cadastro" element={<RegisterPage />} />
