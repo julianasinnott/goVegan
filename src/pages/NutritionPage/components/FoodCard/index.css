@@ -6,7 +6,7 @@
   color: var(--secundary);
 }
 
-.food-name {
+.food-card__name {
   font-size: 20px;
   font-weight: bold;
   text-align: start;
@@ -15,7 +15,7 @@
 .food-card__info {
   display: flex;
   justify-content: space-between;
-  gap: 40px;
+  gap: 20px;
   padding-bottom: 10px;
   border-bottom: 2px solid var(--secundary);
 }
