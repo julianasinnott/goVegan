@@ -4,7 +4,7 @@ export function RegisterPage() {
   return(
     <div className="register">
       <div className="register__form">
-        <form className='form' action="https://formsubmit.co/julianasinnott@outlook.com" method="POST">
+        <form className='form__inputs' action="https://formsubmit.co/julianasinnott@outlook.com" method="POST">
           <h1 className='register__form__title'>
             Venha mudar o mundo <br />
             com a gente!

@@ -1,6 +1,7 @@
-import { Header } from "./components/Header/index";
-import { Footer } from "./components/Footer/index";
-import "./app.css";
+import { Header } from "../../components/Header/index";
+import { Footer } from "../../components/Footer/index";
+import "./index.css";
+import "./responsive.css";
 
 export function App() {
   return (
@@ -41,11 +42,11 @@ export function App() {
               </p>
             </div>
           </div>
-          <div className="home__about__img">
-            <img src="/assets/vegan-veganism.gif" alt="" />
+          <div className="home__about__picture">
+            <img className="home__about__picture-img" src="/assets/vegan-veganism.gif" alt="" />
           </div>
         </section>
-        <section className="home__purpose">
+        {/* <section className="home__purpose">
           <h2 className="home__purpose__title">Nosso propósito</h2>
           <div className="home__purpose__description">
             <div className="home__purpose__img">
@@ -75,7 +76,7 @@ export function App() {
               accusantium nemo autem.
             </p>
           </div>
-        </section>
+        </section> */}
       </main>
       <Footer />
     </div>

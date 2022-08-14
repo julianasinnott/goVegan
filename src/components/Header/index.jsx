@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import '../../../global.css'
 import './index.css'
+import './responsive.css'
 import headerLogo from '/assets/white-logo.png'
 import { routes } from './routes'
 

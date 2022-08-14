@@ -1,4 +1,5 @@
 import './index.css'
+import './responsive.css'
 import { UserCircle } from 'phosphor-react'
 import { theme } from '../../utils/theme'
 
