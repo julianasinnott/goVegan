@@ -33,15 +33,15 @@ export function RoutesGoVegan() {
           <Route path="nutricao" element={<NutritionPage />} />
           <Route path="parceiros" element={<PartnersPage />} />
           <Route path="cadastro" element={<RegisterPage />} />
-          <Route path="recipe-complete" element={<RecipeComplete />} />
+          <Route path="receitas/receita" element={<RecipeComplete />} />
           <Route path="modal-contact" element={<ModalContact />} />
           <Route path="modal-success" element={<ModalSuccess />} />
           <Route path="cadastro" element={<RegisterPage />} />
           <Route path="login" element={<LoginAdmPage />} />
           <Route path="admin/receitas" element={<RecipesAdmin />} />
           <Route path="admin/parceiros" element={<PartnersAdmin />} />
-          <Route path="admin/cadastro-parceiros" element={<RegisterPartnersAdmin />} />
-          <Route path="admin/cadastro-receitas" element={<RegisterRecipesAdmin />} />
+          <Route path="admin/parceiros/cadastro" element={<RegisterPartnersAdmin />} />
+          <Route path="admin/receitas/cadastro" element={<RegisterRecipesAdmin />} />
         </Routes>
       </ScrollToTop>
     </BrowserRouter>
