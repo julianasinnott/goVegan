@@ -16,8 +16,8 @@
 
 .form__inputs {
   display: flex;
-  width: 34vw;
-  height: 80vh;
+  width: 464px;
+  height: 530px;
   flex-direction: column;
   gap: 26px;
   background-color: var(--formBackground);
