@@ -1,0 +1,43 @@
+@media only screen and (max-width:1029px) {
+  .register {
+    background: url(/assets/register-background.png) no-repeat center/100% 100%;
+  }
+  .form__inputs {
+    padding: 30px;
+  }
+  .register__form__title {
+    font-size: 28px;
+  }
+  .register__form__button {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width:880px) {
+  .register__form__title {
+    font-size: 26px;
+  }
+  .form__inputs {
+    height: 70vh;
+    gap: 16px;
+  } 
+}
+
+@media only screen and (max-width:720px) {
+  .register {
+    height: min-content;
+    background: url(/assets/register-background.png) no-repeat top/100%;
+    flex-direction: column;    
+  }
+  .space {
+    height: 55.4vw;
+  }
+  .register__form {
+    width: 100%;
+    padding: 0;
+  }
+  .form__inputs {
+    width: 100%;
+    border-radius: 0;
+  }
+}
