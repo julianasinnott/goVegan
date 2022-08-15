@@ -10,7 +10,8 @@
   background-color: var(--primary);
   border-radius: 40px;
   padding: 0 20px;
-  box-shadow: var(--shadow)
+  box-shadow: var(--shadow);
+  color: var(--secundary);
 }
 
 .search-input:focus {
