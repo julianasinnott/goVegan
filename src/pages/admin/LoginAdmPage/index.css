@@ -36,6 +36,8 @@
 .login-adm__form__button {
   background-color: var(--tertiary);
   color: var(--white);
+  font-weight: bold;
+  letter-spacing: 0.1em;
   cursor: pointer;
 }
 

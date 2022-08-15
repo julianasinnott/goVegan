@@ -1,4 +1,5 @@
 import './index.css'
+import './responsive.css'
 
 export function LoginAdmPage() {
   return(
