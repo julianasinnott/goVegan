@@ -1,7 +1,6 @@
 .card {
   max-width: 200px;
   width: 100%;
-  background: var(--quaternary);  
   color: var(--secundary);
   border-radius: 12px;
   box-shadow: var(--shadow);
@@ -9,11 +8,12 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  cursor: pointer;
 }
 
 .card__img {
   width: 100%;
-  height: 140px;
+  height: 100%;
   border-radius: 12px;
 }
 
@@ -21,6 +21,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  gap: 5px;
 }
 
 .card__info__title {

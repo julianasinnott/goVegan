@@ -1,5 +1,4 @@
 import './index.css'
-import './responsive.css'
 import { MagnifyingGlass } from "phosphor-react";
 
 export function SearchInput({ handleSearch }) {
