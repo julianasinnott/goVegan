@@ -1,5 +1,8 @@
 @media only screen and (max-width:600px) {
   .card__info__title {
+    font-size: 18px;
+  }
+  .card__info__item {
     font-size: 14px;
   }
 }
