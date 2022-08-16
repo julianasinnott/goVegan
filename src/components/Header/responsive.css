@@ -1,0 +1,80 @@
+@media only screen and (max-width:800px) {
+  .header  {
+    padding-bottom: 35px;
+    padding-top: 15px;
+  }
+  .header__logo {
+    width: 100px;
+    padding: 0;
+  }
+  .header__navbar {
+    gap: 16px;
+    padding-right: 20px;
+  }
+  .header__navbar-section {
+    gap: 20px;
+  }
+  .header__navbar__item {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width:630px) {
+  .header__logo {
+    width: 80px;
+  }
+  .header__navbar {
+    padding-right: 10px;
+  }
+  .header__navbar-section {
+    gap: 16px;
+  }
+  .header__navbar__item {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width:550px) {
+  .header__logo {
+    width: 68px; 
+  }
+  .header__navbar {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding-top: 10px;
+    padding-left: 40px;
+    gap: 5px;
+  }
+  .header__navbar-section {
+    gap: 10px;
+  }
+}
+
+@media only screen and (max-width:430px) {
+  .header {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .header__navbar-section {
+    gap: 6px;
+  }
+}
+
+@media only screen and (max-width:350px) {
+   .header__navbar{
+    padding-left: 5px;
+  }
+  .header__navbar__item {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width:320px) {
+  .header {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .header__logo {
+    width: 55px; 
+  }
+}

@@ -1,4 +1,4 @@
-.btn {
+.btn__component {
   width: 160px;
   cursor: pointer;
   color: var(--white);

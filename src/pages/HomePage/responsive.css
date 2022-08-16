@@ -1,0 +1,119 @@
+@media only screen and (max-width:1400px) {
+  .home__purpose__img {
+    padding: 0 20px;
+  }
+}
+
+@media only screen and (max-width:980px) {
+  .home__about__picture-img {
+    width: 80%;
+    height: 50%;
+  }
+  .home__about {
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width:900px) {
+  .home__about {
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 40px;
+  }
+  .home__about__description {
+    width: 100%;
+  }
+  .home__purpose__description {
+    display: flex;  
+    padding-left: 0px;
+  }
+}
+
+@media only screen and (max-width:860px) {
+  .home__purpose__text {
+    background-position: bottom;
+  }
+  .purpose__text {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width:800px) {
+  .home__background {
+    background-position: center top 76px;
+    height: 70vw;
+  }
+  .home__purpose__description {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .home__purpose__types {
+    gap: 80px;
+  }
+  .purpose__text {
+    font-size: 18px;
+    line-height: 38px;
+  }
+  .home__purpose__text {
+    height: 72vw;
+  }
+}
+
+@media only screen and (max-width:730px) {
+  .home__background {
+    height: 74vw;
+  }
+  .home__about__description {
+    gap: 30px;
+  }
+  .home__about__title, .home__purpose__title {
+    font-size: 32px;
+  }
+  .home__purpose__types {
+    font-size: 22px;
+  }
+}
+
+@media only screen and (max-width:650px) {
+  .home__background {
+    height: 72vw; 
+    background-position: center top 66px;
+  }
+  .purpose__text {
+    font-size: 16px;
+    line-height: 36px;
+  }
+}
+
+@media only screen and (max-width:550px) {
+  .home__background {
+    background-position: center top 50px;
+  }
+  .home__about__title {
+    font-size: 28px;
+  }
+}
+
+@media only screen and (max-width:500px) {
+  .home__about__description {
+    gap: 20px;
+  }
+  .home__about__title {
+    font-size: 24px;
+  }
+  .home__about__text {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width:450px) {
+  .home__background {
+    background-position: center;
+  }
+  .home__about {
+    margin-top: -10px;
+  }
+}
+
+

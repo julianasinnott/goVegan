@@ -1,0 +1,35 @@
+@media only screen and (max-width:880px) {
+  .nutrition__main {
+    margin-top: 100px;
+  }
+}
+
+@media only screen and (max-width:630px) {
+  .nutrition__main {
+    gap: 30px;
+    margin-top: 90px;
+  }
+  .nutrition__subtitle {
+    font-size: 20px;
+  }
+  .nutrition__title {
+    font-size: 24px;
+  }
+}
+
+
+@media only screen and (max-width:590px) {
+  .nutrition__main  {
+    padding: 30px 20px 20px;
+    margin-top: 85px;
+  }
+  .nutrition__subtitle {
+    font-size: 16px;
+  }
+  .nutrition__title {
+    font-size: 20px;
+  }
+  .nutrition__info {
+    font-size: 12px;
+  }
+}

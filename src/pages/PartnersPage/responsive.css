@@ -1,0 +1,26 @@
+@media only screen and (max-width:630px) {
+  .partners__main {
+    gap: 30px;
+    margin-top: 100px;
+  }
+  .partners__subtitle {
+    font-size: 22px;
+  }
+  .partners__title {
+    font-size: 28px;
+  }
+}
+
+@media only screen and (max-width:590px) {
+  .partners__main {
+    padding: 30px 10px 20px;
+    gap: 20px;
+    margin-top: 80px;
+  }
+  .partners__subtitle {
+    font-size: 17px;
+  }
+  .partners__title {
+    font-size: 24px;
+  }
+}
