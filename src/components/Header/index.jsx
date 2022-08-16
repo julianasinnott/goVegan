@@ -6,6 +6,10 @@ import headerLogo from '/assets/white-logo.png'
 import { routes } from './routes'
 
 export function Header({ type }) {
+  function handleLogout() {
+    type === 'ADMIN' && localStorage.removeItem('token')
+  }
+
   return(
     <header className="header">
         <img className="header__logo" src={headerLogo} alt="Logo GoVegan"/>
@@ -18,7 +22,9 @@ export function Header({ type }) {
             ))}   
           </div>
           <div className="header__navbar__purple-btn">
-            <button className="header__navbar__item purple-btn">
+            <button
+              onClick={handleLogout}
+              className="header__navbar__item purple-btn">
              <Link to={routes[type].featured.path}>{routes[type].featured.name}</Link>              
             </button>
           </div>   

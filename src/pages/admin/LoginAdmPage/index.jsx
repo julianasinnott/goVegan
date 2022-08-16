@@ -1,7 +1,7 @@
 import './index.css'
 import './responsive.css'
 import * as React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export function LoginAdmPage() {
 
@@ -33,33 +33,31 @@ export function LoginAdmPage() {
     <div className='login-adm'>
       <div className="login-adm__img"></div>
       <form 
-      className='login-adm__form'  
-      onSubmit={handleSubmit}
+        className='login-adm__form'  
+        onSubmit={handleSubmit}
       >
           <h1 className='login-adm__form__title'>
             Venha mudar o mundo <br />
             com a gente!
           </h1>
-
           <input 
-          className='login-adm__form__email input-adm' 
-          type="email" 
-          name='email'
-          value={form.email}
-          onChange={handleChange} 
-          placeholder='Seu melhor email' 
-          required
+            className='login-adm__form__email input-adm' 
+            type="email" 
+            name='email'
+            value={form.email}
+            onChange={handleChange} 
+            placeholder='Seu melhor email' 
+            required
           />
-
           <input 
-          className='login-adm__form__password input-adm' 
-          type="password" 
-          name="password"
-          value={form.password}
-          onChange={handleChange} 
-          placeholder='Sua senha' 
-          required />
-
+            className='login-adm__form__password input-adm' 
+            type="password" 
+            name="password"
+            value={form.password}
+            onChange={handleChange} 
+            placeholder='Sua senha' 
+            required
+          />
           <button className='login-adm__form__button input-adm' type="submit">
             ENTRAR
           </button>

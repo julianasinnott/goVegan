@@ -46,7 +46,7 @@ export function App() {
             <img className="home__about__picture-img" src="/assets/vegan-veganism.gif" alt="" />
           </div>
         </section>
-        {/* <section className="home__purpose">
+        <section className="home__purpose">
           <h2 className="home__purpose__title">Nosso propósito</h2>
           <div className="home__purpose__description">
             <div className="home__purpose__img">
@@ -72,11 +72,10 @@ export function App() {
               voluptatum laborum numquam blanditiis harum quisquam eius sed odit
               fugiat iusto fuga praesentium optio, eaque rerum! Provident
               similique accusantium nemo Provident similique accusantium nemo
-              autem. Provident similique accusantium nemo Provident similique
-              accusantium nemo autem.
+              autem.
             </p>
           </div>
-        </section> */}
+        </section>
       </main>
       <Footer />
     </div>

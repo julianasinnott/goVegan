@@ -29,7 +29,7 @@ export const routes = {
   },
   ADMIN: {
     featured: {
-      path: '/logout',
+      path: '/',
       name:'Sair'
     },
     routes: [
