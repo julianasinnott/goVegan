@@ -82,7 +82,13 @@
   }
   .purpose__text {
     font-size: 16px;
-    line-height: 36px;
+    line-height: 28px;
+    padding-left: 20px;
+  }
+}
+@media only screen and (max-width:620px) {
+  .home__purpose__text {
+    background-position: center;
   }
 }
 
@@ -90,8 +96,17 @@
   .home__background {
     background-position: center top 50px;
   }
-  .home__about__title {
+  .home__about__title, .home__purpose__title {
     font-size: 28px;
+  }
+  .purpose__text {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .purpose__type__animals, .purpose__type__environment, .purpose__type__health { 
+    font-size: 20px;
+    width: 80%;
+    text-align: end;
   }
 }
 
@@ -99,11 +114,21 @@
   .home__about__description {
     gap: 20px;
   }
-  .home__about__title {
+  .home__about__title, .home__purpose__title {
     font-size: 24px;
   }
-  .home__about__text {
+  .home__about__text, .purpose__type__animals, .purpose__type__environment, .purpose__type__health {
     font-size: 16px;
+  }
+  .purpose__text {
+    line-height: 16px;
+  }
+  .home__purpose__img {
+    height: 100%;
+  }
+  .purpose__img {
+    width: 100%;
+    height: 100vw;
   }
 }
 
@@ -113,6 +138,23 @@
   }
   .home__about {
     margin-top: -10px;
+  }
+  .purpose__type__animals, .purpose__type__environment, .purpose__type__health { 
+    width: 90%;
+  }
+  .purpose__text {
+    font-size: 12px;
+    padding-left: 10px;
+  }
+}
+
+@media only screen and (max-width:330px) {
+  .home__purpose__text {
+    align-items: flex-start;
+    padding-top: 20px;
+  }  
+  .purpose__type__animals, .purpose__type__environment, .purpose__type__health { 
+    width: 99%;
   }
 }
 
