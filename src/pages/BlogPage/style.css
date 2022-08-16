@@ -3,22 +3,25 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 40px;
     width: 100%;
-    height: 800px;
-    margin-top: 200px;
+    margin-top: 140px;
+    padding: 0 20px;
+    color: var(--secundary);
 }
 
-.h1_blog{
-    margin-top: 50px;
+.h1_blog {
+    text-align: center;
 }
 
 .group_news {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
 
     width: 90%;
-    height: 450px;
 }
 
 .news {

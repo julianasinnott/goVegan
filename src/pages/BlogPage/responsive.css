@@ -1,0 +1,27 @@
+@media only screen and (max-width:600px) {
+  .main_blog {
+    margin-top: 110px;
+    gap: 30px;
+  }
+  .h1_blog {
+    font-size: 28px;
+  }
+  .group_news {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 0;
+    flex-wrap: wrap;
+
+    width: 90%;
+}
+}
+
+@media only screen and (max-width:500px) {
+  .main_blog {
+    gap: 20px;
+  }
+  .h1_blog {
+    font-size: 24px;
+  }
+}
