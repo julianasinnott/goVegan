@@ -15,63 +15,63 @@ export function PartnersPage() {
       title: "Paraíso Vegano",
       subtitle: "Pelotas",
       description: "Rua Lobo da Costa 1492",
-      url: "https://www.google.com",
+      urlContact: "https://www.google.com",
     },
     {
       img: MockImg,
       title: "Paraíso Vegano",
       subtitle: "Pelotas",
       description: "Rua Lobo da Costa 1492",
-      url: "https://www.google.com",
+      urlContact: "https://www.google.com",
     },
     {
       img: MockImg,
       title: "Paraíso Vegano",
       subtitle: "Pelotas",
       description: "Rua Lobo da Costa 1492",
-      url: "https://www.google.com",
+      urlContact: "https://www.google.com",
     },
     {
       img: MockImg,
       title: "Paraíso Vegano",
       subtitle: "Pelotas",
       description: "Rua Lobo da Costa 1492",
-      url: "https://www.google.com",
+      urlContact: "https://www.google.com",
     },
     {
       img: MockImg,
       title: "Paraíso Vegano",
       subtitle: "Pelotas",
       description: "Rua Lobo da Costa 1492",
-      url: "https://www.google.com",
+      urlContact: "https://www.google.com",
     },
     {
       img: MockImg,
       title: "Paraíso Vegano",
       subtitle: "Pelotas",
       description: "Rua Lobo da Costa 1492",
-      url: "https://www.google.com",
+      urlContact: "https://www.google.com",
     },
     {
       img: MockImg,
       title: "Paraíso Vegano",
       subtitle: "Pelotas",
       description: "Rua Lobo da Costa 1492",
-      url: "https://www.google.com",
+      urlContact: "https://www.google.com",
     },
     {
       img: MockImg,
       title: "Paraíso Vegano",
       subtitle: "Pelotas",
       description: "Rua Lobo da Costa 1492",
-      url: "https://www.google.com",
+      urlContact: "https://www.google.com",
     },
     {
       img: MockImg,
       title: "Paraíso Vegano",
       subtitle: "Pelotas",
       description: "Rua Lobo da Costa 1492",
-      url: "https://www.google.com",
+      urlContact: "https://www.google.com",
     },
   ];
   return (
@@ -83,7 +83,7 @@ export function PartnersPage() {
         <SearchInput />
         <section className="partners__section">
           {partners?.map((partner, index) => (
-            <Card key={index} item={partner} color={theme.colors.quaternary} width={200} />
+            <Card key={index} item={partner} urlImg={partner.img} color={theme.colors.quaternary} width={200} />
           ))}
         </section>
         <Button value="Carregar mais" color={theme.colors.secundary} />
