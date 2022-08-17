@@ -1,16 +1,14 @@
-.container__modal-contact {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.modal-teste {
+  position: absolute;
+  right: 150px;
+  bottom: 300px;
 
-  width: 100vw;
-  height: 100vh;
-
-  background-color: #F5F5F5;
+  /* width: 300px;
+  height: 300px; */
 }
 
 .modal-contact {
-  width: 370px;
+  width: 280px;
   border-radius: 12px;
 
   background-color: #FFFFFF;
@@ -21,7 +19,7 @@
   font-size: 20px;
   text-align: center;
 
-  padding: 27px;
+  padding: 15px;
 }
 
 .form-contact {
@@ -34,11 +32,11 @@
 .input__modal-contact {
   /* all: unset; */
 
-  width: 297px;
+  width: 225px;
   height: 30px;
   border-radius: 12px;
 
-  margin: 10px;
+  margin: 5px;
   padding-left: 16px;
 
 
@@ -50,22 +48,22 @@
 
   box-sizing: border-box;
 
-  width: 297px;
-  height: 170px;
+  width: 225px;
+  height: 115px;
   border-radius: 12px;
 
-  margin: 15px;
+  margin: 8px;
   padding-left: 16px;
 
   background-color: #E6ECEB;
 }
 
 .button__modal-contact {
-  width: 297px;
-  height: 55px;
+  width: 225px;
+  height: 30px;
   border-radius: 12px;
 
-  margin-bottom: 35px;
+  margin-bottom: 15px;
 
   background-color: #81B289;
   color: #FFFFFF;
@@ -78,6 +76,8 @@
 }
 
 .close-modal-icon__modal-contact {
+  cursor: pointer;
+
   width: 50px;
   height: 50px;
   border-radius: 50%;
