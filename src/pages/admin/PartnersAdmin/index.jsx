@@ -5,7 +5,7 @@ import '../../../components/templates/AdminTemplate/responsive.css';
 
 export function PartnersAdmin() {
   return (
-    <AdminTemplate>
+    <AdminTemplate colorPartners='--tertiary'>
       <AdminSection
         title={'Parceiros GoVegan'}
         data={[

@@ -3,7 +3,7 @@ import "./style.css"
 
 export function RegisterRecipesAdmin() {
     return(
-      <AdminTemplate>
+      <AdminTemplate colorRecipes='--tertiary'>
         <main className="main_RegisterRecipes">
         <div className="content_RegisterRecipes">
           <h1 className="h1_RegisterRecipes">Cadastrar nova receita</h1>

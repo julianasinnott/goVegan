@@ -1,6 +1,7 @@
 .card-list {
+  width: 70%;
   display: flex;
-  gap: 400px;
+  justify-content: space-between;
   font-size: 20px;
   padding-bottom: 8px;
   border-bottom: 1px solid var(--secundary);

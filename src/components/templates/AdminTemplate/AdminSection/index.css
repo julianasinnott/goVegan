@@ -6,11 +6,14 @@
   color: var(--secundary);
   justify-content: center;
   align-items: center;
+  padding: 20px;
+  margin-top: 50px;
   gap: 40px;
 }
 
 .main-adm__list__title {
   font-size: 22px;
+  text-align: center;
   display: flex;
   align-items: center;
   gap: 100px;
@@ -22,5 +25,11 @@
   border-radius: 50%;  
   box-shadow: var(--shadow);
   cursor: pointer;
+}
+
+.card-list__sectiom {
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 
