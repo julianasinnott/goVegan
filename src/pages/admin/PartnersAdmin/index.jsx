@@ -1,9 +1,10 @@
 import { AdminTemplate } from "../../../components/templates/AdminTemplate";
 import { AdminSection } from "../../../components/templates/AdminTemplate/AdminSection";
+import '../../../components/templates/AdminTemplate/responsive.css';
 
 
 export function PartnersAdmin() {
-  return(
+  return (
     <AdminTemplate>
       <AdminSection
         title={'Parceiros GoVegan'}
@@ -14,7 +15,7 @@ export function PartnersAdmin() {
           {
             name: 'nome 2'
           },
-        ]}  
+        ]}
       />
     </AdminTemplate>
   )
