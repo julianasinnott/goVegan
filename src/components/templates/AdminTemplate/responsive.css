@@ -10,21 +10,21 @@
   .main-adm__navbar {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     flex-wrap: nowrap;
+    padding: 90px 50px 20px;
+  }
+
+  .column_recipes, .column_partners { 
+    width: 49%;
+    border-radius: 6px;
   }
 
   .main-adm {
     width: 100%;
-    margin-top: 30px;
+    padding-top: 40px;
 
   }
-
-  /* .section__card-list {
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-  } */
-
 }
 
 @media only screen and (max-width: 600px) {
@@ -35,24 +35,10 @@
   .header__navbar-section {
     padding: 0px 20px;
   }
-}
-
-@media only screen and (max-width: 550px) {
-
-  .card-list {
-    display: flex;
-    justify-content: space-between;
-    gap: 300px;
+  .main-adm__navbar {
+    padding: 80px 20px 10px;
   }
-
-  .card-list__item {
-    font-size: 17px;
-    width: 50px;
-    margin-left: 10px;
+  .column_recipes, .column_partners { 
+   font-size: 18px;
   }
-
-  .main-adm__list__title {
-    font-size: 15px;
-  }
-
 }
