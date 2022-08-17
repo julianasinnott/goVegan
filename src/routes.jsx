@@ -14,7 +14,6 @@ import { NutritionPage } from './pages/NutritionPage/index'
 import { PartnersPage } from './pages/PartnersPage/index'
 import { RegisterPage } from './pages/RegisterPage/index'
 import { RecipeComplete } from './pages/RecipeComplete/index';
-import { ModalContact } from './pages/ModalContact/index'
 import { ModalSuccess } from './pages/ModalSuccess/index'
 import { RecipesAdmin } from './pages/admin/RecipesAdmin/index'
 import { ScrollToTop } from './pages/ScrollToTop';
@@ -29,7 +28,7 @@ function ProtectedRoutes({ redirectTo }) {
 }
 
 export function RoutesGoVegan() {
-  return(
+  return (
     <BrowserRouter>
       <ScrollToTop>
         <Routes>
@@ -40,7 +39,6 @@ export function RoutesGoVegan() {
           <Route path="parceiros" element={<PartnersPage />} />
           <Route path="cadastro" element={<RegisterPage />} />
           <Route path="receitas/receita" element={<RecipeComplete />} />
-          <Route path="modal-contact" element={<ModalContact />} />
           <Route path="modal-success" element={<ModalSuccess />} />
           <Route path="cadastro" element={<RegisterPage />} />
           <Route path="login" element={<LoginAdmPage />} />

@@ -1,0 +1,14 @@
+/* .close-modal-icon__modal-contact */
+
+@media only screen and (max-width:800px) {
+  .modal-teste {
+    bottom: 232px;
+  }
+}
+
+@media only screen and (max-width:800px) {
+  .modal-teste {
+    right: 130px;
+    bottom: 205px;
+  }
+}
