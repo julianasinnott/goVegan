@@ -5,27 +5,38 @@ import { Footer } from "../../components/Footer/index";
 import { SearchInput } from "../../components/SearchInput";
 import {Button} from "../../components/Button"
 import { theme } from "../../utils/theme";
-import news1 from "../../assets/images/news1.png"
-import news2 from "../../assets/images/news2.png"
-import news3 from "../../assets/images/news3.png"
 import { Card } from "../../components/Card";
+import axios from "axios";
+import { useEffect } from "react";
+import { useState } from "react";
 
 
 export function BlogPage() {
-  const news = [
-    {title: 'Mercado de leite de castanha-de-caju atingirá US$ 382,7 milhões até 2032.',
-     img: news1,
-     subtitle:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maximmollitia...'
-    },
-    {title: 'Mercado de sorvete vegano atingirá US$ 1,01 bilhão até 2029.',
-     img: news2,
-     subtitle:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maximmollitia...',
-    },
-    {title: 'N.OVO lança croquete de porco plant-based.',
-     img: news3,
-     subtitle:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maximmollitia...'
-    },
-  ]
+ 
+  const [newsArray, setNewsArray] = useState([]);
+  const [pageSize, setPageSize] = useState(9)
+  const [loading, setLoading] = useState(false)
+
+  function handlePageSize() {
+    setPageSize(pageSize + 9)
+  }
+ 
+  async function getNews() {
+    try {
+      setLoading(true)
+      const response = await axios.get(`https://newsapi.org/v2/everything?q=VEG%20OR%20veganismo%20NOT%20MELANC%C3%93LICO%20NOT%20lexi%20NOT%20ANCA%20OR%20VEGETARIANA%20OR%20VEGANA%20OR%20vegano%20OR%20VEGETARIAN%20OR%20VEGAN%20OR%20VEGETARIANO&sortBy=POPULARITY&language=pt&pageSize=${pageSize}&apiKey=3499002376e14cdcb8fbe55906c464fc`);
+      setNewsArray(response.data.articles)
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  useEffect(()=> {
+    getNews()
+  }, [pageSize])
+
     return(
       <>
         <Header type={"USER"}/>
@@ -35,25 +46,14 @@ export function BlogPage() {
           </h1>
           <SearchInput />
           <div className="group_news">
-          {news?.map((news, index) => (
-            <Card key={index} item={news} color={theme.colors.white} width={300} height={330} />
+          {newsArray?.map((news, index) => (
+            <Card key={index} urlImg={news.urlToImage} item={news} color={theme.colors.white} width={300} height={430} />
           ))}
-            {/* <div className="news">
-              <img className="news-img" src={news1} alt="" />
-              <p className="news-text">Mercado de leite de castanha-de-caju atingirá US$ 382,7 milhões até 2032.</p>
-            </div>
-            <div>
-              <img className="news-img" src={news2} alt="" />
-              <p className="news-text">Mercado de sorvete vegano atingirá US$ 1,01 bilhão até 2029.</p>
-            </div>
-            <div>
-              <img className="news-img" src={news3} alt="" />
-              <p className="news-text">N.OVO lança croquete de porco plant-based.</p>
-            </div> */}
           </div>
           <Button
-              value="Carregar mais"
-              color={theme.colors.tertiary}
+            value={loading ? 'Carregando...' : "Carregar mais"}
+            color={theme.colors.tertiary}
+            handlepageSize={handlePageSize}
           />
           {/* <div className="banner_blog">
             <h3 className="banner_title">Notícias mais recentes</h3>
