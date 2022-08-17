@@ -41,7 +41,7 @@ export function RecipesPage() {
         </div>
         <section className="recipes-section">
           {recipes.map((recipe, index) => (
-            <Card key={index} item={recipe} color={theme.colors.quaternary} width={200}/>
+            <Card key={index} item={recipe} urlImg={recipe.img} color={theme.colors.quaternary} width={200}/>
           ))}
         </section>
         <Button value="Carregar mais" color={theme.colors.secundary} />
