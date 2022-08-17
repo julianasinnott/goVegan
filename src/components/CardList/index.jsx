@@ -1,5 +1,6 @@
 import { Trash } from "phosphor-react";
 import './index.css'
+import './responsive.css'
 
 
 export function CardList({ data }) {
