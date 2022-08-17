@@ -1,7 +1,8 @@
-import { CardList } from "../../CardList";
-import { SearchInput } from "../../SearchInput";
+import { CardList } from "../../../CardList";
+import { SearchInput } from "../../../SearchInput";
 import { Plus } from "phosphor-react"
-import './section.css'
+import './index.css'
+import './responsive.css'
 
 export function AdminSection({
   title,
@@ -18,7 +19,7 @@ export function AdminSection({
       />
     </div>
     <SearchInput />
-    <section style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+    <section className="card-list__sectiom" style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
       {data?.map((item, index) => (
         <CardList key={index} data={item} />
       ))}

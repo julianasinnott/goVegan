@@ -5,7 +5,7 @@ import '../../../components/templates/AdminTemplate/responsive.css';
 
 export function RecipesAdmin() {
   return (
-    <AdminTemplate>
+    <AdminTemplate colorRecipes='--tertiary' >
       <AdminSection
         title={'Receitas GoVegan'}
         data={[

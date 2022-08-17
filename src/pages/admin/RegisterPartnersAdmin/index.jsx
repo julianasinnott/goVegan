@@ -3,7 +3,7 @@ import "./style.css"
 
 export function RegisterPartnersAdmin() {
     return(
-      <AdminTemplate>
+      <AdminTemplate colorPartners='--tertiary'>
         <main className="main_RegisterPartners">
         <div className="content_RegisterPartners">
          <form className="form_RegisterPartners">

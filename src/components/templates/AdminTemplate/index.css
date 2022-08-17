@@ -1,52 +1,33 @@
 .adm-template {
   display: grid;
   grid-template-columns: 250px 1fr;
-  margin-top: 110px;
+  margin-top: 90px;
 }
 
 .main-adm__navbar {
   background-color: var(--gray);
-  /* height: 1000px; */
   margin-bottom: -82px;
-  padding-top: 110px;
+  padding-top: 70px;
 }
 
-.column_recipes {
+.column_recipes, .column_partners {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 99%;
-  height: 100px;
+  height: 60px;
 
   background: #FFFFFF;
   box-shadow: 0px 4px 4px #81B289;
-  border-radius: 0px 12px 12px 0px;
-  margin-bottom: 40px;
+  border-radius: 0px 8px 8px 0px;
+  margin-bottom: 10px;
 
   font-weight: 400;
-  font-size: 30px;
+  font-size: 24px;
   line-height: 59px;
 
   text-align: center;
 
   color: #223929;
-}
-
-.column_partners {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 99%;
-  height: 100px;
-
-  background: #FFFFFF;
-  box-shadow: 0px 4px 4px #81B289;
-  border-radius: 0px 12px 12px 0px;
-
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 59px;
-
-  text-align: center;
-  color: #223929;
+  cursor: pointer;
 }

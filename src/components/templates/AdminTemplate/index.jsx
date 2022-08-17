@@ -1,19 +1,37 @@
-
 import { Header } from "../../Header";
 import { Container } from "../../Container";
 import "./index.css";
 import { Footer } from "../../Footer";
+import { useNavigate } from 'react-router-dom';
 
-export function AdminTemplate({ children }) {
+
+export function AdminTemplate({ children, colorRecipes, colorPartners }) {
+  const navigate = useNavigate();
   return (
     <Container>
       <Header type={"ADMIN"} />
       <div className="adm-template">
-        <nav className="main-adm__navbar">
-          <div className="column_recipes">Receitas</div>
-          <div className="column_partners">Parceiros</div>
+        <nav className="main-adm__navbar">        
+          <button
+            onClick={() => navigate('/admin/receitas')}
+            className="column_recipes"
+            style={{
+              borderLeft:`6px solid var(${colorRecipes})`,             
+              }}
+          >
+            Receitas
+          </button>
+          <button
+            onClick={() => navigate('/admin/parceiros')}
+            className="column_partners"
+            style={{
+              borderLeft:`6px solid var(${colorPartners})`,             
+              }}
+          >
+            Parceiros
+          </button>   
         </nav>
-        <div style={{ padding: "60px 20px" }}>{children}</div>
+        <div>{children}</div>
       </div>
       <Footer hasIdealizers={false} />
     </Container>
