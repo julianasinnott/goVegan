@@ -83,7 +83,12 @@ export function PartnersPage() {
         <SearchInput />
         <section className="partners__section">
           {partners?.map((partner, index) => (
-            <Card key={index} item={partner} urlImg={partner.img} color={theme.colors.quaternary} width={200} />
+            <Card
+              key={index}
+              item={partner}
+              urlImg={partner.img}
+              color={theme.colors.quaternary}
+              width={200} />
           ))}
         </section>
         <Button value="Carregar mais" color={theme.colors.secundary} />
