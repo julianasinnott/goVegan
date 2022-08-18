@@ -11,63 +11,63 @@ import { theme } from "../../utils/theme";
 export function PartnersPage() {
   const partners = [
     {
-      img: MockImg,
+      urlToImage: MockImg,
       title: "Paraíso Vegano",
       subtitle: "Pelotas",
       description: "Rua Lobo da Costa 1492",
       urlContact: "https://www.google.com",
     },
     {
-      img: MockImg,
+      urlToImage: MockImg,
       title: "Paraíso Vegano",
       subtitle: "Pelotas",
       description: "Rua Lobo da Costa 1492",
       urlContact: "https://www.google.com",
     },
     {
-      img: MockImg,
+      urlToImage: MockImg,
       title: "Paraíso Vegano",
       subtitle: "Pelotas",
       description: "Rua Lobo da Costa 1492",
       urlContact: "https://www.google.com",
     },
     {
-      img: MockImg,
+      urlToImage: MockImg,
       title: "Paraíso Vegano",
       subtitle: "Pelotas",
       description: "Rua Lobo da Costa 1492",
       urlContact: "https://www.google.com",
     },
     {
-      img: MockImg,
+      urlToImage: MockImg,
       title: "Paraíso Vegano",
       subtitle: "Pelotas",
       description: "Rua Lobo da Costa 1492",
       urlContact: "https://www.google.com",
     },
     {
-      img: MockImg,
+      urlToImage: MockImg,
       title: "Paraíso Vegano",
       subtitle: "Pelotas",
       description: "Rua Lobo da Costa 1492",
       urlContact: "https://www.google.com",
     },
     {
-      img: MockImg,
+      urlToImage: MockImg,
       title: "Paraíso Vegano",
       subtitle: "Pelotas",
       description: "Rua Lobo da Costa 1492",
       urlContact: "https://www.google.com",
     },
     {
-      img: MockImg,
+      urlToImage: MockImg,
       title: "Paraíso Vegano",
       subtitle: "Pelotas",
       description: "Rua Lobo da Costa 1492",
       urlContact: "https://www.google.com",
     },
     {
-      img: MockImg,
+      urlToImage: MockImg,
       title: "Paraíso Vegano",
       subtitle: "Pelotas",
       description: "Rua Lobo da Costa 1492",
@@ -86,7 +86,6 @@ export function PartnersPage() {
             <Card
               key={index}
               item={partner}
-              urlImg={partner.img}
               color={theme.colors.quaternary}
               width={200} />
           ))}
