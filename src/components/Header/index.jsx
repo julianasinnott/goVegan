@@ -16,9 +16,21 @@ export function Header({ type }) {
         <nav className="header__navbar">
           <div className="header__navbar-section">
             {routes[type].routes.map(route => (
-              <button key={route.path} className="header__navbar__item" >
-                <Link to={route.path}>{route.name}</Link>
-              </button>        
+              route.path === window.location.pathname ?
+              (<button 
+              key={route.path} 
+              className="header__navbar__item"
+              style={{'color':'var(--secundary)', 'borderBottom':'2px solid var(--secundary)'}} 
+              >
+              <Link to={route.path}>{route.name}</Link>
+            </button>) 
+            :
+            (<button 
+            key={route.path} 
+            className="header__navbar__item" 
+            >
+            <Link to={route.path}>{route.name}</Link>
+          </button>)       
             ))}   
           </div>
           <div className="header__navbar__purple-btn">

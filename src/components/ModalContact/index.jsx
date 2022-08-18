@@ -1,13 +1,14 @@
 import './index.css';
+import './responsive.css';
 
 import iconClose from '../../assets/images/icon-close.png';
 
-export function ModalContact() {
+export function ModalContact(props) {
   return (
-    <section className='container__modal-contact'>
+    <div className='modal-teste'>
       <section className='modal-contact'>
         <section className='close-modal__modal-contact' >
-          <section className='close-modal-icon__modal-contact' >
+          <section className='close-modal-icon__modal-contact' onClick={() => props.setShowModal(false)} >
             <img className='icon__close__modal-contact' src={iconClose} alt="" />
           </section>
         </section>
@@ -19,6 +20,6 @@ export function ModalContact() {
           <button className='button__modal-contact' type="submit">Enviar</button>
         </form>
       </section>
-    </section>
-  );
-};
+    </div>
+  )
+}

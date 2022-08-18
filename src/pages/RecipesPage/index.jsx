@@ -7,22 +7,23 @@ import "./index.css";
 import "./responsive.css";
 import { theme } from "../../utils/theme";
 
+
 export function RecipesPage() {
   const recipes = [
     {
-      img: ImgFoodMock,
+      urlToImage: ImgFoodMock,
       title: "Título da Receita",
     },
     {
-      img: ImgFoodMock,
+      urlToImage: ImgFoodMock,
       title: "Título da Receita",
     },
     {
-      img: ImgFoodMock,
+      urlToImage: ImgFoodMock,
       title: "Título da Receita",
     },
     {
-      img: ImgFoodMock,
+      urlToImage: ImgFoodMock,
       title: "Título da Receita",
     },
   ];

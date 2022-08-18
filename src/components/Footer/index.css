@@ -20,10 +20,12 @@
 .footer__idealizers-title {
   color: var(--white);
   padding-bottom: 2px;
-  border-bottom: 2px solid var(--primary) ;
+  border-bottom: 2px solid var(--primary);
 }
 
 .contact-btn {
+  position: relative;
+
   color: var(--white);
   height: min-content;
   cursor: pointer;
@@ -40,7 +42,7 @@
 }
 
 .footer__logo {
-  border-top: 2px solid var(--primary); 
+  border-top: 2px solid var(--primary);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -53,6 +55,7 @@
   width: 100px;
   height: auto;
 }
+
 .footer__copyright {
   font-size: 12px;
   color: var(--secundary)

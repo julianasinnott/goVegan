@@ -1,10 +1,11 @@
 import { AdminTemplate } from "../../../components/templates/AdminTemplate";
 import { AdminSection } from "../../../components/templates/AdminTemplate/AdminSection";
+import '../../../components/templates/AdminTemplate/responsive.css';
 
 
 export function PartnersAdmin() {
-  return(
-    <AdminTemplate>
+  return (
+    <AdminTemplate colorPartners='--tertiary'>
       <AdminSection
         title={'Parceiros GoVegan'}
         data={[
@@ -14,7 +15,7 @@ export function PartnersAdmin() {
           {
             name: 'nome 2'
           },
-        ]}  
+        ]}
       />
     </AdminTemplate>
   )

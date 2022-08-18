@@ -1,10 +1,11 @@
 import { AdminTemplate } from "../../../components/templates/AdminTemplate";
 import { AdminSection } from "../../../components/templates/AdminTemplate/AdminSection";
+import '../../../components/templates/AdminTemplate/responsive.css';
 
 
 export function RecipesAdmin() {
-  return(
-    <AdminTemplate>
+  return (
+    <AdminTemplate colorRecipes='--tertiary' >
       <AdminSection
         title={'Receitas GoVegan'}
         data={[
@@ -14,7 +15,7 @@ export function RecipesAdmin() {
           {
             name: 'nome 2'
           },
-        ]}  
+        ]}
       />
     </AdminTemplate>
   )

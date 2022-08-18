@@ -1,0 +1,26 @@
+@media only screen and (max-width: 550px) {
+  .main-adm {
+    gap: 20px;
+  }
+  .main-adm__list__title {
+    font-size: 15px;
+  }
+  .plus-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media only screen and (max-width: 410px) {
+  .main-adm__list__title {
+    gap: 50px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .main-adm__list__title {
+    font-size: 13px;
+  }
+  .main-adm__list__title {
+    gap: 20px;
+  }
+}

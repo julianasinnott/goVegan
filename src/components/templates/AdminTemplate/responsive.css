@@ -1,0 +1,37 @@
+@media only screen and (max-width: 800px) {
+
+  .adm-template {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 5%;
+  }
+
+  .main-adm__navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding: 90px 50px 20px;
+  }
+
+  .column_recipes, .column_partners { 
+    width: 49%;
+    border-radius: 6px;
+  }
+
+  .main-adm {
+    width: 100%;
+    padding-top: 40px;
+
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .main-adm__navbar {
+    padding: 80px 20px 10px;
+  }
+  .column_recipes, .column_partners { 
+   font-size: 18px;
+  }
+}

@@ -20,8 +20,15 @@
 @media only screen and (max-width:500px) {
   .main_blog {
     gap: 20px;
+    padding: 0 40px;
   }
   .h1_blog {
     font-size: 24px;
+  }
+}
+
+@media only screen and (max-width:380px) {
+  .main_blog {
+    padding: 0 20px;
   }
 }
