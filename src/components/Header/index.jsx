@@ -20,7 +20,7 @@ export function Header({ type }) {
               (<button 
               key={route.path} 
               className="header__navbar__item"
-              style={{'color':'var( --secundary)', 'border-bottom':'2px solid var( --secundary)'}} 
+              style={{'color':'var( --secundary)', 'borderBottom':'2px solid var( --secundary)'}} 
               >
               <Link to={route.path}>{route.name}</Link>
             </button>) 
