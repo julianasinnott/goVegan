@@ -28,13 +28,6 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .header__navbar {
-    margin-right: 30px;
-  }
-
-  .header__navbar-section {
-    padding: 0px 20px;
-  }
   .main-adm__navbar {
     padding: 80px 20px 10px;
   }
