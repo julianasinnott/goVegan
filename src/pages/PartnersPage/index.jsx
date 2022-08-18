@@ -7,9 +7,15 @@ import MockImg from "/assets/mock-img.png";
 import "./index.css";
 import "./responsive.css";
 import { theme } from "../../utils/theme";
+import partnersInfo from "../../features/PartnersPage/partners.json"
+import { useState } from "react";
 
 export function PartnersPage() {
-  const partners = [
+  const partners = partnersInfo;
+  console.log(partners);
+  const [partnersArray, setPartnersArray] = useState(partners);
+
+  /* const partners = [
     {
       img: MockImg,
       title: "Paraíso Vegano",
@@ -73,7 +79,7 @@ export function PartnersPage() {
       description: "Rua Lobo da Costa 1492",
       urlContact: "https://www.google.com",
     },
-  ];
+  ]; */
   return (
     <div>
       <Header type={"USER"} />
