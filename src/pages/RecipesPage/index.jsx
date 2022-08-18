@@ -2,31 +2,13 @@ import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
 import { Button } from "../../components/Button";
 import { Card } from "../../components/Card/index";
-import ImgFoodMock from "/assets/img-food-mock.png";
 import "./index.css";
 import "./responsive.css";
 import { theme } from "../../utils/theme";
+import recipes from "../../features/RecipesPage/recipes.json"
 
 
 export function RecipesPage() {
-  const recipes = [
-    {
-      urlToImage: ImgFoodMock,
-      title: "Título da Receita",
-    },
-    {
-      urlToImage: ImgFoodMock,
-      title: "Título da Receita",
-    },
-    {
-      urlToImage: ImgFoodMock,
-      title: "Título da Receita",
-    },
-    {
-      urlToImage: ImgFoodMock,
-      title: "Título da Receita",
-    },
-  ];
   return (
     <div>
       <Header type={"USER"} />
@@ -42,7 +24,7 @@ export function RecipesPage() {
         </div>
         <section className="recipes-section">
           {recipes.map((recipe, index) => (
-            <Card key={index} item={recipe} color={theme.colors.quaternary} width={200}/>
+            <Card key={index} item={recipe} color={theme.colors.quaternary} width={200} height={250}/>
           ))}
         </section>
         <Button value="Carregar mais" color={theme.colors.secundary} />
