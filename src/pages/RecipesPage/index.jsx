@@ -7,22 +7,23 @@ import "./index.css";
 import "./responsive.css";
 import { theme } from "../../utils/theme";
 
+
 export function RecipesPage() {
   const recipes = [
     {
-      img: ImgFoodMock,
+      urlToImage: ImgFoodMock,
       title: "Título da Receita",
     },
     {
-      img: ImgFoodMock,
+      urlToImage: ImgFoodMock,
       title: "Título da Receita",
     },
     {
-      img: ImgFoodMock,
+      urlToImage: ImgFoodMock,
       title: "Título da Receita",
     },
     {
-      img: ImgFoodMock,
+      urlToImage: ImgFoodMock,
       title: "Título da Receita",
     },
   ];
@@ -41,7 +42,7 @@ export function RecipesPage() {
         </div>
         <section className="recipes-section">
           {recipes.map((recipe, index) => (
-            <Card key={index} item={recipe} urlImg={recipe.img} color={theme.colors.quaternary} width={200}/>
+            <Card key={index} item={recipe} color={theme.colors.quaternary} width={200}/>
           ))}
         </section>
         <Button value="Carregar mais" color={theme.colors.secundary} />
