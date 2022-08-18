@@ -53,7 +53,7 @@ export function BlogPage() {
           <Button
             value={loading ? 'Carregando...' : "Carregar mais"}
             color={theme.colors.tertiary}
-            handlepageSize={handlePageSize}
+            handlePageSize={handlePageSize}
           />
           {/* <div className="banner_blog">
             <h3 className="banner_title">Notícias mais recentes</h3>
