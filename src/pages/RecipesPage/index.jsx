@@ -6,9 +6,27 @@ import "./index.css";
 import "./responsive.css";
 import { theme } from "../../utils/theme";
 import recipes from "../../features/RecipesPage/recipes.json"
-
+import { useEffect, useState } from "react";
 
 export function RecipesPage() {
+  const [type, setType] = useState('SALGADAS')
+  function handleType(value) {
+    setType(value)
+  }
+  const render = recipes.map((recipe, index) => (
+    recipe.type === type &&
+    <Card
+      key={index}
+      item={recipe}
+      color={theme.colors.quaternary}
+      width={200}
+      height={250}
+     />
+  ))
+  useEffect(()=> {
+    render
+  }, [type])          
+ 
   return (
     <div>
       <Header type={"USER"} />
@@ -18,14 +36,12 @@ export function RecipesPage() {
           incríveis!
         </h1>
         <div className="recipes__select-section">
-          <Button value="SALGADAS" color={theme.colors.primary} />
+          <Button handleClick={handleType} value="SALGADAS" color={type === 'SALGADAS'? theme.colors.secundary : theme.colors.primary} />
           <div className="options-divisor">|</div>
-          <Button value="DOCES" color={theme.colors.secundary} />
+          <Button handleClick={handleType} value="DOCES" color={type === 'DOCES'? theme.colors.secundary : theme.colors.primary} />
         </div>
-        <section className="recipes-section">
-          {recipes.map((recipe, index) => (
-            <Card key={index} item={recipe} color={theme.colors.quaternary} width={200} height={250}/>
-          ))}
+        <section className="recipes-section">        
+          {render}
         </section>
         <Button value="Carregar mais" color={theme.colors.secundary} />
       </main>

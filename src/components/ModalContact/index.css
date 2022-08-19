@@ -3,6 +3,7 @@
   right: 150px;
   bottom: 300px;
   z-index: 1;
+  box-shadow: var(--shadow);
 }
 
 .modal-contact {
