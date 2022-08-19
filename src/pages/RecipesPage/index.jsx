@@ -7,6 +7,7 @@ import "./responsive.css";
 import { theme } from "../../utils/theme";
 import recipes from "../../features/RecipesPage/recipes.json"
 import { useEffect, useState } from "react";
+import { RecipeComplete } from "./components/RecipeComplete";
 
 export function RecipesPage() {
 
@@ -15,7 +16,11 @@ export function RecipesPage() {
   const [pageSizeSalgado, setPageSizeSalgado] = useState(5)
   const [pageSizeDoce, setPageSizeDoce] = useState(5)
   const [type, setType] = useState('SALGADAS')
-
+  const [hasClick, setHasClick] = useState(false)
+  const [selectedRecipe, setSelectedRecipe] = useState('')
+  function handleType(value) {
+    setType(value)
+  }
   if (type === 'SALGADAS') {
     recipes.map(recipe => {
       if (recipe.type === type && recipesArray.length < pageSizeSalgado) {
@@ -31,7 +36,6 @@ export function RecipesPage() {
       }
     });
   }
-
   function upadetArray(value) {
     if (type === 'SALGADAS') {
       setPageSizeSalgado(pageSizeSalgado + 5);
@@ -39,27 +43,39 @@ export function RecipesPage() {
       setPageSizeDoce(pageSizeDoce + 5);
     }
   }
-
-  function handleType(value) {
-    setType(value)
+  function handleClick(recipe) {
+    setHasClick(!hasClick)
+    setSelectedRecipe(recipe)
   }
   const render = recipesArray.map((recipe, index) => (
     recipe.type === type &&
     <Card
+      handleClick={() => handleClick(recipe)}
       key={index}
       item={recipe}
       color={theme.colors.quaternary}
       width={200}
       height={250}
-    />
+     />
   ))
   useEffect(() => {
     render
-  }, [type])
-
+  }, [type])          
+ 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [hasClick]);
+  
   return (
+    <>      
     <div>
       <Header type={"USER"} />
+      {hasClick?
+      <RecipeComplete
+        handleClick={handleClick}
+        selectedRecipe={selectedRecipe}
+      />
+      :
       <main className="recipes__main">
         <h1 className="recipes__title">
           Escolha uma das opções abaixo e mostraremos para você seleções
@@ -75,7 +91,9 @@ export function RecipesPage() {
         </section>
         <Button handleClick={upadetArray} value="Carregar mais" color={theme.colors.secundary} />
       </main>
+      }
       <Footer />
     </div>
+    </>
   );
 }

@@ -20,20 +20,18 @@ export function BlogPage() {
   function handlePageSize() {
     setPageSize(pageSize + 9)
   }
- 
-  async function getNews() {
-    try {
-      setLoading(true)
-      const response = await axios.get(`https://newsapi.org/v2/everything?q=VEG%20OR%20veganismo%20NOT%20MELANC%C3%93LICO%20NOT%20lexi%20NOT%20ANCA%20OR%20VEGETARIANA%20OR%20VEGANA%20OR%20vegano%20OR%20VEGETARIAN%20OR%20VEGAN%20OR%20VEGETARIANO&sortBy=POPULARITY&language=pt&pageSize=${pageSize}&apiKey=3499002376e14cdcb8fbe55906c464fc`);
-      setNewsArray(response.data.articles)
-    } catch (err) {
-      console.error(err);
-    } finally {
-      setLoading(false)
-    }
-  }
-
   useEffect(()=> {
+    async function getNews() {
+      try {
+        setLoading(true)
+        const response = await axios.get(`https://newsapi.org/v2/everything?q=VEG%20OR%20veganismo%20NOT%20MELANC%C3%93LICO%20NOT%20lexi%20NOT%20ANCA%20OR%20VEGETARIANA%20OR%20VEGANA%20OR%20vegano%20OR%20VEGETARIAN%20OR%20VEGAN%20OR%20VEGETARIANO&sortBy=POPULARITY&language=pt&pageSize=${pageSize}&apiKey=3499002376e14cdcb8fbe55906c464fc`);
+        setNewsArray(response.data.articles)
+      } catch (err) {
+        console.error(err);
+      } finally {
+        setLoading(false)
+      }
+    }
     getNews()
   }, [pageSize])
 
