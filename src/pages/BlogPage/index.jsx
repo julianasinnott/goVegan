@@ -47,7 +47,9 @@ export function BlogPage() {
           <SearchInput />
           <div className="group_news">
           {newsArray?.map((news, index) => (
-            <Card key={index} item={news} color={theme.colors.white} width={300} height={430} />
+            <a target='blank' href={news.url}>
+              <Card key={index} item={news} color={theme.colors.white} width={300} height={430} />
+            </a>
           ))}
           </div>
           <Button
