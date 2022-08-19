@@ -3,9 +3,10 @@ import './responsive.css'
 import { UserCircle } from 'phosphor-react'
 import { theme } from '../../utils/theme'
 
-export function Card({item, color, width, height}) {
+export function Card({item, color, width, height, handleClick}) {
   return (
     <div
+      onClick={handleClick}
       className='card'
       style={{
         backgroundColor: color,
