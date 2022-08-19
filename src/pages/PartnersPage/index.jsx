@@ -11,7 +11,6 @@ import partnersInfo from "../../features/PartnersPage/partners.json"
 import { useState } from "react";
 
 export function PartnersPage() {
-<<<<<<< HEAD
 
   const [pageSize, setPageSize] = useState(8)
 
@@ -34,73 +33,6 @@ export function PartnersPage() {
     setPartnersArray(filteredPartners)
   }
 
-=======
-  const partners = [
-    {
-      urlToImage: MockImg,
-      title: "Paraíso Vegano",
-      subtitle: "Pelotas",
-      description: "Rua Lobo da Costa 1492",
-      urlContact: "https://www.google.com",
-    },
-    {
-      urlToImage: MockImg,
-      title: "Paraíso Vegano",
-      subtitle: "Pelotas",
-      description: "Rua Lobo da Costa 1492",
-      urlContact: "https://www.google.com",
-    },
-    {
-      urlToImage: MockImg,
-      title: "Paraíso Vegano",
-      subtitle: "Pelotas",
-      description: "Rua Lobo da Costa 1492",
-      urlContact: "https://www.google.com",
-    },
-    {
-      urlToImage: MockImg,
-      title: "Paraíso Vegano",
-      subtitle: "Pelotas",
-      description: "Rua Lobo da Costa 1492",
-      urlContact: "https://www.google.com",
-    },
-    {
-      urlToImage: MockImg,
-      title: "Paraíso Vegano",
-      subtitle: "Pelotas",
-      description: "Rua Lobo da Costa 1492",
-      urlContact: "https://www.google.com",
-    },
-    {
-      urlToImage: MockImg,
-      title: "Paraíso Vegano",
-      subtitle: "Pelotas",
-      description: "Rua Lobo da Costa 1492",
-      urlContact: "https://www.google.com",
-    },
-    {
-      urlToImage: MockImg,
-      title: "Paraíso Vegano",
-      subtitle: "Pelotas",
-      description: "Rua Lobo da Costa 1492",
-      urlContact: "https://www.google.com",
-    },
-    {
-      urlToImage: MockImg,
-      title: "Paraíso Vegano",
-      subtitle: "Pelotas",
-      description: "Rua Lobo da Costa 1492",
-      urlContact: "https://www.google.com",
-    },
-    {
-      urlToImage: MockImg,
-      title: "Paraíso Vegano",
-      subtitle: "Pelotas",
-      description: "Rua Lobo da Costa 1492",
-      urlContact: "https://www.google.com",
-    },
-  ];
->>>>>>> dev
   return (
     <div>
       <Header type={"USER"} />
