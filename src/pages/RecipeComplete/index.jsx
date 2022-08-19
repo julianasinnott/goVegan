@@ -1,4 +1,5 @@
 import './index.css';
+import './responsive.css';
 
 import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
@@ -22,7 +23,7 @@ export function RecipeComplete() {
             <li className='recipe-complete__item'>100 g de tomate</li>
             <li className='recipe-complete__item'>10 g temperos</li>
           </ul>
-          <h2>Modo de fazer</h2>
+          <h2 className='recipe-complete__subtitle' >Modo de fazer</h2>
           <p className='recipe-complete__preparation-mode'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda esse temporibus soluta qui, harum ut cupiditate laboriosam, quis officia expedita nihil dignissimos laudantium explicabo maxime voluptate, enim est sed natus!</p>
         </div>
       </main>
