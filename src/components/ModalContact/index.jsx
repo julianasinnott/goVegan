@@ -3,8 +3,12 @@ import './responsive.css';
 
 import iconClose from '../../assets/images/icon-close.png';
 import * as React from 'react';
+import { useNavigate } from 'react-router-dom';
+import axios from "axios";
 
 export function ModalContact(props) {
+
+  const navigate = useNavigate();
 
   const [form, setForm] = React.useState({
     nome: '',
@@ -21,16 +25,38 @@ const handleChange = (e) => {
   });
 
 }
+
+function formSubmit(data) {
+  fetch("https://formsubmit.co/ajax/larissa11.cedaspy@gmail.com", {
+  method: "POST",
+  headers: { 
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+  },
+  body: JSON.stringify(data)
+})
+  .then(response => console.log( response.json()))
+  .then(data => console.log(data))
+  .catch(error => console.log(error))
+  
+}
+
 const handleSubmit = (e) => {
   e.preventDefault();
-
+  
   if(!validate()) return;
 
+  let data = {
+    nome: form.nome,
+    email: form.email,
+    mensagem: form.mensagem
+  }
+  console.log(data)
+  formSubmit(data)
+
   const saveForm = true;
-  
   if (saveForm) {
-    console.log("enviado")
-    console.log(form)
+    navigate('/modal-success');
     };
 }
 
@@ -57,9 +83,9 @@ function validate() {
           </section>
         </section>
         <h1 className='title-contact' >Gostaria de falar<br />com a gente?</h1>
-        <form action="https://formsubmit.co/larissa11.cedaspy@gmail.com" method="POST"
+        <form  method="POST"
         className='form-contact'
-        
+        onSubmit={handleSubmit}
         >
           <input 
           className='input__modal-contact' 
@@ -88,7 +114,7 @@ function validate() {
           value={form.mensagem}
           onChange={handleChange}
            /* cols="30" rows="10" */></textarea>
-          <button className='button__modal-contact' type="submit" onSubmit={handleSubmit}>Enviar</button>
+          <button className='button__modal-contact' type="submit">Enviar</button>
           <span className='spanErro'>{erro}</span>
         </form>
       </section>
