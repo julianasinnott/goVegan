@@ -2,17 +2,15 @@
   position: absolute;
   right: 150px;
   bottom: 300px;
-
-  /* width: 300px;
-  height: 300px; */
+  z-index: 1;
+  box-shadow: var(--shadow);
 }
 
 .modal-contact {
   width: 280px;
-  border-radius: 12px;
+  border-radius: 6px;
 
-  background-color: #FFFFFF;
-
+  background-color: var(--white);
 }
 
 .title-contact {
@@ -23,24 +21,22 @@
 }
 
 .form-contact {
-
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .input__modal-contact {
-  /* all: unset; */
-
   width: 225px;
   height: 30px;
-  border-radius: 12px;
+  border-radius: 6px;
 
   margin: 5px;
   padding-left: 16px;
 
 
-  background-color: #E6ECEB;
+  background-color: var(--InputFormaBakground);
+  color: var(--tertiary);
 }
 
 .message__modal-contact {
@@ -50,24 +46,32 @@
 
   width: 225px;
   height: 115px;
-  border-radius: 12px;
+  border-radius: 6px;
 
   margin: 8px;
-  padding-left: 16px;
+  padding: 8px 16px;
 
-  background-color: #E6ECEB;
+  color: var(--tertiary) ;
+  background-color: var(--InputFormaBakground);
 }
 
 .button__modal-contact {
   cursor: pointer;
   width: 225px;
-  height: 30px;
-  border-radius: 12px;
+  height: 40px;
+  border-radius: 6px;
 
-  background-color: #81B289;
-  color: #FFFFFF;
+  margin-bottom: 15px;
+
+  background-color: var(--primary);
+  color: var(--white);
 
   font-size: 20px;
+  cursor: pointer;
+}
+
+.button__modal-contact:hover {
+  opacity: 0.9;
 }
 
 .button__modal-contact:hover{
@@ -81,21 +85,19 @@
 .close-modal-icon__modal-contact {
   cursor: pointer;
 
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  background-color: #780083;
+  background-color: var(--tertiary);
 
   position: relative;
-  /* left: -25px; */
   left: -36%;
   bottom: 15px;
-
 }
 
 .icon__close__modal-contact {
@@ -105,5 +107,5 @@
 
 .spanErro {
  margin: 8px 0px;
-  color: red;
+ color: red;
 }
