@@ -15,9 +15,8 @@ export function PartnersPage() {
   const [pageSize, setPageSize] = useState(8)
 
   function handlePageSize() {
-    console.log('Entrou!');
-    setPageSize(pageSize + 4);
     upadetArray();
+    setPageSize(pageSize + 4);
   }
 
   function upadetArray() {
@@ -27,7 +26,7 @@ export function PartnersPage() {
   const partners = partnersInfo;
   const [partnersArray, setPartnersArray] = useState(partners.slice(0, 4));
   function handleSearch(value) {
-    value ? filterFoods(value.toLowerCase()) : setPartnersArray(partnersInfo)
+    value ? filterFoods(value.toLowerCase()) : setPartnersArray(partnersInfo.slice(0, pageSize - 4))
   }
   function filterFoods(value) {
     const filteredPartners = partnersInfo.filter(partners => partners.subtitle.toLowerCase().includes(value))
