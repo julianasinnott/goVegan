@@ -3,14 +3,27 @@ import './index.css';
 import iconClose from '../../assets/images/icon-close.png';
 import iconOk from '../../assets/images/icon-ok.png';
 import logoGoVegan from '../../assets/images/logo-go-vegan.png';
+import * as React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-export function ModalSuccess() {
+export function ModalSuccess(props) {
+  const navigate = useNavigate();
+
+  const [showModal, setShowModal] = React.useState(true)
+
+  function close() {
+    setShowModal(false)
+    if(!showModal){
+      navigate('/')
+    }
+  }
+
   return (
     <section className='container__modal-success'>
       <section className='modal-success'>
         <section className='close-modal__success' >
           <section className='background-icon-close__success' >
-            <img className='icon__close__modal-success' src={iconClose} alt="" />
+            <img className='icon__close__modal-success' src={iconClose} alt="" onClick={()=>{close()}} />
           </section>
         </section>
         <section className='success__container' >

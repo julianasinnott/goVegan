@@ -56,6 +56,7 @@
 }
 
 .button__modal-contact {
+  cursor: pointer;
   width: 225px;
   height: 40px;
   border-radius: 6px;
@@ -71,6 +72,10 @@
 
 .button__modal-contact:hover {
   opacity: 0.9;
+}
+
+.button__modal-contact:hover{
+  background-color: #6c9a74
 }
 
 .close-modal__modal-contact {
@@ -97,5 +102,10 @@
 
 .icon__close__modal-contact {
   width: 18px;
-  height: 16px;
+  height: 18px;
+}
+
+.spanErro {
+ margin: 8px 0px;
+ color: red;
 }
