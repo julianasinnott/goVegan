@@ -4,7 +4,7 @@ import './responsive.css';
 import iconClose from '../../assets/images/icon-close.png';
 import * as React from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from "axios";
+
 
 export function ModalContact(props) {
 
@@ -53,10 +53,11 @@ const handleSubmit = (e) => {
   }
   console.log(data)
   formSubmit(data)
+  setForm("")
 
   const saveForm = true;
   if (saveForm) {
-    navigate('/modal-success');
+    navigate('/modal-success')
     };
 }
 

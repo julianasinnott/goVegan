@@ -7,6 +7,7 @@ import idealizer3 from '/assets/idealizer-3.png'
 import idealizer4 from '/assets/idealizer-4.png'
 import React from 'react';
 
+
 import { ModalContact } from "../ModalContact/index";
 
 export function Footer({

@@ -7,15 +7,23 @@ import * as React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 export function ModalSuccess(props) {
+  const navigate = useNavigate();
 
   const [showModal, setShowModal] = React.useState(true)
+
+  function close() {
+    setShowModal(false)
+    if(!showModal){
+      navigate('/')
+    }
+  }
 
   return (
     <section className='container__modal-success'>
       <section className='modal-success'>
         <section className='close-modal__success' >
           <section className='background-icon-close__success' >
-            <img className='icon__close__modal-success' src={iconClose} alt="" onClick={() => props.setShowModal(false)} />
+            <img className='icon__close__modal-success' src={iconClose} alt="" onClick={()=>{close()}} />
           </section>
         </section>
         <section className='success__container' >
