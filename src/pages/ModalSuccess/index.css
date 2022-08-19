@@ -31,7 +31,7 @@
   align-items: center;
 
   background-color: #780083;
-
+  cursor: pointer;
   position: relative;
   left: -36%;
   bottom: 15px;
@@ -41,6 +41,7 @@
 .icon__close__modal-success {
   width: 18px;
   height: 18px;
+  cursor: pointer;
 }
 
 .success__container {
