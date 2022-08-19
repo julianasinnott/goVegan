@@ -1,10 +1,10 @@
 import './index.css'
 import './responsive.css'
 
-export function Button ({value, color, handlePageSize}) {
+export function Button ({value, color, handleClick}) {
   return(
     <button
-      onClick={handlePageSize}
+      onClick={() => handleClick(value)}
       style={{backgroundColor:color}}
       className='btn__component'
     >

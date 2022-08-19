@@ -3,10 +3,7 @@ import './responsive.css'
 import { UserCircle } from 'phosphor-react'
 import { theme } from '../../utils/theme'
 
-export function Card({ item, urlImg, color, width, height }) {
-  /* return (
-    <a target='blank' href={item.urlContact}>
-export function Card({item, color, width, height}) { */
+export function Card({item, color, width, height}) {
   return (
     <a target='blank' href={item.url}>
       <div
@@ -14,7 +11,7 @@ export function Card({item, color, width, height}) { */
         style={{
           backgroundColor: color,
           maxWidth: width,
-          height: height,
+          minHeight: height,
         }}
       >
         <img

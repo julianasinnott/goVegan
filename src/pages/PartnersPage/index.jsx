@@ -3,7 +3,6 @@ import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
 import { SearchInput } from "../../components/SearchInput";
 import { Card } from "../../components/Card";
-import MockImg from "/assets/mock-img.png";
 import "./index.css";
 import "./responsive.css";
 import { theme } from "../../utils/theme";
@@ -26,9 +25,9 @@ export function PartnersPage() {
   const partners = partnersInfo;
   const [partnersArray, setPartnersArray] = useState(partners.slice(0, 4));
   function handleSearch(value) {
-    value ? filterFoods(value.toLowerCase()) : setPartnersArray(partnersInfo.slice(0, pageSize - 4))
+    value ? filterPartners(value.toLowerCase()) : setPartnersArray(partnersInfo.slice(0, pageSize - 4))
   }
-  function filterFoods(value) {
+  function filterPartners(value) {
     const filteredPartners = partnersInfo.filter(partners => partners.subtitle.toLowerCase().includes(value))
     setPartnersArray(filteredPartners)
   }
@@ -41,21 +40,22 @@ export function PartnersPage() {
         <h1 className="partners__title"> Parceiros na sua cidade</h1>
         <SearchInput handleSearch={handleSearch} />
         <section className="partners__section">
-
           {partnersArray.length > 0 ? partnersArray.map((partner, index) => (
             <Card
               key={index}
               item={partner}
               color={theme.colors.quaternary}
-              width={243} />
+              width={243}
+              height={374}
+              />
           )) :
-            <p> Nenhum alimento encontrado :( </p>
+            <p> Nenhum parceiro encontrado :( </p>
           }
         </section>
         <Button
           value="Carregar mais"
           color={theme.colors.secundary}
-          handlePageSize={handlePageSize}
+          handleClick={handlePageSize}
         />
       </main>
       <Footer />
