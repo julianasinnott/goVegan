@@ -23,7 +23,8 @@ export function Header({ type }) {
                   route.path === window.location.pathname ?
                   {'color':'var(--secundary)', 'borderBottom':'2px solid var(--secundary)'}
                   :
-                  {'color':'var(--white)'}} 
+                  {'color':'var(--white)'}
+                } 
               >
               <Link to={route.path}>{route.name}</Link>
             </button>
