@@ -69,7 +69,7 @@ function validate() {
 }
 
   return (
-    <div className='modal-teste'>
+    <div className='modal-container'>
       <section className='modal-contact'>
         <section className='close-modal__modal-contact' >
           <section className='close-modal-icon__modal-contact' onClick={() => props.setShowModal(false)} >
