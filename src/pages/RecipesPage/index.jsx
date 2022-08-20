@@ -1,52 +1,60 @@
+import "./index.css";
+import "./responsive.css";
 import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
 import { Button } from "../../components/Button";
 import { Card } from "../../components/Card/index";
-import "./index.css";
-import "./responsive.css";
 import { theme } from "../../utils/theme";
-import recipes from "../../features/RecipesPage/recipes.json"
 import { useEffect, useState } from "react";
 import { RecipeComplete } from "./components/RecipeComplete";
+import recipes from "../../features/RecipesPage/recipes.json"
 
 export function RecipesPage() {
 
   const recipesArray = []
-  const recipeTeste = [];
   const [pageSizeSalgado, setPageSizeSalgado] = useState(5)
   const [pageSizeDoce, setPageSizeDoce] = useState(5)
   const [type, setType] = useState('SALGADAS')
   const [hasClick, setHasClick] = useState(false)
   const [selectedRecipe, setSelectedRecipe] = useState('')
+
   function handleType(value) {
     setType(value)
   }
-  if (type === 'SALGADAS') {
-    recipes.map(recipe => {
-      if (recipe.type === type && recipesArray.length < pageSizeSalgado) {
-        let item = recipe
-        recipesArray.push(item);
-      }
-    });
-  } else {
-    recipes.map(recipe => {
-      if (recipe.type === type && recipesArray.length < pageSizeDoce) {
-        let item = recipe
-        recipesArray.push(item);
-      }
-    });
+
+  function handlePageSize() {
+    if (type === 'SALGADAS') {
+      recipes.map(recipe => {
+        if (recipe.type === type && recipesArray.length < pageSizeSalgado) {
+          let item = recipe
+          recipesArray.push(item);
+        }
+      });
+    } else {
+      recipes.map(recipe => {
+        if (recipe.type === type && recipesArray.length < pageSizeDoce) {
+          let item = recipe
+          recipesArray.push(item);
+        }
+      });
+    }
   }
-  function upadetArray(value) {
+
+  handlePageSize()
+
+  function upadetArray() {
     if (type === 'SALGADAS') {
       setPageSizeSalgado(pageSizeSalgado + 5);
     } else {
       setPageSizeDoce(pageSizeDoce + 5);
     }
   }
+
   function handleClick(recipe) {
     setHasClick(!hasClick)
     setSelectedRecipe(recipe)
   }
+
   const render = recipesArray.map((recipe, index) => (
     recipe.type === type &&
     <Card
@@ -58,6 +66,7 @@ export function RecipesPage() {
       height={250}
      />
   ))
+  
   useEffect(() => {
     render
   }, [type])          

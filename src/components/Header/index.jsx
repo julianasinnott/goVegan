@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom";
 import '../../../global.css'
 import './index.css'
 import './responsive.css'
-import headerLogo from '/assets/white-logo.png'
+import { Link } from "react-router-dom";
 import { routes } from './routes'
+import headerLogo from '/assets/white-logo.png'
 
 export function Header({ type }) {
   function handleLogout() {

@@ -1,10 +1,9 @@
 import './index.css';
-
+import { useNavigate } from 'react-router-dom';
 import iconClose from '../../assets/images/icon-close.png';
 import iconOk from '../../assets/images/icon-ok.png';
 import logoGoVegan from '../../assets/images/logo-go-vegan.png';
 import * as React from 'react';
-import { useNavigate } from 'react-router-dom';
 
 export function ModalSuccess(props) {
   const navigate = useNavigate();

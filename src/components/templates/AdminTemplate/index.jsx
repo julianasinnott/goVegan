@@ -1,6 +1,6 @@
+import "./index.css";
 import { Header } from "../../Header";
 import { Container } from "../../Container";
-import "./index.css";
 import { Footer } from "../../Footer";
 import { useNavigate } from 'react-router-dom';
 

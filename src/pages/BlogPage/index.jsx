@@ -6,9 +6,9 @@ import { SearchInput } from "../../components/SearchInput";
 import {Button} from "../../components/Button"
 import { theme } from "../../utils/theme";
 import { Card } from "../../components/Card";
-import axios from "axios";
 import { useEffect } from "react";
 import { useState } from "react";
+import axios from "axios";
 
 
 export function BlogPage() {
@@ -20,6 +20,7 @@ export function BlogPage() {
   function handlePageSize() {
     setPageSize(pageSize + 9)
   }
+  
   useEffect(()=> {
     async function getNews() {
       try {
