@@ -1,8 +1,8 @@
+import './index.css'
+import './responsive.css'
 import { CardList } from "../../../CardList";
 import { SearchInput } from "../../../SearchInput";
 import { Plus } from "phosphor-react"
-import './index.css'
-import './responsive.css'
 
 export function AdminSection({
   title,

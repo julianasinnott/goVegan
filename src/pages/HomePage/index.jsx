@@ -1,8 +1,7 @@
-import { Header } from "../../components/Header/index";
-import { Footer } from "../../components/Footer/index";
-
 import "./index.css";
 import "./responsive.css";
+import { Header } from "../../components/Header/index";
+import { Footer } from "../../components/Footer/index";
 
 export function App() {
   return (

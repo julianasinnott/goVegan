@@ -1,15 +1,11 @@
 import './index.css';
 import './responsive.css';
-
+import { useNavigate } from 'react-router-dom';
 import iconClose from '../../assets/images/icon-close.png';
 import * as React from 'react';
-import { useNavigate } from 'react-router-dom';
-
 
 export function ModalContact(props) {
-
   const navigate = useNavigate();
-
   const [form, setForm] = React.useState({
     nome: '',
     email: '',
@@ -23,7 +19,6 @@ const handleChange = (e) => {
     ...form,
     [e.target.name]: e.target.value
   });
-
 }
 
 function formSubmit(data) {
@@ -37,8 +32,7 @@ function formSubmit(data) {
 })
   .then(response => console.log( response.json()))
   .then(data => console.log(data))
-  .catch(error => console.log(error))
-  
+  .catch(error => console.log(error))  
 }
 
 const handleSubmit = (e) => {
@@ -51,7 +45,7 @@ const handleSubmit = (e) => {
     email: form.email,
     mensagem: form.mensagem
   }
-  console.log(data)
+
   formSubmit(data)
   setForm("")
 
@@ -71,7 +65,6 @@ function validate() {
   if(form.mensagem > 300){
     return setErro("Máximo de 300 caracteres.")
   }
-
   return true
 }
 
@@ -89,32 +82,33 @@ function validate() {
         onSubmit={handleSubmit}
         >
           <input 
-          className='input__modal-contact' 
-          placeholder='Deixe seu nome completo'
-          required 
-          type="text" 
-          name="nome"
-          value={form.nome}
-          pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$"
-          onChange={handleChange}
+            className='input__modal-contact' 
+            placeholder='Deixe seu nome completo'
+            required 
+            type="text" 
+            name="nome"
+            value={form.nome}
+            pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$"
+            onChange={handleChange}
           />
           <input 
-          className='input__modal-contact' 
-          placeholder='Deixe seu E-mail'
-          required 
-          type="text" 
-          name="email"
-          value={form.email}
-          onChange={handleChange}
+            className='input__modal-contact' 
+            placeholder='Deixe seu E-mail'
+            required 
+            type="text" 
+            name="email"
+            value={form.email}
+            onChange={handleChange}
           />
           <textarea 
-          placeholder='Deixe sua mensagem' 
-          required
-          name="mensagem" 
-          className='message__modal-contact'
-          value={form.mensagem}
-          onChange={handleChange}
-           /* cols="30" rows="10" */></textarea>
+            placeholder='Deixe sua mensagem' 
+            required
+            name="mensagem" 
+            className='message__modal-contact'
+            value={form.mensagem}
+            onChange={handleChange}
+           >
+           </textarea>
           <button className='button__modal-contact' type="submit">Enviar</button>
           <span className='spanErro'>{erro}</span>
         </form>

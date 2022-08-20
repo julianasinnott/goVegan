@@ -1,27 +1,19 @@
 import '../../../global.css'
 import './index.css'
 import './responsive.css'
+import { ModalContact } from "../ModalContact/index";
 import idealizer1 from '/assets/idealizer-1.png'
 import idealizer2 from '/assets/idealizer-2.png'
 import idealizer3 from '/assets/idealizer-3.png'
 import idealizer4 from '/assets/idealizer-4.png'
 import React from 'react';
 
-
-import { ModalContact } from "../ModalContact/index";
-
 export function Footer({
   hasIdealizers = true
 }) {
   const [showModal, setShowModal] = React.useState(false);
-
-
-
   const handleModal = () => {
-
-
     setShowModal(true)
-
   }
 
   return (
