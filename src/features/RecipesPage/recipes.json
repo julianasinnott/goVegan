@@ -1,5 +1,7 @@
 [
   {
+    "id": 1,
+    "slug": "molho-pesto",
     "urlToImage": "https://img.itdg.com.br/tdg/images/recipes/000/005/887/346227/346227_original.jpg?mode=crop&width=710&height=400",
     "title": "Molho Pesto",
     "subtitle": "Molho Pesto de Hortelã",
@@ -8,6 +10,8 @@
     "type": "SALGADAS"
   },
   {
+    "id": 2,
+    "slug": "pao-de-chia",
     "urlToImage": "http://4.bp.blogspot.com/-CAUtQEu1w9M/U4pYzu8cdoI/AAAAAAAAH6k/RvVA33z3v_4/s1600/DSCN8278.JPG",
     "title": "Pão de Chia",
     "subtitle": "Pão de chia vegano, sem glúten e sem lactose",
@@ -16,6 +20,8 @@
     "type": "SALGADAS"
   },
   {
+    "id": 3,
+    "slug": "bolo-de-limao",
     "urlToImage": "https://vovopalmirinha.com.br/wp-content/uploads/2020/03/vovo-palmirinha-bolo-de-limao.jpg",
     "title": "Bolo de Limão",
     "subtitle": "Bolo de Limão Vegano, sem leite e ovos",
@@ -24,6 +30,8 @@
     "type": "DOCES"
   },
   {
+    "id": 4,
+    "slug": "bolo-branco",
     "urlToImage": "https://truffle-assets.imgix.net/ea03e15f-bolo-beijinho-l-thumb.jpg",
     "title": "Bolo Branco",
     "subtitle": "Bolo Branco com Recheio de Abacaxi com Coco",
@@ -32,6 +40,8 @@
     "type": "DOCES"
   },
   {
+    "id": 5,
+    "slug": "bolo-prestigio",
     "urlToImage": "https://amorpelacomida.com.br/wp-content/uploads/2018/06/bolo-prestigio-fit-simples-de-forno-aniversario-c-recheio.jpg",
     "title": "Bolo Prestígio",
     "subtitle": "Bolo Prestígio Sem Glúten",
@@ -40,6 +50,8 @@
     "type": "DOCES"
   },
   {
+    "id": 6,
+    "slug": "almondegas-de-tofu",
     "urlToImage": "http://2.bp.blogspot.com/_nd08FVkVLog/Smdu3ZO7Q8I/AAAAAAAADRI/W0kGafcl5yw/w1200-h630-p-k-no-nu/almondegastofu.jpg",
     "title": "Almôndegas de Tofu",
     "subtitle": "Almôndegas Veganas feitas com Tofu",
@@ -48,6 +60,8 @@
     "type": "SALGADAS"
   },
   {
+    "id": 7,
+    "slug": "chilli-vegano",
     "urlToImage": "https://thepeskyvegan.com/wp-content/uploads/2019/12/easy-vegan-chilli-feature.jpg",
     "title": "Chilli Vegano",
     "subtitle": "Chilli Vegano",
@@ -56,6 +70,8 @@
     "type": "SALGADAS"
   },
   {
+    "id": 1,
+    "slug": "molho-pesto",
     "urlToImage": "https://img.itdg.com.br/tdg/images/recipes/000/005/887/346227/346227_original.jpg?mode=crop&width=710&height=400",
     "title": "Molho Pesto",
     "subtitle": "Molho Pesto de Hortelã",
@@ -64,6 +80,8 @@
     "type": "SALGADAS"
   },
   {
+    "id": 2,
+    "slug": "pao-de-chia",
     "urlToImage": "http://4.bp.blogspot.com/-CAUtQEu1w9M/U4pYzu8cdoI/AAAAAAAAH6k/RvVA33z3v_4/s1600/DSCN8278.JPG",
     "title": "Pão de Chia",
     "subtitle": "Pão de chia vegano, sem glúten e sem lactose",
@@ -72,6 +90,8 @@
     "type": "SALGADAS"
   },
   {
+    "id": 3,
+    "slug": "bolo-de-limao",
     "urlToImage": "https://vovopalmirinha.com.br/wp-content/uploads/2020/03/vovo-palmirinha-bolo-de-limao.jpg",
     "title": "Bolo de Limão",
     "subtitle": "Bolo de Limão Vegano, sem leite e ovos",
@@ -80,6 +100,8 @@
     "type": "DOCES"
   },
   {
+    "id": 4,
+    "slug": "bolo-branco",
     "urlToImage": "https://truffle-assets.imgix.net/ea03e15f-bolo-beijinho-l-thumb.jpg",
     "title": "Bolo Branco",
     "subtitle": "Bolo Branco com Recheio de Abacaxi com Coco",
@@ -88,6 +110,8 @@
     "type": "DOCES"
   },
   {
+    "id": 5,
+    "slug": "bolo-prestigio",
     "urlToImage": "https://amorpelacomida.com.br/wp-content/uploads/2018/06/bolo-prestigio-fit-simples-de-forno-aniversario-c-recheio.jpg",
     "title": "Bolo Prestígio",
     "subtitle": "Bolo Prestígio Sem Glúten",
@@ -96,6 +120,8 @@
     "type": "DOCES"
   },
   {
+    "id": 6,
+    "slug": "almondegas-de-tofu",
     "urlToImage": "http://2.bp.blogspot.com/_nd08FVkVLog/Smdu3ZO7Q8I/AAAAAAAADRI/W0kGafcl5yw/w1200-h630-p-k-no-nu/almondegastofu.jpg",
     "title": "Almôndegas de Tofu",
     "subtitle": "Almôndegas Veganas feitas com Tofu",
@@ -104,6 +130,8 @@
     "type": "SALGADAS"
   },
   {
+    "id": 7,
+    "slug": "chilli-vegano",
     "urlToImage": "https://thepeskyvegan.com/wp-content/uploads/2019/12/easy-vegan-chilli-feature.jpg",
     "title": "Chilli Vegano",
     "subtitle": "Chilli Vegano",
@@ -112,6 +140,8 @@
     "type": "SALGADAS"
   },
   {
+    "id": 1,
+    "slug": "molho-pesto",
     "urlToImage": "https://img.itdg.com.br/tdg/images/recipes/000/005/887/346227/346227_original.jpg?mode=crop&width=710&height=400",
     "title": "Molho Pesto",
     "subtitle": "Molho Pesto de Hortelã",
@@ -120,6 +150,8 @@
     "type": "SALGADAS"
   },
   {
+    "id": 2,
+    "slug": "pao-de-chia",
     "urlToImage": "http://4.bp.blogspot.com/-CAUtQEu1w9M/U4pYzu8cdoI/AAAAAAAAH6k/RvVA33z3v_4/s1600/DSCN8278.JPG",
     "title": "Pão de Chia",
     "subtitle": "Pão de chia vegano, sem glúten e sem lactose",
@@ -128,6 +160,8 @@
     "type": "SALGADAS"
   },
   {
+    "id": 3,
+    "slug": "bolo-de-limao",
     "urlToImage": "https://vovopalmirinha.com.br/wp-content/uploads/2020/03/vovo-palmirinha-bolo-de-limao.jpg",
     "title": "Bolo de Limão",
     "subtitle": "Bolo de Limão Vegano, sem leite e ovos",
@@ -136,6 +170,8 @@
     "type": "DOCES"
   },
   {
+    "id": 4,
+    "slug": "bolo-branco",
     "urlToImage": "https://truffle-assets.imgix.net/ea03e15f-bolo-beijinho-l-thumb.jpg",
     "title": "Bolo Branco",
     "subtitle": "Bolo Branco com Recheio de Abacaxi com Coco",
@@ -144,6 +180,8 @@
     "type": "DOCES"
   },
   {
+    "id": 5,
+    "slug": "bolo-prestigio",
     "urlToImage": "https://amorpelacomida.com.br/wp-content/uploads/2018/06/bolo-prestigio-fit-simples-de-forno-aniversario-c-recheio.jpg",
     "title": "Bolo Prestígio",
     "subtitle": "Bolo Prestígio Sem Glúten",
@@ -152,6 +190,8 @@
     "type": "DOCES"
   },
   {
+    "id": 6,
+    "slug": "almondegas-de-tofu",
     "urlToImage": "http://2.bp.blogspot.com/_nd08FVkVLog/Smdu3ZO7Q8I/AAAAAAAADRI/W0kGafcl5yw/w1200-h630-p-k-no-nu/almondegastofu.jpg",
     "title": "Almôndegas de Tofu",
     "subtitle": "Almôndegas Veganas feitas com Tofu",
@@ -160,6 +200,8 @@
     "type": "SALGADAS"
   },
   {
+    "id": 7,
+    "slug": "chilli-vegano",
     "urlToImage": "https://thepeskyvegan.com/wp-content/uploads/2019/12/easy-vegan-chilli-feature.jpg",
     "title": "Chilli Vegano",
     "subtitle": "Chilli Vegano",
