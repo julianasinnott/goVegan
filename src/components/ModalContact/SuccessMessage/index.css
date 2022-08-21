@@ -1,0 +1,38 @@
+.success__container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+  color: var(--secundary);
+}
+
+.title-success {
+  font-size: 18px;
+  text-align: center;
+}
+
+.background-image-ok__modal-success {
+  background-color: #81B289;
+
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-ok__modal-success {
+  width: 60px;
+}
+
+.subtitle-success {
+  font-size: 18px;
+}
+
+.logo-go-vegan__modal-success {
+  width: 80px;
+}

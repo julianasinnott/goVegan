@@ -9,8 +9,10 @@
 .modal-contact {
   width: 280px;
   border-radius: 6px;
+  height: 370px;
 
   background-color: var(--white);
+  color: var(--secundary);
 }
 
 .title-contact {
@@ -24,6 +26,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 14px;
 }
 
 .input__modal-contact {
@@ -31,12 +34,11 @@
   height: 30px;
   border-radius: 6px;
 
-  margin: 5px;
   padding-left: 16px;
-
 
   background-color: var(--InputFormaBakground);
   color: var(--tertiary);
+  box-shadow: var(--shadow);
 }
 
 .message__modal-contact {
@@ -48,17 +50,17 @@
   height: 115px;
   border-radius: 6px;
 
-  margin: 8px;
   padding: 8px 16px;
 
   color: var(--tertiary) ;
   background-color: var(--InputFormaBakground);
+  box-shadow: var(--shadow);
 }
 
 .button__modal-contact {
   cursor: pointer;
   width: 225px;
-  height: 40px;
+  height: 44px;
   border-radius: 6px;
 
   margin-bottom: 15px;
