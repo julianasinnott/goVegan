@@ -22,7 +22,7 @@ export function ModalContact({setShowModal}) {
   }
 
   function formSubmit(data) {
-    fetch("https://formsubmit.co/ajax/julianasinnott@outlook.com", {
+    fetch("https://formsubmit.co/ajax/larissa11.cedaspy@gmail.com", {
     method: "POST",
     headers: { 
         'Content-Type': 'application/json',
