@@ -12,7 +12,8 @@ export function ModalContact({setShowModal}) {
     mensagem: ''
   });
   const [erro, setErro] = React.useState("")
-  const[saveForm, setSaveForm] = useState('')
+  const [saveForm, setSaveForm] = useState('')
+  const [isFormSend, setIsFormSend] = useState('')
 
   const handleChange = (e) => {
     setForm({
@@ -22,20 +23,17 @@ export function ModalContact({setShowModal}) {
   }
 
   function formSubmit(data) {
+    setIsFormSend(true)
     fetch("https://formsubmit.co/ajax/larissa11.cedaspy@gmail.com", {
-    method: "POST",
-    headers: { 
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-    },
-    body: JSON.stringify(data)
-  })
-    .then(response => console.log( response.json()))
-    .then(data => console.log(data))
+      method: "POST",
+      headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+    .then(()=> setSaveForm(true))
     .catch(error => console.log(error))
-    .finally(
-      setSaveForm('true')
-    )
   }
 
   const handleSubmit = (e) => {
@@ -80,7 +78,7 @@ export function ModalContact({setShowModal}) {
               <SuccessMessage />
             :
             <>
-              <h1 className='title-contact' >Gostaria de falar<br />com a gente?</h1>
+              <h1 className='title-contact' > Gostaria de falar <br/> com a gente? </h1>
               <form  method="POST"
                 className='form-contact'
                 onSubmit={handleSubmit}
@@ -113,7 +111,9 @@ export function ModalContact({setShowModal}) {
                   onChange={handleChange}
                 >
                 </textarea>
-                <button className='button__modal-contact' type="submit">Enviar</button>
+                <button className='button__modal-contact' type="submit" >
+                  { isFormSend ? 'Enviando...' : 'Enviar' }   
+                </button>
                 <span className='spanErro'>{erro}</span>
               </form>
             </> 
