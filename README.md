@@ -48,9 +48,15 @@ Acesso:
 
 🔗 https://www.figma.com/file/Sxdwav78lwnCfy2E4Pmvbx/GoVegan?node-id=0%3A1 🔗
 
+## API fake - Json Server
+
+https://github.com/julianasinnott/go-vegan-API/blob/main/README.md
+
 ## | Como rodar |
 
 Para clonar e rodar esse projeto você precisa ter instalado: [Git](https://git-scm.com/) e [NodeJS](https://nodejs.org/en/) 
+
+----- <h5>CERTIFIQUE-SE DE RODAR A API ANTES DO FRONT-END ⚠</h5> -----
 
 <hr>
 No terminal:
