@@ -18,7 +18,7 @@ export function PartnersPage() {
   useEffect(()=> {
     async function getPartners() {
       try {
-        const response = await axios.get(`http://localhost:3000/partners?q=${key}`)
+        const response = await axios.get(`http://localhost:3000/partners?_page=1&_limit=${pageSize}&q=${key}`)
         setPartners(response.data)        
       }
       catch (err) {
@@ -26,27 +26,14 @@ export function PartnersPage() {
       }
     }
     getPartners()
-  },[key]) 
-
-  useEffect(()=> {
-    async function getPartners() {
-      try {
-        const response = await axios.get(`http://localhost:3000/partners?_page=1&_limit=${pageSize}`)
-        setPartners(response.data)     
-      }
-      catch (err) {
-        console.error(err);
-      }
-    }
-    getPartners()
-  }, [pageSize])  
+  },[key, pageSize]) 
 
   function handlePageSize() {
     setPageSize(pageSize + 4);
   }
 
   function handleSearch(value) {
-    value ? setKey(value) : setPartners(partners.slice(0, pageSize))
+    setKey(value) 
   }
   
   return (
