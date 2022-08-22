@@ -19,7 +19,7 @@ export function RecipesPage() {
   useEffect(()=> {
     async function getRecipes() {
       try {
-        const response = await axios.get('http://localhost:3000/recipes')
+        const response = await axios.get('https://go-vegan-api.herokuapp.com/recipes')
         console.log(response)
         setRecipes(response.data)
       }
