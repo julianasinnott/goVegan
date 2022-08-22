@@ -33,6 +33,7 @@ Este App foi criado com [Vite](https://vitejs.dev/) <br>
 [ReactJS](https://reactjs.org/) <br>
 [NodeJS](https://nodejs.org/en/) <br>
 [React Router](https://reactrouter.com/) <br>
+[JSON Server](https://github.com/typicode/json-server#getting-started) <br>
 [Phospor Icons](https://phosphoricons.com/) <br>
 [CSS](https://www.w3.org/Style/CSS/Overview.en.html) <br>
 
@@ -48,15 +49,19 @@ Acesso:
 
 🔗 https://www.figma.com/file/Sxdwav78lwnCfy2E4Pmvbx/GoVegan?node-id=0%3A1 🔗
 
-## API fake - Json Server
+## API fake - JSON Server
 
-https://github.com/julianasinnott/go-vegan-API/blob/main/README.md
+Deploy:
+
+https://go-vegan-api.herokuapp.com/
+
+Documentação JSON Server:
+
+https://github.com/typicode/json-server#getting-started
 
 ## | Como rodar |
 
 Para clonar e rodar esse projeto você precisa ter instalado: [Git](https://git-scm.com/) e [NodeJS](https://nodejs.org/en/) 
-
------ <h5>CERTIFIQUE-SE DE RODAR A API ANTES DO FRONT-END ⚠</h5> -----
 
 <hr>
 No terminal:
