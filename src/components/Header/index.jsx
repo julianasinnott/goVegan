@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom";
 import '../../../global.css'
 import './index.css'
 import './responsive.css'
-import headerLogo from '/assets/white-logo.png'
+import { Link } from "react-router-dom";
 import { routes } from './routes'
+import headerLogo from '/assets/white-logo.png'
 
 export function Header({ type }) {
   function handleLogout() {
@@ -15,23 +15,20 @@ export function Header({ type }) {
         <img className="header__logo" src={headerLogo} alt="Logo GoVegan"/>
         <nav className="header__navbar">
           <div className="header__navbar-section">
-            {routes[type].routes.map(route => (
-              route.path === window.location.pathname ?
-              (<button 
-              key={route.path} 
-              className="header__navbar__item"
-              style={{'color':'var(--secundary)', 'borderBottom':'2px solid var(--secundary)'}} 
+            {routes[type].routes.map(route => (              
+              <button 
+                key={route.path} 
+                className="header__navbar__item"
+                style={
+                  route.path === window.location.pathname ?
+                  {'color':'var(--secundary)', 'borderBottom':'2px solid var(--secundary)'}
+                  :
+                  {'color':'var(--white)'}
+                } 
               >
               <Link to={route.path}>{route.name}</Link>
-            </button>) 
-            :
-            (<button 
-            key={route.path} 
-            className="header__navbar__item" 
-            >
-            <Link to={route.path}>{route.name}</Link>
-          </button>)       
-            ))}   
+            </button>
+           ))}   
           </div>
           <div className="header__navbar__purple-btn">
             <button

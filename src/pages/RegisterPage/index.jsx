@@ -1,12 +1,8 @@
 import './index.css'
 import './responsive.css'
 import * as React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
 
 export function RegisterPage() {
-
-  const navigate = useNavigate();
-
   const [form, setForm] = React.useState({
       name: '',
       cpf: '',
@@ -36,32 +32,32 @@ export function RegisterPage() {
             com a gente!
           </h1>
           <input 
-          className='register__form__name input' 
-          type="text" 
-          name='name'
-          value={form.name}
-          onChange={handleChange} 
-          placeholder='Seu nome completo' 
-          required 
+            className='register__form__name input' 
+            type="text" 
+            name='name'
+            value={form.name}
+            onChange={handleChange} 
+            placeholder='Seu nome completo' 
+            required 
           />
 
           <input 
-          className='register__form__cpf input' 
-          type="text" 
-          name='cpf'
-          value={form.cpf}
-          onChange={handleChange} 
-          placeholder='Seu CPF' 
-          required 
+            className='register__form__cpf input' 
+            type="text" 
+            name='cpf'
+            value={form.cpf}
+            onChange={handleChange} 
+            placeholder='Seu CPF' 
+            required 
           />
           <input 
-          className='register__form__email input' 
-          type="email" 
-          name='email'
-          value={form.email}
-          onChange={handleChange}  
-          placeholder='Seu melhor email' 
-          required 
+            className='register__form__email input' 
+            type="email" 
+            name='email'
+            value={form.email}
+            onChange={handleChange}  
+            placeholder='Seu melhor email' 
+            required 
           />
 
           <button className='register__form__button input' type="submit">

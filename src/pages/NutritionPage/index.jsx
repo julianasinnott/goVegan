@@ -4,18 +4,20 @@ import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
 import { SearchInput } from "../../components/SearchInput";
 import { FoodCard } from "./components/FoodCard";
-import tacoTable from "../../features/NutritionPage/taco.json"
 import { useState } from "react";
+import tacoTable from "../../features/NutritionPage/taco.json"
 
 export function NutritionPage() {
-  const inicialFoodsArray = tacoTable.slice(0,25)
+  const inicialFoodsArray = tacoTable.slice(0, 25)
   const [foodsArray, setFoodsArray] = useState(inicialFoodsArray)
+
   function handleSearch(value) {
     value ? filterFoods(value.toLowerCase()) : setFoodsArray(inicialFoodsArray)
   }
+  
   function filterFoods(value) {
     const filteredFoods = tacoTable.filter(food => food.Descricao.toLowerCase().includes(value))
-    setFoodsArray(filteredFoods.slice(0,25))
+    setFoodsArray(filteredFoods.slice(0, 25))
   }
 
   return (
@@ -29,10 +31,10 @@ export function NutritionPage() {
           Busque as informações nutricionais na Tabela TACO
         </h2>
         <p className="nutrition__info">
-          Informações baseadas em 100g do alimento 
+          Informações baseadas em 100g do alimento
         </p>
         <SearchInput handleSearch={handleSearch} />
-        {foodsArray.length > 0  ? foodsArray.map((item, index) => (
+        {foodsArray.length > 0 ? foodsArray.map((item, index) => (
           <FoodCard key={index} tableItem={item} />
         )) : (
           <p> Nenhum alimento encontrado :( </p>

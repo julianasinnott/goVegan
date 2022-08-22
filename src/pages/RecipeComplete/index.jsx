@@ -1,32 +1,53 @@
+import { Pizza, Cookie } from 'phosphor-react';
+import { Footer } from '../../components/Footer';
+import { Header } from '../../components/Header';
+import { useParams } from 'react-router-dom';
+import { useState } from 'react';
+import { useEffect } from 'react';
+import axios from "axios"
 import './index.css';
-
-import { Footer } from "../../components/Footer";
-import { Header } from "../../components/Header";
-
-import image from "../../assets/recipe-complete-1.png";
+import './responsive.css';
 
 export function RecipeComplete() {
+  const [selectedRecipe, setSelectedRecipe] = useState([])
+  const { slug } = useParams()
+
+  useEffect(()=> {
+    async function getRecipes() {
+      try {
+        const response = await axios.get(`https://go-vegan-api.herokuapp.com/recipes?slug=${slug}`)
+        setSelectedRecipe(response.data[0]) 
+      }
+      catch (err) {
+        console.error(err);
+      }
+    }
+    getRecipes()
+  },[]) 
+
   return (
-    <div className='container'>
+    <>
       <Header type={"USER"} />
       <main className='recipe-complete'>
+        {selectedRecipe.type === 'DOCES'?
+          <Cookie size={55} className='recipe-complete__icon' />
+        :
+          <Pizza size={55} className='recipe-complete__icon' />
+        }
         <div className='recipe-complete__image-container'>
-          <img className='recipe-complete__image' src={image} alt="" />
+          <img className='recipe-complete__image' src={selectedRecipe.urlToImage} alt="" />
         </div>
-        <h1 className='recipe-complete__title' >Avocado Toast</h1>
-        <div className='recipe-complete__preparation'>
+        <h1 className='recipe-complete__title' >{selectedRecipe.title}</h1>
+        <section className='recipe-complete__preparation'>
           <h2 className='recipe-complete__subtitle' >Ingredientes</h2>
-          <ul className='recipe-complete__ingredients'>
-            <li className='recipe-complete__item'>100 g de abacate</li>
-            <li className='recipe-complete__item'>2 fatias de pão 9 grãos</li>
-            <li className='recipe-complete__item'>100 g de tomate</li>
-            <li className='recipe-complete__item'>10 g temperos</li>
-          </ul>
-          <h2>Modo de fazer</h2>
-          <p className='recipe-complete__preparation-mode'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda esse temporibus soluta qui, harum ut cupiditate laboriosam, quis officia expedita nihil dignissimos laudantium explicabo maxime voluptate, enim est sed natus!</p>
-        </div>
+          <section className='recipe-complete__ingredients'>
+            <p className='recipe-complete__item'>{selectedRecipe.ingredients}</p>
+          </section>
+          <h2 className='recipe-complete__subtitle' >Modo de fazer</h2>
+          <p className='recipe-complete__preparation-mode'>{selectedRecipe.phases}</p>
+        </section>
       </main>
       <Footer />
-    </div>
+    </>
   )
 }

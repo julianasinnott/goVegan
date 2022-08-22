@@ -11,6 +11,15 @@
   width: 100%;
 }
 
+.recipe-complete__icon {
+  position: fixed;
+  top: 30%;
+  left: 50px;
+  padding: 5px;
+  color: var(--secundary);
+  background-color: var(--primary);
+  border-radius: 50%;
+}
 
 .recipe-complete__title {
   text-align: center;
