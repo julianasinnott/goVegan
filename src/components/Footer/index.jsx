@@ -2,10 +2,9 @@ import '../../../global.css'
 import './index.css'
 import './responsive.css'
 import { ModalContact } from "../ModalContact/index";
-import idealizer1 from '/assets/idealizer-1.png'
-import idealizer2 from '/assets/idealizer-2.png'
-import idealizer3 from '/assets/idealizer-3.png'
-import idealizer4 from '/assets/idealizer-4.png'
+import juliana from '../../assets/images/Juliana.png'
+import lavinia from '../../assets/images/Lavinia.jpg'
+import edilson from '../../assets/images/Edilson.jpg'
 import React from 'react';
 
 export function Footer({
@@ -29,10 +28,15 @@ export function Footer({
               {showModal && <ModalContact setShowModal={setShowModal} />}
             </div>
             <div className="footer__idealizers-section__imgs">
-              <img className="idealizers-img" src={idealizer1} alt="" />
-              <img className="idealizers-img" src={idealizer2} alt="" />
-              <img className="idealizers-img" src={idealizer3} alt="" />
-              <img className="idealizers-img" src={idealizer4} alt="" />
+              <a href="https://www.linkedin.com/in/julianasinnott/" target="_blank" rel="noopener noreferrer">
+                <img className="idealizers-img" src={juliana} alt="" />
+              </a>
+              <a href="https://www.linkedin.com/in/larissa-lav%C3%ADnia-4282aa238/" target="_blank" rel="noopener noreferrer">
+              <img className="idealizers-img" src={lavinia} alt="" />
+              </a>
+              <a href="https://www.linkedin.com/in/edilson-santos-982338234/" target="_blank" rel="noopener noreferrer">
+                <img className="idealizers-img" src={edilson} alt="" />
+                </a>
             </div>
           </>
         )}
