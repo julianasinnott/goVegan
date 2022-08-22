@@ -5,33 +5,50 @@ import { SearchInput } from "../../components/SearchInput";
 import { Card } from "../../components/Card";
 import { theme } from "../../utils/theme";
 import { useState } from "react";
-import partnersInfo from "../../features/PartnersPage/partners.json"
+import { useEffect } from "react";
+import axios from "axios"
 import "./index.css";
 import "./responsive.css";
 
 export function PartnersPage() {
-  const partners = partnersInfo;
-  const [pageSize, setPageSize] = useState(8)
-  const [partnersArray, setPartnersArray] = useState(partners.slice(0, 4));
+  const [partners, setPartners] = useState([])
+  const [pageSize, setPageSize] = useState(4)
+  const [key, setKey] = useState('')
+
+  useEffect(()=> {
+    async function getPartners() {
+      try {
+        const response = await axios.get(`http://localhost:3000/partners?q=${key}`)
+        setPartners(response.data)        
+      }
+      catch (err) {
+        console.error(err);
+      }
+    }
+    getPartners()
+  },[key]) 
+
+  useEffect(()=> {
+    async function getPartners() {
+      try {
+        const response = await axios.get(`http://localhost:3000/partners?_page=1&_limit=${pageSize}`)
+        setPartners(response.data)     
+      }
+      catch (err) {
+        console.error(err);
+      }
+    }
+    getPartners()
+  }, [pageSize])  
 
   function handlePageSize() {
-    upadetArray();
     setPageSize(pageSize + 4);
   }
 
-  function upadetArray() {
-    setPartnersArray(partners.slice(0, pageSize))
-  }
-
   function handleSearch(value) {
-    value ? filterPartners(value.toLowerCase()) : setPartnersArray(partnersInfo.slice(0, pageSize - 4))
+    value ? setKey(value) : setPartners(partners.slice(0, pageSize))
   }
   
-  function filterPartners(value) {
-    const filteredPartners = partnersInfo.filter(partners => partners.subtitle.toLowerCase().includes(value))
-    setPartnersArray(filteredPartners)
-  }
-
   return (
     <div>
       <Header type={"USER"} />
@@ -40,7 +57,7 @@ export function PartnersPage() {
         <h1 className="partners__title"> Parceiros na sua cidade</h1>
         <SearchInput handleSearch={handleSearch} />
         <section className="partners__section">
-          {partnersArray.length > 0 ? partnersArray.map((partner, index) => (
+          {partners.length > 0 ? partners.map((partner, index) => (
             <Card
               key={index}
               item={partner}
