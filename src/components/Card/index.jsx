@@ -3,7 +3,7 @@ import './responsive.css'
 import { UserCircle } from 'phosphor-react'
 import { theme } from '../../utils/theme'
 
-export function Card({item, color, width, height, handleClick}) {
+export function Card({ item, color, width, height, handleClick }) {
   return (
     <div
       onClick={handleClick}
@@ -24,12 +24,13 @@ export function Card({item, color, width, height, handleClick}) {
         <p className='card__info__item'>{item.subtitle}</p>
         <p className='card__info__item description'>{item.description}</p>
         {item.urlContact &&
-        <UserCircle
-          size={50}
-          className='card__info__icon'
-          color={theme.colors.secundary}
-          cursor="pointer"
-        />
+          <a href={item.urlContact} target="blank">
+            <UserCircle
+              size={50}
+              className='card__info__icon'
+              color={theme.colors.secundary}
+            />
+          </a>
         }
       </div>
     </div>

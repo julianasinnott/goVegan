@@ -10,7 +10,6 @@
   align-items: center;
   justify-content: space-evenly;
   gap: 16px;
-  cursor: pointer;
 }
 
 .card__img {
