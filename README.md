@@ -10,7 +10,8 @@
   </a>
 </p>
 
-![image](https://user-images.githubusercontent.com/100887684/183810311-3458c51b-2e43-49fe-85bb-c9a0286ed2ea.png)
+![image](https://user-images.githubusercontent.com/100887684/185830699-a2fbd6bd-4867-46a2-9635-7978c3f7ff83.png)
+
 
 
 
@@ -21,7 +22,7 @@ Site desenvolvido com o objetivo de facilitar o acesso a informações sobre veg
 
 ## | Visualize o projeto |
 
-🔗 https://go-vegan-rosy.vercel.app/ 🔗
+🚧 Ainda não disponível 🚧
 
 ## | Create App |
 
