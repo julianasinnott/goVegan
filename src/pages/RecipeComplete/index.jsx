@@ -2,14 +2,28 @@ import { Pizza, Cookie } from 'phosphor-react';
 import { Footer } from '../../components/Footer';
 import { Header } from '../../components/Header';
 import { useParams } from 'react-router-dom';
-import recipes from '../../features/RecipesPage/recipes.json'
+import { useState } from 'react';
+import { useEffect } from 'react';
+import axios from "axios"
 import './index.css';
 import './responsive.css';
 
 export function RecipeComplete() {
-
+  const [selectedRecipe, setSelectedRecipe] = useState([])
   const { slug } = useParams()
-  const selectedRecipe = recipes.find(recipe => recipe.slug === slug)
+
+  useEffect(()=> {
+    async function getRecipes() {
+      try {
+        const response = await axios.get(`https://go-vegan-api.herokuapp.com/recipes?slug=${slug}`)
+        setSelectedRecipe(response.data[0]) 
+      }
+      catch (err) {
+        console.error(err);
+      }
+    }
+    getRecipes()
+  },[]) 
 
   return (
     <>

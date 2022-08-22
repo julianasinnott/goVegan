@@ -7,15 +7,28 @@ import { Card } from "../../components/Card/index";
 import { theme } from "../../utils/theme";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import recipes from "../../features/RecipesPage/recipes.json"
+import axios from "axios"
 
 export function RecipesPage() {
-
-
   const recipesArray = []
   const [pageSizeSalgado, setPageSizeSalgado] = useState(5)
   const [pageSizeDoce, setPageSizeDoce] = useState(5)
   const [type, setType] = useState('SALGADAS')
+  const [recipes, setRecipes] = useState([])
+
+  useEffect(()=> {
+    async function getRecipes() {
+      try {
+        const response = await axios.get('https://go-vegan-api.herokuapp.com/recipes')
+        console.log(response)
+        setRecipes(response.data)
+      }
+      catch (err) {
+        console.error(err);
+      }
+    }
+    getRecipes()
+  },[]) 
 
   function handleType(value) {
     setType(value)
