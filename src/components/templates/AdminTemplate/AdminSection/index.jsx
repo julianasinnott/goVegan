@@ -7,7 +7,8 @@ import { Link } from 'react-router-dom';
 
 export function AdminSection({
   title,
-  data
+  data,
+  handleClick
 }) {
   return (
     <main className="main-adm">
@@ -29,7 +30,7 @@ export function AdminSection({
     <SearchInput />
     <section className="card-list__sectiom" style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
       {data?.map((item, index) => (
-        <CardList key={index} data={item} />
+        <CardList handleClick={handleClick} key={index} data={item} />
       ))}
     </section>
   </main>

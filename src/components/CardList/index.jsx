@@ -3,13 +3,14 @@ import './responsive.css'
 import { Trash } from "phosphor-react";
 
 
-export function CardList({ data }) {
+export function CardList({ data, handleClick }) {
   return(
     <div className="card-list">
       <span className="card-list__item">
-        {data.name}
+        {data.title}
       </span>
       <Trash
+      onClick={()=> handleClick(data.id)}
       weight="bold"
       cursor="pointer"
       />
