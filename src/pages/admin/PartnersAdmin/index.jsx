@@ -22,11 +22,22 @@ export function PartnersAdmin() {
     getPartners()
   },[]) 
 
+    async function deletePartners(ID) {
+      try {
+        const response = await axios.delete(`https://go-vegan-api.herokuapp.com/partners/${ID}`)
+        setPartners(partners.filter(partner => partner.id !== ID))
+      }
+      catch (err) {
+        console.error(err);
+      }
+    }
+
   return (
     <AdminTemplate colorPartners='--tertiary'>
       <AdminSection
         title={'Parceiros GoVegan'}
         data={partners}
+        handleClick={deletePartners}
       />
     </AdminTemplate>
   )
