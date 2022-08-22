@@ -15,7 +15,7 @@ export function RecipeComplete() {
   useEffect(()=> {
     async function getRecipes() {
       try {
-        const response = await axios.get(`http://localhost:3000/recipes?slug=${slug}`)
+        const response = await axios.get(`https://go-vegan-api.herokuapp.com/recipes?slug=${slug}`)
         setSelectedRecipe(response.data[0]) 
       }
       catch (err) {

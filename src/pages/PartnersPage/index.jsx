@@ -18,7 +18,7 @@ export function PartnersPage() {
   useEffect(()=> {
     async function getPartners() {
       try {
-        const response = await axios.get(`http://localhost:3000/partners?_page=1&_limit=${pageSize}&q=${key}`)
+        const response = await axios.get(`https://go-vegan-api.herokuapp.com/partners?_page=1&_limit=${pageSize}&q=${key}`)
         setPartners(response.data)        
       }
       catch (err) {
