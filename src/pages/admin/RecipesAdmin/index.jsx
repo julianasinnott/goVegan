@@ -8,11 +8,12 @@ import axios from "axios"
 
 export function RecipesAdmin() {
   const [recipes, setRecipes] = useState([])
+  const [key, setKey] = useState('')
 
   useEffect(()=> {
     async function getRecipes() {
       try {
-        const response = await axios.get('https://go-vegan-api.herokuapp.com/recipes')
+        const response = await axios.get(`https://go-vegan-api.herokuapp.com/recipes?q=${key}`)
         setRecipes(response.data)
       }
       catch (err) {
@@ -20,14 +21,19 @@ export function RecipesAdmin() {
       }
     }
     getRecipes()
-  },[])
+  },[key])
+
+  function handleSearch(value) {
+    setKey(value)
+    console.log(key)
+  }
 
   async function deleteRecipes(ID) {
     try {
       const response = await axios.delete(`https://go-vegan-api.herokuapp.com/recipes/${ID}`)
       setRecipes(recipes.filter(recipe => recipe.id !== ID))
     }
-    catch (err) {
+    catch (err) {a
       console.error(err);
     }
   }
@@ -37,7 +43,10 @@ export function RecipesAdmin() {
       <AdminSection
         title={'Receitas GoVegan'}
         data={recipes}
+
+        handleSearch={handleSearch}
         handleClick={deleteRecipes}
+
       />
     </AdminTemplate>
   )
