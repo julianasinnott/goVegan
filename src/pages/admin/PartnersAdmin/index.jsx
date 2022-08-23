@@ -8,25 +8,34 @@ import axios from "axios";
 
 export function PartnersAdmin() {
   const [partners, setPartners] = useState([])
+  const [key, setKey] = useState('')
+  
 
   useEffect(()=> {
     async function getPartners() {
       try {
-        const response = await axios.get(`https://go-vegan-api.herokuapp.com/partners`)
-        setPartners(response.data)        
+        const response = await axios.get(`https://go-vegan-api.herokuapp.com/partners?q=${key}`)
+        setPartners(response.data)      
+        console.log(response.data)  
       }
       catch (err) {
         console.error(err);
       }
     }
     getPartners()
-  },[]) 
+  },[key]) 
+
+  function handleSearch(value) {
+    setKey(value)
+    console.log(key)
+  }
 
   return (
     <AdminTemplate colorPartners='--tertiary'>
       <AdminSection
         title={'Parceiros GoVegan'}
         data={partners}
+        handleSearch={handleSearch}
       />
     </AdminTemplate>
   )
