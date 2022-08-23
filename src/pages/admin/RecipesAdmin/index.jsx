@@ -28,12 +28,25 @@ export function RecipesAdmin() {
     console.log(key)
   }
 
+  async function deleteRecipes(ID) {
+    try {
+      const response = await axios.delete(`https://go-vegan-api.herokuapp.com/recipes/${ID}`)
+      setRecipes(recipes.filter(recipe => recipe.id !== ID))
+    }
+    catch (err) {a
+      console.error(err);
+    }
+  }
+
   return (
     <AdminTemplate colorRecipes='--tertiary' >
       <AdminSection
         title={'Receitas GoVegan'}
         data={recipes}
+
         handleSearch={handleSearch}
+        handleClick={deleteRecipes}
+
       />
     </AdminTemplate>
   )
