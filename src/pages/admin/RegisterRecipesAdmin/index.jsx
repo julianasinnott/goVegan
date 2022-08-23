@@ -9,16 +9,16 @@ export function RegisterRecipesAdmin() {
           <h1 className="h1_RegisterRecipes">Cadastrar nova receita</h1>
           <form className="form_RegisterRecipes">
           <input className="input_RegisterRecipes" type="text" placeholder="Título" />
-          <textarea className="text-area_RegisterRecipes" placeholder="Ingredientes" cols="30" rows="10">Ingredientes</textarea>
-          <textarea className="text-area_RegisterRecipes" placeholder="Modo de fazer" cols="30" rows="10">Modo de fazer</textarea>
+          <input className="input_RegisterRecipes" type="text" placeholder="Subtítulo" />
+          <textarea className="text-area_RegisterRecipes" placeholder="Ingredientes"></textarea>
+          <textarea className="text-area_RegisterRecipes" placeholder="Modo de fazer"></textarea>
           <select className="input_RegisterRecipes">
             <option value="Tipo" selected="selected" disabled>Tipo</option>
-            <option value="Doce">Doce</option>
-            <option value="Salgado">Salgado</option>
+            <option value="Doce">DOCES</option>
+            <option value="Salgado">SALGADAS</option>
           </select>
-          <input className="input_RegisterRecipes" type="date" placeholder="Data" />
-          <input className="input_RegisterRecipes" type="text" placeholder="Upload Imagem" />
-          <button className="btn_RegisterRecipes" type="submit">Enviar</button>
+          <input className="input_RegisterRecipes" type="text" placeholder="URL da Imagem" />
+          <button className="btn_RegisterRecipes" type="submit">ENVIAR</button>
           </form>
         </div>
       </main>
