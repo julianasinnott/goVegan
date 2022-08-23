@@ -4,11 +4,15 @@ import { CardList } from "../../../CardList";
 import { SearchInput } from "../../../SearchInput";
 import { Plus } from "phosphor-react"
 import { Link } from 'react-router-dom';
+import { useState } from "react";
 
 export function AdminSection({
   title,
   data,
-  handleClick
+  handleClick,
+  handleSearch
+
+   
 }) {
   return (
     <main className="main-adm">
@@ -27,7 +31,7 @@ export function AdminSection({
         />
       </Link>
     </div>
-    <SearchInput />
+    <SearchInput handleSearch={handleSearch}/>
     <section className="card-list__sectiom" style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
       {data?.map((item, index) => (
         <CardList handleClick={handleClick} key={index} data={item} />
