@@ -15,27 +15,27 @@ export function PartnersPage() {
   const [pageSize, setPageSize] = useState(4)
   const [key, setKey] = useState('')
 
-  useEffect(()=> {
+  useEffect(() => {
     async function getPartners() {
       try {
         const response = await axios.get(`https://go-vegan-api.herokuapp.com/partners?_page=1&_limit=${pageSize}&q=${key}`)
-        setPartners(response.data)        
+        setPartners(response.data)
       }
       catch (err) {
         console.error(err);
       }
     }
     getPartners()
-  },[key, pageSize]) 
+  }, [key, pageSize])
 
   function handlePageSize() {
     setPageSize(pageSize + 4);
   }
 
   function handleSearch(value) {
-    setKey(value) 
+    setKey(value)
   }
-  
+
   return (
     <div>
       <Header type={"USER"} />
@@ -51,7 +51,7 @@ export function PartnersPage() {
               color={theme.colors.quaternary}
               width={243}
               height={374}
-              />
+            />
           )) :
             <p> Nenhum parceiro encontrado :( </p>
           }
