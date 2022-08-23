@@ -49,7 +49,7 @@ export function PartnersPage() {
               key={index}
               item={partner}
               color={theme.colors.quaternary}
-              width={243}
+              width={300}
               height={374}
             />
           )) :
