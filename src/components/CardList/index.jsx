@@ -10,9 +10,9 @@ export function CardList({ data, handleClick }) {
         {data.title}
       </span>
       <Trash
-      onClick={()=> handleClick(data.id)}
-      weight="bold"
-      cursor="pointer"
+        onClick={()=> handleClick(data.id)}
+        weight="bold"
+        cursor="pointer"
       />
     </div>
   )
