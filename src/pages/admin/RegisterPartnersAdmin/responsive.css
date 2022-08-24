@@ -1,0 +1,23 @@
+@media only screen and (max-width:800px) {
+  .main_RegisterPartners {
+    margin-top: 43px;
+  }
+
+
+
+  /* .input_RegisterPartners {
+    width: 400px;
+  } */
+}
+
+@media only screen and (max-width:500px) {
+
+  .content_RegisterPartners {
+    width: 90%;
+  }
+
+  .h1_RegisterPartners {
+    font-size: 37.5px;
+  }
+
+}
