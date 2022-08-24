@@ -25,7 +25,6 @@ export function RecipesAdmin() {
 
   function handleSearch(value) {
     setKey(value)
-    console.log(key)
   }
 
   async function deleteRecipes(ID) {
@@ -43,10 +42,8 @@ export function RecipesAdmin() {
       <AdminSection
         title={'Receitas GoVegan'}
         data={recipes}
-
         handleSearch={handleSearch}
         handleClick={deleteRecipes}
-
       />
     </AdminTemplate>
   )
