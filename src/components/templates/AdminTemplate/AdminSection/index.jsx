@@ -10,9 +10,7 @@ export function AdminSection({
   title,
   data,
   handleClick,
-  handleSearch
-
-   
+  handleSearch   
 }) {
   return (
     <main className="main-adm">

@@ -16,7 +16,6 @@ export function PartnersAdmin() {
       try {
         const response = await axios.get(`https://go-vegan-api.herokuapp.com/partners?q=${key}`)
         setPartners(response.data)      
-        console.log(response.data)  
       }
       catch (err) {
         console.error(err);
@@ -27,7 +26,6 @@ export function PartnersAdmin() {
 
   function handleSearch(value) {
     setKey(value)
-    console.log(key)
   }
 
     async function deletePartners(ID) {
@@ -45,9 +43,7 @@ export function PartnersAdmin() {
       <AdminSection
         title={'Parceiros GoVegan'}
         data={partners}
-
         handleSearch={handleSearch}
-
         handleClick={deletePartners}
       />
     </AdminTemplate>
