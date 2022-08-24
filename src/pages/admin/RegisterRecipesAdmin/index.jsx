@@ -8,14 +8,14 @@ export function RegisterRecipesAdmin() {
   const [ID, setID] = useState('')
   const [form, setForm] = useState(
     {
-      "id": "",
-      "slug": "",
-      "urlToImage": "",
-      "title": "",
-      "subtitle": "",
-      "ingredients": "",
-      "phases": "",
-      "type": ""
+      id: "",
+      slug: "",
+      urlToImage: "",
+      title: "",
+      subtitle: "",
+      ingredients: "",
+      phases: "",
+      type: ""
     }
   )
 
