@@ -5,7 +5,7 @@
     align-items: center;
     width: 100%;
     height: 100vh;
-    margin: 47px 0;
+    margin: 15px 0;
 }
 
 .h1_RegisterPartners {
@@ -13,7 +13,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 60px;
+    height: 73px;
 
     font-weight: bold;
     font-size: 43.5px;
@@ -23,7 +23,7 @@
 
     color: var(--secundary);
     margin-top: 30px;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
 }
 
 .form_RegisterPartners {
@@ -40,11 +40,10 @@
 
     background: var(--InputFormaBakground);
     box-shadow: var(--shadow);
-    border-radius: 8px;
+    border-radius: 6px;
     padding: 10px;
     font-weight: 400;
     font-size: 20px;
-    line-height: 58px;
 
     text-align: center;
     letter-spacing: 0.04em;
@@ -55,20 +54,22 @@
 .btn_RegisterPartners {
     all: unset;
     width: 100%;
-    height: 4%;
     display: flex;
     align-items: center;
     justify-content: center;
     background: var(--tertiary);
     box-shadow: var(--shadow);
-    border-radius: 8px;
+    border-radius: 6px;
     font-weight: 700;
     font-size: 24px;
     line-height: 58px;
     text-align: center;
     letter-spacing: 0.04em;
-    padding: 5px 0;
     color: var(--white);
     margin-top: 20px;
     cursor: pointer;
+}
+
+.btn_RegisterPartners:hover {
+    opacity: 0.9;
 }
