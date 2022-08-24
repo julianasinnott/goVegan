@@ -8,7 +8,6 @@ export function RegisterRecipesAdmin() {
   const [ID, setID] = useState('')
   const [form, setForm] = useState(
     {
-      id: "",
       slug: "",
       urlToImage: "",
       title: "",
@@ -19,15 +18,9 @@ export function RegisterRecipesAdmin() {
     }
   )
 
-  function handleID() {
-    setID(Math.floor(Math.random() * 98765536))
-  }
-
   function handleChange(e) {
-    handleID()
     setForm({
       ...form,
-      "id": ID,
       "slug": form.title.toLowerCase().replace(/ /g,"-"),
       [e.target.name]: e.target.value,
     });    
