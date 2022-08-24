@@ -1,5 +1,6 @@
 import { AdminTemplate } from "../../../components/templates/AdminTemplate";
 import "./style.css"
+import "./responsive.css"
 
 export function RegisterPartnersAdmin() {
   return (
