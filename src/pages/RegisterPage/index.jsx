@@ -42,7 +42,6 @@ export function RegisterPage() {
             placeholder='Seu nome completo' 
             required 
           />
-
           <input 
             className='register__form__cpf input' 
             type="text" 
@@ -61,7 +60,6 @@ export function RegisterPage() {
             placeholder='Seu melhor email' 
             required 
           />
-
           <button className='register__form__button input' type="submit">
             CADASTRAR
           </button>
