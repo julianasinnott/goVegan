@@ -1,5 +1,6 @@
 import './index.css'
 import './responsive.css'
+import { Header } from "../../components/Header";
 import * as React from 'react';
 
 export function RegisterPage() {
@@ -24,6 +25,7 @@ export function RegisterPage() {
 
   return(
     <div className="register">
+      <Header type={"USER"} />
       <div className='space'></div>
       <div className="register__form">
         <form className='form__inputs' action="https://formsubmit.co/julianasinnott@outlook.com" method="POST">
