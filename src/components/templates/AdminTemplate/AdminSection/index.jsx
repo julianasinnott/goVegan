@@ -14,8 +14,7 @@ export function AdminSection({
 }) {
   return (
     <main className="main-adm">
-    <div className="main-adm__list__title">
-      <h1>{title}</h1>
+      <h1 className="main-adm__list__title">{title}</h1>
       <Link
        to={window.location.pathname === "/admin/parceiros"?
        "/admin/parceiros/cadastro" 
@@ -28,7 +27,6 @@ export function AdminSection({
           color="var(--white)"
         />
       </Link>
-    </div>
     <SearchInput handleSearch={handleSearch}/>
     <section className="card-list__sectiom" style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
       {data?.map((item, index) => (
