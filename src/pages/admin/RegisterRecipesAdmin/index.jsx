@@ -1,11 +1,10 @@
 import { useState } from "react";
 import { AdminTemplate } from "../../../components/templates/AdminTemplate";
-import axios from "axios"
+import api from '../../../services/api'
 import "./style.css"
 import "./responsive.css"
 
 export function RegisterRecipesAdmin() {
-  const [ID, setID] = useState('')
   const [form, setForm] = useState(
     {
       slug: "",
@@ -40,7 +39,7 @@ export function RegisterRecipesAdmin() {
 
   async function postRecipes() {
     try {
-      const response = await axios.post(`https://go-vegan-api.herokuapp.com/recipes`, form)
+      await api.post('/recipes', form)
     }
     catch (err) {
       console.error(err);
