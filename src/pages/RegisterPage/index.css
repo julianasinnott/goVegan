@@ -1,7 +1,7 @@
 .register {
   width: 100vw;
-  height: 100vh;
-  background: url(/assets/register-background.png) no-repeat center/100%;
+  min-height: 100vh;
+  background: url(/assets/register-background.png) no-repeat center;
   display: flex;
   justify-content: end;
   padding-top: 120px;
@@ -10,6 +10,7 @@
 .register__form {
   padding: 40px 40px 50px;
   width: 50%;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,26 +19,26 @@
 .form__inputs {
   display: flex;
   width: 464px;
-  height: 530px;
+  height: 420px;
   flex-direction: column;
-  gap: 26px;
+  gap: 20px;
   background-color: var(--formBackground);
-  padding: 50px 34px;
+  padding: 28px 34px 10px;
   box-shadow: var(--shadow);
   border-radius: 8px;  
 }
 
 .register__form__title {
   text-align: center;
+  font-size: 28px;
   color: var(--secundary);
 }
 
 .input {
   background-color: var(--white);
   box-shadow: var(--shadow);
-  height: 68px;
   border-radius: 6px;
-  padding: 10px 40px;
+  padding: 16px 40px;
   color: var(--tertiary);
   font-size: 16px;
 }
