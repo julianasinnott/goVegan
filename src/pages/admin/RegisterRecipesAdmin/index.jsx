@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { AdminTemplate } from "../../../components/templates/AdminTemplate";
-// import { useNavigate } from "react-router-dom";
+import { Check } from "phosphor-react";
 import api from '../../../services/api'
 import "./style.css"
 import "./responsive.css"
 
 export function RegisterRecipesAdmin() {
   const [loading, setLoading] = useState('')
+  const [successMessage, setSuccessMessage] = useState(false)
   const [form, setForm] = useState(
     {
       slug: "",
@@ -37,12 +38,16 @@ export function RegisterRecipesAdmin() {
     setLoading(true)
     try {
       await api.post('/recipes', form)
+      setSuccessMessage(true)
     }
     catch (err) {
       console.error(err);
     }
     finally {
       setLoading(false)
+      setTimeout(() => {
+        setSuccessMessage(false); 
+      }, 4000);
     }
   }
 
@@ -103,7 +108,20 @@ export function RegisterRecipesAdmin() {
               <option value="DOCES"> Doce </option>
               <option value="SALGADAS"> Salgada </option>
             </select>
-            <button className="btn_RegisterRecipes" type="submit"> {loading? 'Enviando...' : 'Enviar'} </button>
+            <button className="btn_RegisterRecipes" type="submit">
+              {loading? 'Enviando...' : 'Enviar'}
+            </button>
+            {
+              successMessage && 
+              <div className="success-msg__RegisterPartners">
+                <p> Receita cadastrada com sucesso! </p>
+                <Check 
+                  className="check-icon"
+                  size={34}
+                  color="var(--white)"
+                />        
+              </div>
+            }            
           </form>
         </div>
       </main>

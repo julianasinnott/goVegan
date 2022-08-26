@@ -7,6 +7,10 @@
     margin: 20px 0;
 }
 
+.content_RegisterPartners {
+    width: 70%;
+}
+
 .h1_RegisterPartners {
     display: flex;
     justify-content: center;

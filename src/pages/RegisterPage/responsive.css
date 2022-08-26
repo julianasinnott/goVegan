@@ -1,6 +1,6 @@
 @media only screen and (max-width:1029px) {
   .register {
-    background: url(/assets/register-background.png) no-repeat center/100% 100%;
+    background: url(/assets/register-background.png) no-repeat center;
   }
   .form__inputs {
     padding: 30px;
@@ -23,21 +23,59 @@
   } 
 }
 
-@media only screen and (max-width:720px) {
+@media only screen and (max-width:800px) {
   .register {
     height: min-content;
-    background: url(/assets/register-background.png) no-repeat top/100%;
+    background: url(/assets/register-background.png) no-repeat left top 100% auto;
     flex-direction: column;    
-  }
-  .space {
-    height: 55.4vw;
   }
   .register__form {
     width: 100%;
-    padding: 0;
+    padding: 30px;
   }
   .form__inputs {
     width: 100%;
     border-radius: 0;
+  }
+}
+
+@media only screen and (max-width:630px) {
+  .register {
+    padding-top: 80px;
+  } 
+}
+
+@media only screen and (max-width:550px) {
+  .register {
+    justify-content: center;
+  } 
+}
+
+@media only screen and (max-width:380px) {
+  .register {
+    justify-content: center;
+  } 
+  .register__form {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+
+@media only screen and (max-width:355px) {
+  .register__form__title {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (max-width:335px) {
+  .register__form {
+    padding: 10px;
+  }
+  .register__form__title {
+    font-size: 22px;
+  }
+  .form__inputs {
+    padding: 34px 20px 20px;
   }
 }

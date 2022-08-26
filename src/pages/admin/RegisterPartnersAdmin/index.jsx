@@ -1,11 +1,18 @@
 import { AdminTemplate } from "../../../components/templates/AdminTemplate";
+<<<<<<< HEAD
 import api from '../../../services/api';
 import * as React from 'react';
 /* import useForm from "react-hook-form"; */
+=======
+import { useState } from "react";
+import { Check } from "phosphor-react";
+import api  from "../../../services/api";
+>>>>>>> dev
 import "./style.css"
 import "./responsive.css"
 
 export function RegisterPartnersAdmin() {
+<<<<<<< HEAD
 
   const [loading, setLoading] = React.useState('');
   const [urlWarning, setUrlWarning] = React.useState('');
@@ -77,18 +84,58 @@ export function RegisterPartnersAdmin() {
     } else {
       setUrlWarning('Preencha todos os campos!');
     }
+=======
+  const [loading, setLoading] = useState('')
+  const [successMessage, setSuccessMessage] = useState(false)
+  const [form, setForm] = useState(
+    {
+      slug: "",
+      urlToImage: "",
+      title: "",
+      subtitle: "",
+      description: "",
+      urlContact: ""
+    }
+  )
+
+  function handleChange(e) {
+    setForm({
+      ...form,
+      "slug": form.title.toLowerCase().replace(/ /g,"-"),
+      [e.target.name]: e.target.value,
+    });    
+  }
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    await postPartners()
+    e.target.reset()
+>>>>>>> dev
   }
 
   async function postPartners() {
     setLoading(true)
     try {
       await api.post('/partners', form)
+<<<<<<< HEAD
     }
     catch (error) {
       console.error(error);
     }
     finally {
       setLoading(false)
+=======
+      setSuccessMessage(true)
+    }
+    catch (err) {
+      console.error(err);
+    }
+    finally {
+      setLoading(false)
+      setTimeout(() => {
+        setSuccessMessage(false); 
+      }, 4000);
+>>>>>>> dev
     }
   }
 
@@ -102,6 +149,7 @@ export function RegisterPartnersAdmin() {
             className="form_RegisterPartners"
           >
             <input
+<<<<<<< HEAD
               name="urlToImage"
               className="input_RegisterPartners"
               type="text"
@@ -148,6 +196,56 @@ export function RegisterPartnersAdmin() {
             />
             <p className="url-warning_RegisterPartners" >{urlWarning}</p>
             <button className="btn_RegisterPartners" > {loading ? 'Enviando...' : 'Enviar'} </button>
+=======
+              className="input_RegisterPartners"
+              type="text"
+              name="urlToImage"
+              placeholder="URL da imagem"
+              onChange={handleChange}
+            />
+            <input
+              className="input_RegisterPartners"
+              type="text"
+              name="title"
+              placeholder="Nome"
+              onChange={handleChange}
+            />
+            <input
+              className="input_RegisterPartners"
+              type="text"
+              name="subtitle"
+              placeholder="Cidade"
+              onChange={handleChange}
+            />
+            <input
+              className="input_RegisterPartners"
+              type="text"
+              name="description"
+              placeholder="Endereço"
+              onChange={handleChange}
+            />
+            <input
+              className="input_RegisterPartners"
+              type="text"
+              name="urlContact"
+              placeholder="URL de contato" 
+              onChange={handleChange}
+            />
+            <button className="btn_RegisterPartners" type="submit">
+              {loading? 'Enviando...' : 'Enviar'}
+            </button>
+            {
+              successMessage && 
+              <div className="success-msg__RegisterPartners">
+                <p> Parceiro cadastrado com sucesso! </p>
+                <Check 
+                  className="check-icon"
+                  size={34}
+                  color="var(--white)"
+                />        
+              </div>
+            } 
+>>>>>>> dev
           </form>
         </div>
       </main>
