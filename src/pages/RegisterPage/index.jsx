@@ -26,7 +26,6 @@ export function RegisterPage() {
   return(
     <div className="register">
       <Header type={"USER"} />
-      <div className='space'></div>
       <div className="register__form">
         <form className='form__inputs' action="https://formsubmit.co/julianasinnott@outlook.com" method="POST">
           <h1 className='register__form__title'>
