@@ -72,3 +72,7 @@
 .btn_RegisterPartners:hover {
     opacity: 0.9;
 }
+
+.url-warning_RegisterPartners {
+    color: red;
+}
