@@ -47,6 +47,8 @@
 
 .recipe-complete__item {
   padding: 10px;
+  word-wrap: break-word;
+  white-space: pre-wrap;
 }
 
 .recipe-complete__preparation-mode {
@@ -56,4 +58,7 @@
   padding: 20px 0px 0px 25px;
   padding-top: 25px;
   padding-left: 17px;
+
+  word-wrap: break-word;
+  white-space: pre-wrap;
 }

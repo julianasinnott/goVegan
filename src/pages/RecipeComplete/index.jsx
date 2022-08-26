@@ -41,10 +41,14 @@ export function RecipeComplete() {
         <section className='recipe-complete__preparation'>
           <h2 className='recipe-complete__subtitle' >Ingredientes</h2>
           <section className='recipe-complete__ingredients'>
-            <p className='recipe-complete__item'>{selectedRecipe.ingredients}</p>
+            <pre className='recipe-complete__item'>
+              {selectedRecipe.ingredients}
+            </pre>
           </section>
           <h2 className='recipe-complete__subtitle' >Modo de fazer</h2>
-          <p className='recipe-complete__preparation-mode'>{selectedRecipe.phases}</p>
+          <pre className='recipe-complete__preparation-mode'>
+            {selectedRecipe.phases}
+          </pre>
         </section>
       </main>
       <Footer />

@@ -1,5 +1,3 @@
-/* .close-modal-icon__modal-contact */
-
 @media only screen and (max-width:800px) {
   .modal-container {
     right: 140px;
@@ -25,5 +23,25 @@
   .modal-container {
     right: 85px;
     bottom: 245px;
+  }
+}
+
+@media only screen and (max-width:400px) {
+  .modal-container {
+    right: 60px;
+  }
+  .modal-contact {
+    width: 240px;
+    height: 330px;
+  }
+  .close-modal-icon__modal-contact {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media only screen and (max-width:330px) {
+  .modal-container {
+    right: 40px;
   }
 }
