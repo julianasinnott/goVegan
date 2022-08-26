@@ -40,7 +40,8 @@ export function PartnersAdmin() {
         title={'Parceiros GoVegan'}
         data={partners}
         handleSearch={setKey}
-        handleClick={deletePartners}
+        deleteItem={deletePartners}
+        titleModal={'Parceiro'}
       />
     </AdminTemplate>
   )
