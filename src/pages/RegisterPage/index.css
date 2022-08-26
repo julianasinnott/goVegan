@@ -4,6 +4,7 @@
   background: url(/assets/register-background.png) no-repeat center/100%;
   display: flex;
   justify-content: end;
+  padding-top: 120px;
 }
 
 .register__form {
