@@ -23,7 +23,6 @@ export function RegisterPartnersAdmin() {
   )
 
   function handleChange(e) {
-
     if (e.target.value.length > 0 && e.target.value !== '') {
       setForm({
         ...form,
@@ -43,7 +42,6 @@ export function RegisterPartnersAdmin() {
     } else {
       setUrlWarning('');
     }
-
   }
 
   const validationForm = (data) => {
@@ -55,32 +53,32 @@ export function RegisterPartnersAdmin() {
     return true;
   }
 
-  async function handleSubmit(e) {
-    e.preventDefault();
-
+  function validateURL() {
     if ((form.urlToImage).includes('https://') && (form.urlContact).includes('https://')) {
       setUrls(true);
     } else {
       setUrls(false);
-    }
+    } 
+  }
 
-    console.log(urls);
-
+  async function handleSubmit(e) {
+    e.preventDefault();
+    validateURL()  
     if (validationForm(form) && urls === true) {
-      await postPartners()
-      e.target.reset()
-
+      await postPartners()  
+      setForm({[e.target.name]: ''})    
     } else if (!validationForm(form)) {
       setUrlWarning('Preencha todos os campos!');
     } else if (urls === false) {
       setUrlWarning('As urls precisam incluir "https://"')
-    }
+    }    
   }
 
   async function postPartners() {
     setLoading(true)
     try {
       await api.post('/partners', form)
+      setSuccessMessage(true)
     }
     catch (err) {
       console.error(err);
@@ -143,7 +141,7 @@ export function RegisterPartnersAdmin() {
               type="text"
               name="urlContact"
               placeholder="URL de contato"
-              value={form.urlToContact}
+              value={form.urlContact}
               onChange={handleChange}
               required
             />

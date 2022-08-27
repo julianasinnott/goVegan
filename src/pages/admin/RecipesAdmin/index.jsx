@@ -26,10 +26,10 @@ export function RecipesAdmin() {
 
   async function deleteRecipes(ID) {
     try {
-      await api.delete(`/recipes/${ID}`)
+      const response = await api.delete(`/recipes/${ID}`)
       getRecipes()
     }
-    catch (err) {a
+    catch (err) {
       console.error(err);
     }
   }
@@ -40,7 +40,8 @@ export function RecipesAdmin() {
         title={'Receitas GoVegan'}
         data={recipes}
         handleSearch={setKey}
-        handleClick={deleteRecipes}
+        deleteItem={deleteRecipes}
+        titleModal={'Receita'}
       />
     </AdminTemplate>
   )
