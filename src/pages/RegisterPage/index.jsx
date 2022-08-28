@@ -8,7 +8,6 @@ export function RegisterPage() {
       name: '',
       cpf: '',
       email: '',
-      password: ''
   });
 
   const handleChange = (e) => {
@@ -18,16 +17,59 @@ export function RegisterPage() {
     });
   }
 
+  function formSubmit(data) {
+    fetch("https://formsubmit.co/ajax/larissa11.cedaspy@gmail.com", {
+      method: "POST",
+      headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+    .catch(error => console.log(error))
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
     
+    if(!validate()) return;
+
+    let data = {
+      name: form.name,
+      cpf: form.cpf,
+      email: form.email
+    }
+
+    formSubmit(data)
+    setForm({
+      name: '',
+      cpf: '',
+      email: ''
+    })
+  }
+
+  function validate() {
+    if(form.name == "" || form.cpf == "" || form.email == ""){
+      return setErro("Preencha todos os campos")
+    }
+    if (form.name > 30) {
+      return setErro("Máximo de 30 caracteres.")
+    } 
+    if(!form.email.includes("@")){
+      return setErro("E-mail inválido!")
+    }
+    return true
   }
 
   return(
     <div className="register">
       <Header type={"USER"} />
       <div className="register__form">
-        <form className='form__inputs' action="https://formsubmit.co/julianasinnott@outlook.com" method="POST">
+        <form 
+        className='form__inputs'  
+        method="POST"
+        onSubmit={handleSubmit}
+        >
           <h1 className='register__form__title'>
             Venha mudar o mundo <br />
             com a gente!
@@ -39,6 +81,7 @@ export function RegisterPage() {
             value={form.name}
             onChange={handleChange} 
             placeholder='Seu nome completo' 
+            pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$"
             required 
           />
           <input 
@@ -48,6 +91,7 @@ export function RegisterPage() {
             value={form.cpf}
             onChange={handleChange} 
             placeholder='Seu CPF' 
+            maxLength="13"
             required 
           />
           <input 
