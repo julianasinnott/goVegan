@@ -2,8 +2,11 @@ import './index.css'
 import './responsive.css'
 import { Header } from "../../components/Header";
 import * as React from 'react';
+import { useState } from 'react';
 
 export function RegisterPage() {
+  const [error, setError] = useState('')
+  const [loading, setLoading] = useState(false)
   const [form, setForm] = React.useState({
       name: '',
       cpf: '',
@@ -15,10 +18,12 @@ export function RegisterPage() {
       ...form,
       [e.target.name]: e.target.value
     });
+    setError('')
   }
 
-  function formSubmit(data) {
-    fetch("https://formsubmit.co/ajax/larissa11.cedaspy@gmail.com", {
+   async function formSubmit(data) {
+    setLoading(true)
+    await fetch("https://formsubmit.co/ajax/julianasinnott@outlook.com", {
       method: "POST",
       headers: { 
           'Content-Type': 'application/json',
@@ -27,11 +32,11 @@ export function RegisterPage() {
       body: JSON.stringify(data)
     })
     .catch(error => console.log(error))
+    setLoading(false)
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    
+  async function handleSubmit(e) {
+    e.preventDefault();    
     if(!validate()) return;
 
     let data = {
@@ -39,8 +44,7 @@ export function RegisterPage() {
       cpf: form.cpf,
       email: form.email
     }
-
-    formSubmit(data)
+    await formSubmit(data)
     setForm({
       name: '',
       cpf: '',
@@ -50,13 +54,13 @@ export function RegisterPage() {
 
   function validate() {
     if(form.name == "" || form.cpf == "" || form.email == ""){
-      return setErro("Preencha todos os campos")
+      return setError("Preencha todos os campos!")
     }
     if (form.name > 30) {
-      return setErro("Máximo de 30 caracteres.")
+      return setError("Máximo de 30 caracteres.")
     } 
     if(!form.email.includes("@")){
-      return setErro("E-mail inválido!")
+      return setError("E-mail inválido!")
     }
     return true
   }
@@ -103,8 +107,17 @@ export function RegisterPage() {
             placeholder='Seu melhor email' 
             required 
           />
+          {
+            error && 
+            <p className='error-msg'>{error}</p>
+          }
           <button className='register__form__button input' type="submit">
-            CADASTRAR
+            {
+              loading ?
+              'ENVIANDO...'
+              :
+              'CADASTRAR'
+            }
           </button>
         </form>
       </div>

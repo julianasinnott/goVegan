@@ -19,11 +19,11 @@
 .form__inputs {
   display: flex;
   width: 464px;
-  height: 420px;
+
   flex-direction: column;
   gap: 20px;
   background-color: var(--formBackground);
-  padding: 28px 34px 10px;
+  padding: 28px 34px 38px;
   box-shadow: var(--shadow);
   border-radius: 8px;  
 }
@@ -41,6 +41,11 @@
   padding: 16px 40px;
   color: var(--tertiary);
   font-size: 16px;
+}
+
+.error-msg {
+  text-align: center;
+  color: red;
 }
 
 .register__form__button {
