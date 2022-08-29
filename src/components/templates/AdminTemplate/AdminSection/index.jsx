@@ -4,7 +4,7 @@ import { CardList } from "../../../CardList";
 import { SearchInput } from "../../../SearchInput";
 import { Plus } from "phosphor-react"
 import { Link } from 'react-router-dom';
-import { ConfirmModal } from '../../../CardList/ConfirmModal';
+import { ConfirmModal } from '../../../ConfirmModal';
 import { useState } from 'react';
 
 export function AdminSection({

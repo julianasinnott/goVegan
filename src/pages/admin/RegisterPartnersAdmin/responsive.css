@@ -1,20 +1,19 @@
+@media only screen and (max-width:875px) {
+  .content_RegisterPartners {
+    width: 90%;
+  }
+}
+
 @media only screen and (max-width:800px) {
   .main_RegisterPartners {
     margin-top: 60px;
   }
+  .h1_RegisterPartners {
+    font-size: 40px;
+  }
 }
 
 @media only screen and (max-width:500px) {
-  .content_RegisterPartners {
-    width: 90%;
-  }
-
-  .h1_RegisterPartners {
-    font-size: 37.5px;
-  }
-}
-
-@media only screen and (max-width:420px) {
   .h1_RegisterPartners{
     font-size: 34px;
     margin: 20px 0 0;
