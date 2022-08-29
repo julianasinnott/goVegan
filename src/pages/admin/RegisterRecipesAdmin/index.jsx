@@ -4,6 +4,7 @@ import { Check } from "phosphor-react";
 import api from '../../../services/api'
 import "./style.css"
 import "./responsive.css"
+import { SuccessRegister } from "../../../components/SuccessRegister";
 
 export function RegisterRecipesAdmin() {
   const [loading, setLoading] = useState('')
@@ -113,14 +114,9 @@ export function RegisterRecipesAdmin() {
             </button>
             {
               successMessage && 
-              <div className="success-msg__RegisterPartners">
-                <p> Receita cadastrada com sucesso! </p>
-                <Check 
-                  className="check-icon"
-                  size={34}
-                  color="var(--white)"
-                />        
-              </div>
+              <SuccessRegister
+                title='Receita cadastrada com sucesso!'
+              />
             }            
           </form>
         </div>
