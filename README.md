@@ -10,7 +10,8 @@
   </a>
 </p>
 
-![image](https://user-images.githubusercontent.com/100887684/183810311-3458c51b-2e43-49fe-85bb-c9a0286ed2ea.png)
+![image](https://user-images.githubusercontent.com/100887684/185830699-a2fbd6bd-4867-46a2-9635-7978c3f7ff83.png)
+
 
 
 
@@ -21,7 +22,7 @@ Site desenvolvido com o objetivo de facilitar o acesso a informações sobre veg
 
 ## | Visualize o projeto |
 
-🔗 https://go-vegan-rosy.vercel.app/ 🔗
+🚧 Ainda não disponível 🚧
 
 ## | Create App |
 
@@ -33,6 +34,7 @@ Este App foi criado com [Vite](https://vitejs.dev/) <br>
 [ReactJS](https://reactjs.org/) <br>
 [NodeJS](https://nodejs.org/en/) <br>
 [React Router](https://reactrouter.com/) <br>
+[JSON Server](https://github.com/typicode/json-server#getting-started) <br>
 [Phospor Icons](https://phosphoricons.com/) <br>
 [CSS](https://www.w3.org/Style/CSS/Overview.en.html) <br>
 
@@ -47,6 +49,16 @@ Desenvolvido no [Figma](https://www.figma.com/)
 Acesso:
 
 🔗 https://www.figma.com/file/Sxdwav78lwnCfy2E4Pmvbx/GoVegan?node-id=0%3A1 🔗
+
+## API fake - JSON Server
+
+Deploy:
+
+https://go-vegan-api.herokuapp.com/
+
+Documentação JSON Server:
+
+https://github.com/typicode/json-server#getting-started
 
 ## | Como rodar |
 
