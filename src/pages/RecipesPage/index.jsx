@@ -11,8 +11,8 @@ import api from '../../services/api'
 
 export function RecipesPage() {
   const recipesArray = []
-  const [pageSizeSalgado, setPageSizeSalgado] = useState(5)
-  const [pageSizeDoce, setPageSizeDoce] = useState(5)
+  const [pageSizeSalgado, setPageSizeSalgado] = useState(3)
+  const [pageSizeDoce, setPageSizeDoce] = useState(3)
   const [type, setType] = useState('SALGADAS')
   const [recipes, setRecipes] = useState([])
 
@@ -51,9 +51,9 @@ export function RecipesPage() {
 
   function upadetArray() {
     if (type === 'SALGADAS') {
-      setPageSizeSalgado(pageSizeSalgado + 5);
+      setPageSizeSalgado(pageSizeSalgado + 3);
     } else {
-      setPageSizeDoce(pageSizeDoce + 5);
+      setPageSizeDoce(pageSizeDoce + 3);
     }
   }
 
@@ -64,8 +64,8 @@ export function RecipesPage() {
         key={index}
         item={recipe}
         color={theme.colors.quaternary}
-        width={200}
-        height={250}
+        width={300}
+        height={320}
       />
     </Link>
   ))

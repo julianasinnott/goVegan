@@ -35,7 +35,7 @@ export function RecipeComplete() {
           <Pizza size={55} className='recipe-complete__icon' />
         }
         <div className='recipe-complete__image-container'>
-          <img className='recipe-complete__image' src={selectedRecipe.urlToImage} alt="" />
+          <img className='recipe-complete__image' src={selectedRecipe.image} alt="" />
         </div>
         <h1 className='recipe-complete__title' >{selectedRecipe.title}</h1>
         <section className='recipe-complete__preparation'>
