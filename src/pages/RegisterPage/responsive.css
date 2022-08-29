@@ -1,7 +1,4 @@
 @media only screen and (max-width:1029px) {
-  .register {
-    background: url(/assets/register-background.png) no-repeat center;
-  }
   .form__inputs {
     padding: 30px;
   }
@@ -34,7 +31,7 @@
     padding: 30px;
   }
   .form__inputs {
-    width: 100%;
+    max-width: 100%;
     border-radius: 0;
   }
 }
@@ -56,11 +53,9 @@
     justify-content: center;
   } 
   .register__form {
-    width: 100%;
     padding: 20px;
   }
 }
-
 
 @media only screen and (max-width:355px) {
   .register__form__title {

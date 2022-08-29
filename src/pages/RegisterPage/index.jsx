@@ -1,9 +1,14 @@
 import './index.css'
 import './responsive.css'
 import { Header } from "../../components/Header";
+import { useState } from 'react';
+import { SuccessRegister } from '../../components/SuccessRegister';
 import * as React from 'react';
 
 export function RegisterPage() {
+  const [successMessage, setSuccessMessage] = useState(false)
+  const [error, setError] = useState('')
+  const [loading, setLoading] = useState(false)
   const [form, setForm] = React.useState({
       name: '',
       cpf: '',
@@ -15,23 +20,35 @@ export function RegisterPage() {
       ...form,
       [e.target.name]: e.target.value
     });
+    setError('')
   }
 
-  function formSubmit(data) {
-    fetch("https://formsubmit.co/ajax/larissa11.cedaspy@gmail.com", {
-      method: "POST",
-      headers: { 
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-      },
-      body: JSON.stringify(data)
-    })
-    .catch(error => console.log(error))
+  async function formSubmit(data) {
+    setLoading(true)
+    try {
+      await fetch("https://formsubmit.co/ajax/julianasinnott@outlook.com", {
+        method: "POST",
+        headers: { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+      setSuccessMessage(true)
+    }
+    catch (err) {
+      console.error(err);
+    }
+    finally {
+      setLoading(false)
+      setTimeout(() => {
+        setSuccessMessage(false);
+      }, 4000);
+    }
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    
+  async function handleSubmit(e) {
+    e.preventDefault();    
     if(!validate()) return;
 
     let data = {
@@ -39,8 +56,7 @@ export function RegisterPage() {
       cpf: form.cpf,
       email: form.email
     }
-
-    formSubmit(data)
+    await formSubmit(data)
     setForm({
       name: '',
       cpf: '',
@@ -50,13 +66,13 @@ export function RegisterPage() {
 
   function validate() {
     if(form.name == "" || form.cpf == "" || form.email == ""){
-      return setErro("Preencha todos os campos")
+      return setError("Preencha todos os campos!")
     }
     if (form.name > 30) {
-      return setErro("Máximo de 30 caracteres.")
+      return setError("Máximo de 30 caracteres.")
     } 
     if(!form.email.includes("@")){
-      return setErro("E-mail inválido!")
+      return setError("E-mail inválido!")
     }
     return true
   }
@@ -66,9 +82,9 @@ export function RegisterPage() {
       <Header type={"USER"} />
       <div className="register__form">
         <form 
-        className='form__inputs'  
-        method="POST"
-        onSubmit={handleSubmit}
+          className='form__inputs'  
+          method="POST"
+          onSubmit={handleSubmit}
         >
           <h1 className='register__form__title'>
             Venha mudar o mundo <br />
@@ -103,10 +119,25 @@ export function RegisterPage() {
             placeholder='Seu melhor email' 
             required 
           />
+          {
+            error && 
+            <p className='error-msg'>{error}</p>
+          }
           <button className='register__form__button input' type="submit">
-            CADASTRAR
+            {
+              loading ?
+              'ENVIANDO...'
+              :
+              'CADASTRAR'
+            }
           </button>
         </form>
+        {
+          successMessage &&
+          <SuccessRegister
+            title='Cadastro realizado com sucesso!'
+          />
+        }
       </div>
     </div>
   )

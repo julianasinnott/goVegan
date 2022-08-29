@@ -4,26 +4,29 @@
   background: url(/assets/register-background.png) no-repeat center;
   display: flex;
   justify-content: end;
-  padding-top: 120px;
+  padding-top: 100px;
 }
 
 .register__form {
-  padding: 40px 40px 50px;
   width: 50%;
+  padding-right: 20px;
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 20px;
 }
 
 .form__inputs {
   display: flex;
-  width: 464px;
-  height: 420px;
+  max-width: 564px;
+  width: 100%;
+
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
   background-color: var(--formBackground);
-  padding: 28px 34px 10px;
+  padding: 18px 34px 28px;
   box-shadow: var(--shadow);
   border-radius: 8px;  
 }
@@ -41,6 +44,11 @@
   padding: 16px 40px;
   color: var(--tertiary);
   font-size: 16px;
+}
+
+.error-msg {
+  text-align: center;
+  color: red;
 }
 
 .register__form__button {

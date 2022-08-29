@@ -1,9 +1,9 @@
 import { AdminTemplate } from "../../../components/templates/AdminTemplate";
-import api from '../../../services/api';
 import { useState } from "react";
-import { Check } from "phosphor-react";
+import api from '../../../services/api';
 import "./style.css"
 import "./responsive.css"
+import { SuccessRegister } from "../../../components/SuccessRegister";
 
 export function RegisterPartnersAdmin() {
 
@@ -152,14 +152,9 @@ export function RegisterPartnersAdmin() {
             </button>
             {
               successMessage &&
-              <div className="success-msg__RegisterPartners">
-                <p> Parceiro cadastrado com sucesso! </p>
-                <Check
-                  className="check-icon"
-                  size={34}
-                  color="var(--white)"
-                />
-              </div>
+              <SuccessRegister
+                title='Parceiro cadastrado com sucesso!'
+              />
             }
           </form>
         </div>
