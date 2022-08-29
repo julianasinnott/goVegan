@@ -8,7 +8,7 @@ export function SuccessRegister({title}) {
       <Check
         className="check-icon"
         size={34}
-        color="var(--white)"
+        color="var(--secundary)"
       />
     </div>
   )

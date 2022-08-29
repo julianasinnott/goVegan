@@ -71,12 +71,6 @@
     letter-spacing: 0.04em;
 }
 
-.check-icon {
-    background-color: var(--secundary);
-    border-radius: 50%;
-    padding: 2px;
-}
-
 .btn_RegisterRecipes {
     all: unset;
     width: 100%;    
