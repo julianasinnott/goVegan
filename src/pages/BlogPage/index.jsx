@@ -15,6 +15,7 @@ export function BlogPage() {
   const [Array, setArray] = useState([]);
   const [pageSize, setPageSize] = useState(3)
   const [loading, setLoading] = useState(false)
+  const [key, setKey] = useState('ovos')
 
   function handlePageSize() {
     setPageSize(pageSize + 3)
@@ -24,7 +25,7 @@ export function BlogPage() {
     async function getNews() {
       try {
         setLoading(true)
-        const response = await axios.get(`https://gnews.io/api/v4/search?q=vegan OR veganismo OR veg OR vegetariano OR vegetarianismo OR vegetariana OR vegana OR vegano&sortby=relevance&lang=pt&max=${pageSize}&token=2559bbabb022e56c41938b55f3e57df1`);
+        const response = await axios.get(`https://gnews.io/api/v4/search?q=(${key} AND (vegan OR veganismo OR veg OR vegetariano OR vegetarianismo OR vegetariana OR vegana OR vegano))&sortby=relevance&lang=pt&max=${pageSize}&token=2559bbabb022e56c41938b55f3e57df1`);
         setNewsArray(response.data.articles)
         setArray(response.data.articles)
       } catch (err) {
@@ -40,10 +41,10 @@ export function BlogPage() {
     value ? filterNews(value.toLowerCase()) : setNewsArray(newsArray.slice(0, pageSize))
   }
   
-  function filterNews(value) {
-    const filteredNews = newsArray.filter(news => news.title.toLowerCase().includes(value))
-    setArray(filteredNews)
-  }
+  // function filterNews(value) {
+  //   const filteredNews = newsArray.filter(news => news.title.toLowerCase().includes(value))
+  //   setArray(filteredNews)
+  // }
 
   return(
     <>
