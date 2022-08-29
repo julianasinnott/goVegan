@@ -16,7 +16,7 @@ export function Card({ item, color, width, height, handleClick }) {
     >
       <img
         className='card__img'
-        src={item.urlToImage}
+        src={item.image}
         alt=""
       />
       <div className='card__infos'>
