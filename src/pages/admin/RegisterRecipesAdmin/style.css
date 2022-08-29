@@ -1,89 +1,95 @@
-.main_RegisterRecipes{
+.main_RegisterRecipes {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 900px;
-    margin-top: 250px;
+    margin: 20px 0 0;
 }
 
-.h1_RegisterRecipes{
+.content_RegisterRecipes {
+    width: 70%;
+}
+
+.h1_RegisterRecipes {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 73px;
 
-    font-weight: 400;
-    font-size: 70px;
+    font-size: 46px;
+    font-weight: bold;
     line-height: 82px;
     text-align: center;
-    font-family: 'Roboto Condensed';
+    letter-spacing: 0.02em;
 
-    color: #223929;
+    color: var(--secundary);
     margin-top: 30px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
-.form_RegisterRecipes{
+.form_RegisterRecipes {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 20px;
     width: 100%;
-    height: 1200px;
 }
 
 .input_RegisterRecipes {
     width: 100%;
-    height: 4%;
 
-    background: #E6ECEB;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 12px;
-    margin-bottom: 30px;
-    padding-top: 5px;
+    background: var(--InputFormaBakground);
+    box-shadow: var(--shadow);
+    border-radius: 6px;
+    padding: 10px;
     font-weight: 400;
-    font-size: 32px;
-    line-height: 58px;
+    font-size: 20px;
 
     text-align: center;
     letter-spacing: 0.04em;
 
-    color: #223929;
+    color: var(--secundary);
 }
 
-.text-area_RegisterRecipes{
+.text-area_RegisterRecipes {
     width: 100%;
     height: 14%;
 
-    background: #E6ECEB;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 12px;
+    background: var(--InputFormaBakground);
+    color: var(--secundary);
+    box-shadow: var(--shadow);
+    border-radius: 6px;
     font-weight: 400;
-    font-size: 32px;
+    font-size: 20px;
     line-height: 58px;
     padding-top: 15px;
 
     text-align: center;
     letter-spacing: 0.04em;
-    margin-bottom: 30px;
-    color: #223929;
 }
 
-.btn_RegisterRecipes{
+.btn_RegisterRecipes {
     all: unset;
-    width: 100%;
-    height: 4%;
-    background: #780083;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 12px;
+    width: 100%;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--tertiary);
+    box-shadow: var(--shadow);
+    border-radius: 6px;
     font-weight: 700;
-    font-size: 32px;
+    font-size: 24px;
     line-height: 58px;
     text-align: center;
     letter-spacing: 0.04em;
+    color: var(--white);
+    margin-top: 20px;
+    cursor: pointer;
+}
 
-    color: #FFFFFF;
+.btn_RegisterRecipes:hover {
+    opacity: 0.9;
 }

@@ -7,7 +7,7 @@ import { Card } from "../../components/Card/index";
 import { theme } from "../../utils/theme";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import axios from "axios"
+import api from '../../services/api'
 
 export function RecipesPage() {
   const recipesArray = []
@@ -19,8 +19,7 @@ export function RecipesPage() {
   useEffect(()=> {
     async function getRecipes() {
       try {
-        const response = await axios.get('https://go-vegan-api.herokuapp.com/recipes')
-        console.log(response)
+        const response = await api.get('/recipes')
         setRecipes(response.data)
       }
       catch (err) {
@@ -29,10 +28,6 @@ export function RecipesPage() {
     }
     getRecipes()
   },[]) 
-
-  function handleType(value) {
-    setType(value)
-  }
 
   function handlePageSize() {
     if (type === 'SALGADAS') {
@@ -89,9 +84,9 @@ export function RecipesPage() {
           incríveis!
         </h1>
         <div className="recipes__select-section">
-          <Button handleClick={handleType} value="SALGADAS" color={type === 'SALGADAS' ? theme.colors.secundary : theme.colors.primary} />
+          <Button handleClick={setType} value="SALGADAS" color={type === 'SALGADAS' ? theme.colors.secundary : theme.colors.primary} />
           <div className="options-divisor">|</div>
-          <Button handleClick={handleType} value="DOCES" color={type === 'DOCES' ? theme.colors.secundary : theme.colors.primary} />
+          <Button handleClick={setType} value="DOCES" color={type === 'DOCES' ? theme.colors.secundary : theme.colors.primary} />
         </div>
         <section className="recipes-section">
           {render}

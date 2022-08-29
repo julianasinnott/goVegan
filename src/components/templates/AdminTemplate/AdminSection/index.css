@@ -8,18 +8,22 @@
   align-items: center;
   padding: 20px;
   margin-top: 50px;
-  gap: 40px;
+  gap: 20px;
+}
+
+.content_RegisterPartners {
+  width: 80%;
 }
 
 .main-adm__list__title {
-  font-size: 22px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  gap: 100px;
+  font-size: 44px;
+  text-align: center; 
 }
 
 .plus-icon {  
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
   background-color: var(--secundary);
   padding: 4px;
   border-radius: 50%;  
@@ -31,5 +35,6 @@
   width: 100%;
   display: flex;
   align-items: center;
+  margin-top: 20px;
 }
 

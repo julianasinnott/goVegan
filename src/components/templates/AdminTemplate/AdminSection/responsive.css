@@ -1,13 +1,28 @@
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 1100px) {
+  .plus-icon {
+   bottom: 20px;
+   right: 20px;
+  }
+}
+@media only screen and (max-width: 800px) {
   .main-adm {
-    gap: 20px;
+    gap: 10px;
   }
   .main-adm__list__title {
-    font-size: 15px;
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .main-adm {
+    padding: 30px;
+  }
+  .main-adm__list__title {
+    font-size: 34px;
   }
   .plus-icon {
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
   }
 }
 @media only screen and (max-width: 410px) {
@@ -18,7 +33,7 @@
 
 @media only screen and (max-width: 350px) {
   .main-adm__list__title {
-    font-size: 13px;
+    font-size: 32px;
   }
   .main-adm__list__title {
     gap: 20px;

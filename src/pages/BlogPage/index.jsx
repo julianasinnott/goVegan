@@ -56,7 +56,7 @@ export function BlogPage() {
         <div className="group_news">
         {newsArray.length > 0 ?
          Array.map((news, index) => (
-          <a target='blank' href={news.url}>
+          <a key={index} target='blank' href={news.url}>
             <Card 
               key={index} 
               item={news} 

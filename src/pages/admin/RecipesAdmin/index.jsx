@@ -3,29 +3,31 @@ import { AdminSection } from "../../../components/templates/AdminTemplate/AdminS
 import '../../../components/templates/AdminTemplate/responsive.css';
 import { useState } from "react";
 import { useEffect } from "react";
-import axios from "axios"
+import api from '../../../services/api'
 
 
 export function RecipesAdmin() {
   const [recipes, setRecipes] = useState([])
+  const [key, setKey] = useState('')
+
+  async function getRecipes() {
+    try {
+      const response = await api.get(`/recipes?q=${key}`)
+      setRecipes(response.data)
+    }
+    catch (err) {
+      console.error(err);
+    }
+  }
 
   useEffect(()=> {
-    async function getRecipes() {
-      try {
-        const response = await axios.get('https://go-vegan-api.herokuapp.com/recipes')
-        setRecipes(response.data)
-      }
-      catch (err) {
-        console.error(err);
-      }
-    }
     getRecipes()
-  },[])
+  },[key])
 
   async function deleteRecipes(ID) {
     try {
-      const response = await axios.delete(`https://go-vegan-api.herokuapp.com/recipes/${ID}`)
-      setRecipes(recipes.filter(recipe => recipe.id !== ID))
+      const response = await api.delete(`/recipes/${ID}`)
+      getRecipes()
     }
     catch (err) {
       console.error(err);
@@ -37,7 +39,9 @@ export function RecipesAdmin() {
       <AdminSection
         title={'Receitas GoVegan'}
         data={recipes}
-        handleClick={deleteRecipes}
+        handleSearch={setKey}
+        deleteItem={deleteRecipes}
+        titleModal={'Receita'}
       />
     </AdminTemplate>
   )
