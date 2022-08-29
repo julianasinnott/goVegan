@@ -12,7 +12,7 @@ export function RecipesAdmin() {
 
   async function getRecipes() {
     try {
-      const response = await api.get(`/recipes?q=${key}`)
+      const response = await api.get(`/recipes?_sort=id&_order=desc&q=${key}`)
       setRecipes(response.data)
     }
     catch (err) {
