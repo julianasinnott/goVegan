@@ -1,10 +1,12 @@
 import './index.css'
 import './responsive.css'
 import { Header } from "../../components/Header";
-import * as React from 'react';
 import { useState } from 'react';
+import { SuccessRegister } from '../../components/SuccessRegister';
+import * as React from 'react';
 
 export function RegisterPage() {
+  const [successMessage, setSuccessMessage] = useState(false)
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
   const [form, setForm] = React.useState({
@@ -21,18 +23,28 @@ export function RegisterPage() {
     setError('')
   }
 
-   async function formSubmit(data) {
+  async function formSubmit(data) {
     setLoading(true)
-    await fetch("https://formsubmit.co/ajax/julianasinnott@outlook.com", {
-      method: "POST",
-      headers: { 
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-      },
-      body: JSON.stringify(data)
-    })
-    .catch(error => console.log(error))
-    setLoading(false)
+    try {
+      await fetch("https://formsubmit.co/ajax/julianasinnott@outlook.com", {
+        method: "POST",
+        headers: { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+      setSuccessMessage(true)
+    }
+    catch (err) {
+      console.error(err);
+    }
+    finally {
+      setLoading(false)
+      setTimeout(() => {
+        setSuccessMessage(false);
+      }, 4000);
+    }
   }
 
   async function handleSubmit(e) {
@@ -70,9 +82,9 @@ export function RegisterPage() {
       <Header type={"USER"} />
       <div className="register__form">
         <form 
-        className='form__inputs'  
-        method="POST"
-        onSubmit={handleSubmit}
+          className='form__inputs'  
+          method="POST"
+          onSubmit={handleSubmit}
         >
           <h1 className='register__form__title'>
             Venha mudar o mundo <br />
@@ -120,6 +132,12 @@ export function RegisterPage() {
             }
           </button>
         </form>
+        {
+          successMessage &&
+          <SuccessRegister
+            title='Cadastro realizado com sucesso!'
+          />
+        }
       </div>
     </div>
   )
