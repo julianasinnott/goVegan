@@ -19,7 +19,7 @@ export function RecipesPage() {
   useEffect(()=> {
     async function getRecipes() {
       try {
-        const response = await api.get('/recipes')
+        const response = await api.get('/recipes?_sort=id&_order=desc')
         setRecipes(response.data)
       }
       catch (err) {

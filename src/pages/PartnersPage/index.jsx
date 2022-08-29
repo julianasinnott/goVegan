@@ -18,7 +18,8 @@ export function PartnersPage() {
   useEffect(() => {
     async function getPartners() {
       try {
-        const response = await api.get(`/partners?_page=1&_limit=${pageSize}&q=${key}`)
+        const response = await api.get(`/partners?_sort=id&_order=desc&_page=1&_limit=${pageSize}&q=${key}`)
+        console.log(response.data)
         setPartners(response.data)
       }
       catch (err) {

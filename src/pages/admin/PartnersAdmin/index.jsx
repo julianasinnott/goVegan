@@ -11,7 +11,7 @@ export function PartnersAdmin() {
 
   async function getPartners() {
     try {
-      const response = await api.get(`/partners?q=${key}`)
+      const response = await api.get(`/partners?_sort=id&_order=desc&q=${key}`)
       setPartners(response.data)      
     }
     catch (err) {
