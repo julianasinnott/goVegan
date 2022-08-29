@@ -10,7 +10,6 @@ export function RegisterPartnersAdmin() {
   const [loading, setLoading] = useState('')
   const [successMessage, setSuccessMessage] = useState(false)
   const [urlWarning, setUrlWarning] = useState('');
-  const [urls, setUrls] = useState(false);
   const [form, setForm] = useState(
     {
       slug: "",
@@ -53,25 +52,27 @@ export function RegisterPartnersAdmin() {
     return true;
   }
 
-  function validateURL() {
+  const validateURL = () => {
     if ((form.urlToImage).includes('https://') && (form.urlContact).includes('https://')) {
-      setUrls(true);
-    } else {
-      setUrls(false);
-    } 
+      return true
+    };
+    return false;
   }
+
+
 
   async function handleSubmit(e) {
     e.preventDefault();
-    validateURL()  
-    if (validationForm(form) && urls === true) {
-      await postPartners()  
-      setForm({[e.target.name]: ''})    
+    if (validationForm(form) && validateURL()) {
+      await postPartners()
+      for (const key in form) {
+        form[key] = '';
+      }
     } else if (!validationForm(form)) {
       setUrlWarning('Preencha todos os campos!');
-    } else if (urls === false) {
+    } else if (!validateURL()) {
       setUrlWarning('As urls precisam incluir "https://"')
-    }    
+    }
   }
 
   async function postPartners() {
