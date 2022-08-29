@@ -1,11 +1,14 @@
+@media only screen and (max-width:875px) {
+  .content_RegisterRecipes {
+    width: 90%;
+  }
+}
+
 @media only screen and (max-width:800px) {
   .main_RegisterRecipes{
     margin-top: 40px;
-    padding: 20px;
+    padding: 20px 0;
   } 
-  .content_RegisterRecipes {
-    width: 100%;
-  }
   .h1_RegisterRecipes{
     font-size: 40px;
   } 
@@ -17,9 +20,9 @@
   } 
 }
 
-@media only screen and (max-width:420px) {
+@media only screen and (max-width:440px) {
   .h1_RegisterRecipes{
-    font-size: 36px;
+    font-size: 32px;
     margin: 0;
     margin-top: 20px;
   } 
@@ -42,7 +45,7 @@
   }
 }
 
-@media only screen and (max-width:325px) {
+@media only screen and (max-width:355px) {
   .h1_RegisterRecipes{
     font-size: 26px;
   } 
