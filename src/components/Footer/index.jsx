@@ -44,7 +44,7 @@ export function Footer({
       <div className="footer__logo">
         <img className="footer__logo-img" src="/assets/green-logo.png" alt="" />
         <p className="footer__copyright">
-          © Copyright - GoVegan
+          © Copyright 2022 - GoVegan
         </p>
       </div>
     </footer>
