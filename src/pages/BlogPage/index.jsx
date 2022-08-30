@@ -41,7 +41,7 @@ export function BlogPage() {
         <SearchInput handleSearch={(value)=> setKey(value)} />
         <div className="group_news">
         {newsArray.length > 0 ?
-         Array.map((news, index) => (
+         newsArray.map((news, index) => (
           <a key={index} target='blank' href={news.url}>
             <Card 
               key={index} 
