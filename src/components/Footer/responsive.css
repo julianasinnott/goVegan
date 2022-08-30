@@ -1,4 +1,15 @@
+@media only screen and (max-width:1090px) {
+  .footer__contact {
+    bottom: 20px;
+    right: 50px;
+  }
+}
+
 @media only screen and (max-width:800px) {
+  .footer__contact {
+    bottom: 20px;
+    right: 30px;
+  }
   .footer__idealizers-section {
     padding: 14px 40px;
     gap: 10px;
@@ -34,5 +45,11 @@
   .idealizers-img {
     width: 55px;
     height: 55px;
+  }
+}
+
+@media only screen and (max-width:330px) {
+  .footer__contact {
+    right: 10px;
   }
 }

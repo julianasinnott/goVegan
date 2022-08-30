@@ -24,9 +24,13 @@
   margin-left: 20px;
 }
 
-.contact-btn {
-  position: relative;
+.footer__contact {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+}
 
+.contact-btn {
   color: var(--white);
   height: min-content;
   cursor: pointer;

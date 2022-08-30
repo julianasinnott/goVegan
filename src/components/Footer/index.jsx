@@ -22,10 +22,12 @@ export function Footer({
           <>
             <div className="footer__top">
               <p className="footer__idealizers-title">IDEALIZADORES</p>
-              <button className="contact-btn purple-btn" onClick={() => handleModal()} >
-                FALE CONOSCO
-              </button>
-              {showModal && <ModalContact setShowModal={setShowModal} />}
+              <div className='footer__contact'>
+                <button className="contact-btn purple-btn" onClick={() => handleModal()} >
+                  FALE CONOSCO
+                </button>
+                {showModal && <ModalContact setShowModal={setShowModal} />}
+              </div>
             </div>
             <div className="footer__idealizers-section__imgs">
               <a href="https://www.linkedin.com/in/julianasinnott/" target="_blank" rel="noopener noreferrer">
