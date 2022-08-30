@@ -4,7 +4,17 @@
   }
 }
 
+@media only screen and (max-width:1220px) {
+  .home__background {
+    background-position: center top 76px;
+    height: 62vw;
+  }
+}
+
 @media only screen and (max-width:980px) {
+  .home__background {
+    height: 66vw;
+  }
   .home__about__picture-img {
     width: 80%;
     height: 50%;
@@ -41,7 +51,7 @@
 @media only screen and (max-width:800px) {
   .home__background {
     background-position: center top 76px;
-    height: 70vw;
+    height: 68vw;
   }
   .home__purpose__description {
     flex-direction: column;
@@ -62,7 +72,7 @@
 
 @media only screen and (max-width:730px) {
   .home__background {
-    height: 74vw;
+    height: 70vw;
   }
   .home__about__description {
     gap: 30px;
@@ -77,7 +87,6 @@
 
 @media only screen and (max-width:650px) {
   .home__background {
-    height: 72vw; 
     background-position: center top 66px;
   }
   .purpose__text {
