@@ -4,6 +4,7 @@ import { UserCircle } from 'phosphor-react'
 import { theme } from '../../utils/theme'
 
 export function Card({ item, color, width, height, handleClick }) {
+  if (!item.image) return <></>
   return (
     <div
       onClick={handleClick}
