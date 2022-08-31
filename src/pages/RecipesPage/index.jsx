@@ -8,6 +8,7 @@ import { theme } from "../../utils/theme";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import api from '../../services/api'
+import { SearchInput } from "../../components/SearchInput";
 
 export function RecipesPage() {
   const recipesArray = []
@@ -15,11 +16,12 @@ export function RecipesPage() {
   const [pageSizeDoce, setPageSizeDoce] = useState(3)
   const [type, setType] = useState('SALGADAS')
   const [recipes, setRecipes] = useState([])
+  const [key, setKey] = useState('')
 
   useEffect(()=> {
     async function getRecipes() {
       try {
-        const response = await api.get('/recipes?_sort=id&_order=desc')
+        const response = await api.get(`/recipes?_sort=id&_order=desc&q=${key}`)
         setRecipes(response.data)
       }
       catch (err) {
@@ -27,7 +29,7 @@ export function RecipesPage() {
       }
     }
     getRecipes()
-  },[]) 
+  },[key]) 
 
   function handlePageSize() {
     if (type === 'SALGADAS') {
@@ -83,6 +85,7 @@ export function RecipesPage() {
           Escolha uma das opções abaixo e mostraremos para você seleções
           incríveis!
         </h1>
+        <SearchInput handleSearch={(value)=> setKey(value)} />
         <div className="recipes__select-section">
           <Button handleClick={setType} value="SALGADAS" color={type === 'SALGADAS' ? theme.colors.secundary : theme.colors.primary} />
           <div className="options-divisor">|</div>
