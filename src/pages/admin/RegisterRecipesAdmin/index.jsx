@@ -29,6 +29,11 @@ export function RegisterRecipesAdmin() {
         "slug": form.title.toLowerCase().replace(/ /g, "-"),
         [e.target.name]: e.target.value,
       });
+    } else {
+      setForm({
+        ...form,
+        [e.target.name]: '',
+      });
     }
 
     if (e.target.name === 'image' && !e.target.value.includes('https://')) {
