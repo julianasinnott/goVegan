@@ -52,7 +52,6 @@ export function RegisterRecipesAdmin() {
     }
 
   }
-  console.log(form);
 
   const validationForm = (data) => {
     for (const key in form) {
