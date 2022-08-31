@@ -4,7 +4,7 @@ import './responsive.css'
 import { Link } from "react-router-dom";
 import { routes } from './routes'
 import headerLogo from '/assets/white-logo.png'
-import { List } from 'phosphor-react';
+import { List, X } from 'phosphor-react';
 import { useState } from 'react';
 
 export function Header({ type }) {
@@ -17,10 +17,18 @@ export function Header({ type }) {
   return(
     <header className="header">
         <img className="header__logo" src={headerLogo} alt="Logo GoVegan"/>
+        {
+          showMenu?
+          <X 
+            onClick={()=> setShowMenu(!showMenu)}
+            className='header__navbar-icon'
+          />
+          :
           <List 
             onClick={()=> setShowMenu(!showMenu)}
             className='header__navbar-icon'
           />
+        }          
         <nav className=
         {
           showMenu ?
@@ -33,7 +41,7 @@ export function Header({ type }) {
             {routes[type].routes.map(route => (              
               <button 
                 key={route.path} 
-                className="header__navbar__item"
+                className="header__navbar__item gradient"
                 style={
                   route.path === window.location.pathname ?
                   {'color':'var(--secundary)', 'borderBottom':'2px solid var(--secundary)'}
