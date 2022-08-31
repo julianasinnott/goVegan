@@ -29,12 +29,6 @@ export function RegisterRecipesAdmin() {
         "slug": form.title.toLowerCase().replace(/ /g, "-"),
         [e.target.name]: e.target.value,
       });
-    } else {
-      setForm({
-        ...form,
-        "slug": form.title.toLowerCase().replace(/ /g, "-"),
-        [e.target.name]: '',
-      });
     }
 
     if (e.target.name === 'image' && !e.target.value.includes('https://')) {
@@ -46,7 +40,6 @@ export function RegisterRecipesAdmin() {
     if (e.target.value === ' ') {
       setForm({
         ...form,
-        "slug": form.title.toLowerCase().replace(/ /g, "-"),
         [e.target.name]: '',
       });
     }
