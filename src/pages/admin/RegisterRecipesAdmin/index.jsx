@@ -37,7 +37,7 @@ export function RegisterRecipesAdmin() {
       });
     }
 
-    if (e.target.name === 'urlToImage' && !e.target.value.includes('https://')) {
+    if (e.target.name === 'image' && !e.target.value.includes('https://')) {
       setUrlWarning('A url precisa incluir "https://"')
     } else {
       setUrlWarning('');
@@ -64,7 +64,7 @@ export function RegisterRecipesAdmin() {
   }
 
   const validateURL = () => {
-    if ((form.urlToImage).includes('https://')) {
+    if ((form.image).includes('https://')) {
       return true
     };
     return false;
@@ -119,9 +119,9 @@ export function RegisterRecipesAdmin() {
               className="input_RegisterRecipes"
               type="text"
               placeholder="URL da Imagem"
-              value={form.urlToImage}
+              value={form.image}
               onChange={handleChange}
-            /* required */
+              required
             />
             <input
               name="title"
@@ -130,7 +130,7 @@ export function RegisterRecipesAdmin() {
               placeholder="Título"
               value={form.title}
               onChange={handleChange}
-            /* required */
+              required
             />
             <input
               name="subtitle"
@@ -139,7 +139,7 @@ export function RegisterRecipesAdmin() {
               placeholder="Subtítulo"
               value={form.subtitle}
               onChange={handleChange}
-            /* required */
+              required
             />
             <textarea
               name="ingredients"
@@ -147,7 +147,7 @@ export function RegisterRecipesAdmin() {
               placeholder="Ingredientes"
               value={form.ingredients}
               onChange={handleChange}
-            /* required */
+              required
             ></textarea>
             <textarea
               name="phases"
@@ -155,14 +155,14 @@ export function RegisterRecipesAdmin() {
               placeholder="Modo de fazer"
               value={form.phases}
               onChange={handleChange}
-            /* required */
+              required
             ></textarea>
             <select
               name="type"
               className="input_RegisterRecipes"
               defaultValue="Tipo"
               onChange={handleChange}
-            /* required */
+              required
             >
               <option value="Tipo" disabled> Tipo </option>
               <option value="DOCES"> Doce </option>
