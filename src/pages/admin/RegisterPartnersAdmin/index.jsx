@@ -13,7 +13,7 @@ export function RegisterPartnersAdmin() {
   const [form, setForm] = useState(
     {
       slug: "",
-      image: "",
+      urlToImage: "",
       title: "",
       subtitle: "",
       description: "",
@@ -31,16 +31,23 @@ export function RegisterPartnersAdmin() {
     } else {
       setForm({
         ...form,
-        "slug": form.title.toLowerCase().replace(/ /g, "-"),
         [e.target.name]: '',
       });
     }
 
-    if ((e.target.name === 'image' || e.target.name === 'urlContact') && !e.target.value.includes('https://')) {
+    if ((e.target.name === 'urlToImage' || e.target.name === 'urlContact') && !e.target.value.includes('https://')) {
       setUrlWarning('As urls precisam incluir "https://"')
     } else {
       setUrlWarning('');
     }
+
+    if (e.target.value === ' ') {
+      setForm({
+        ...form,
+        [e.target.name]: '',
+      });
+    }
+
   }
 
   const validationForm = (data) => {
@@ -53,7 +60,7 @@ export function RegisterPartnersAdmin() {
   }
 
   const validateURL = () => {
-    if ((form.image).includes('https://') && (form.urlContact).includes('https://')) {
+    if ((form.urlToImage).includes('https://') && (form.urlContact).includes('https://')) {
       return true
     };
     return false;
@@ -104,9 +111,9 @@ export function RegisterPartnersAdmin() {
             <input
               className="input_RegisterPartners"
               type="text"
-              name="image"
+              name="urlToImage"
               placeholder="URL da imagem"
-              value={form.image}
+              value={form.urlToImage}
               onChange={handleChange}
               required
             />
