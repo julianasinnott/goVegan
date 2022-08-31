@@ -20,7 +20,7 @@ export function BlogPage() {
     async function getNews() {
       try {
         setLoading(true)
-        const response = await axios.get(`https://gnews.io/api/v4/search?q=(${key} OR vegan OR veganismo OR veg OR vegetariano OR vegetarianismo OR vegetariana OR vegana OR vegano)&sortby=relevance&lang=pt&max=${pageSize}&token=2559bbabb022e56c41938b55f3e57df1`);
+        const response = await axios.get(`https://gnews.io/api/v4/search?q=vegan OR veganismo OR vegano OR vegetariano OR vegetariana OR vegana NOT pediatra NOT prisao NOT xuxa NOT pobre NOT mato NOT aspargo NOT irrita NOT onVeg NOT FOLHAPRESS&lang=pt&max=${pageSize}&token=2559bbabb022e56c41938b55f3e57df1`);
         setNewsArray(response.data.articles)
       } catch (err) {
         console.error(err);
