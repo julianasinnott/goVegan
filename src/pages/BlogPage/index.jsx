@@ -14,13 +14,13 @@ export function BlogPage() {
   const [newsArray, setNewsArray] = useState([]);
   const [pageSize, setPageSize] = useState(3)
   const [loading, setLoading] = useState(false)
-  const [key, setKey] = useState('vegan')
-  
+  const [key, setKey] = useState('')
+
   useEffect(()=> {
     async function getNews() {
       try {
-        setLoading(true)
-        const response = await axios.get(`https://gnews.io/api/v4/search?q=vegan OR veganismo OR vegano OR vegetariano OR vegetariana OR vegana NOT pediatra NOT prisao NOT xuxa NOT pobre NOT mato NOT aspargo NOT irrita NOT onVeg NOT FOLHAPRESS&lang=pt&max=${pageSize}&token=2559bbabb022e56c41938b55f3e57df1`);
+        setLoading(true)        
+        const response = await axios.get(`https://gnews.io/api/v4/search?q=(vegan OR veganismo OR vegano OR vegetariano OR vegetariana OR vegana NOT pediatra NOT prisao NOT xuxa NOT pobre NOT mato NOT aspargo NOT irrita NOT onVeg NOT FOLHAPRESS)${key && `AND ${key}`}&lang=pt&max=${pageSize}&token=2559bbabb022e56c41938b55f3e57df1`);
         setNewsArray(response.data.articles)
       } catch (err) {
         console.error(err);

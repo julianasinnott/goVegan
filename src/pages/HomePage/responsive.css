@@ -121,6 +121,9 @@
 }
 
 @media only screen and (max-width:500px) {
+  .home__background {
+    height: 69vw;
+  }
   .home__about__description {
     gap: 20px;
   }
