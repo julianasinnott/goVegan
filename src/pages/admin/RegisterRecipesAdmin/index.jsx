@@ -13,7 +13,7 @@ export function RegisterRecipesAdmin() {
   const [form, setForm] = useState(
     {
       slug: "",
-      urlToImage: "",
+      image: "",
       title: "",
       subtitle: "",
       ingredients: "",
@@ -115,7 +115,7 @@ export function RegisterRecipesAdmin() {
             onSubmit={handleSubmit}
             className="form_RegisterRecipes">
             <input
-              name="urlToImage"
+              name="image"
               className="input_RegisterRecipes"
               type="text"
               placeholder="URL da Imagem"

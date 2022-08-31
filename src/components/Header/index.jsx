@@ -4,8 +4,12 @@ import './responsive.css'
 import { Link } from "react-router-dom";
 import { routes } from './routes'
 import headerLogo from '/assets/white-logo.png'
+import { List } from 'phosphor-react';
+import { useState } from 'react';
 
 export function Header({ type }) {
+  const [showMenu, setShowMenu] = useState(false)
+  
   function handleLogout() {
     type === 'ADMIN' && localStorage.removeItem('token')
   }
@@ -13,7 +17,18 @@ export function Header({ type }) {
   return(
     <header className="header">
         <img className="header__logo" src={headerLogo} alt="Logo GoVegan"/>
-        <nav className="header__navbar">
+          <List 
+            onClick={()=> setShowMenu(!showMenu)}
+            className='header__navbar-icon'
+          />
+        <nav className=
+        {
+          showMenu ?
+          "header__navbar navbar-mobile"
+          :
+          "header__navbar"
+        }
+        >
           <div className="header__navbar-section">
             {routes[type].routes.map(route => (              
               <button 
@@ -33,7 +48,7 @@ export function Header({ type }) {
           <div className="header__navbar__purple-btn">
             <button
               onClick={handleLogout}
-              className="header__navbar__item purple-btn">
+              className="header__navbar__item purple-btn btn-register">
              <Link to={routes[type].featured.path}>{routes[type].featured.name}</Link>              
             </button>
           </div>   

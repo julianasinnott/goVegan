@@ -13,7 +13,7 @@ export function RegisterPartnersAdmin() {
   const [form, setForm] = useState(
     {
       slug: "",
-      urlToImage: "",
+      image: "",
       title: "",
       subtitle: "",
       description: "",
@@ -36,7 +36,7 @@ export function RegisterPartnersAdmin() {
       });
     }
 
-    if ((e.target.name === 'urlToImage' || e.target.name === 'urlContact') && !e.target.value.includes('https://')) {
+    if ((e.target.name === 'image' || e.target.name === 'urlContact') && !e.target.value.includes('https://')) {
       setUrlWarning('As urls precisam incluir "https://"')
     } else {
       setUrlWarning('');
@@ -53,7 +53,7 @@ export function RegisterPartnersAdmin() {
   }
 
   const validateURL = () => {
-    if ((form.urlToImage).includes('https://') && (form.urlContact).includes('https://')) {
+    if ((form.image).includes('https://') && (form.urlContact).includes('https://')) {
       return true
     };
     return false;
@@ -104,9 +104,9 @@ export function RegisterPartnersAdmin() {
             <input
               className="input_RegisterPartners"
               type="text"
-              name="urlToImage"
+              name="image"
               placeholder="URL da imagem"
-              value={form.urlToImage}
+              value={form.image}
               onChange={handleChange}
               required
             />
