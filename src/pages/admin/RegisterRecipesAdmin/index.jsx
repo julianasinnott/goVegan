@@ -12,7 +12,7 @@ export function RegisterRecipesAdmin() {
   const [form, setForm] = useState(
     {
       slug: "",
-      urlToImage: "",
+      Image: "",
       title: "",
       subtitle: "",
       ingredients: "",
