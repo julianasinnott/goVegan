@@ -50,8 +50,8 @@
 
 @media only screen and (max-width:800px) {
   .home__background {
-    background-position: center top 76px;
-    height: 68vw;
+    background-position: center top 60px;
+    height: 66vw;
   }
   .home__purpose__description {
     flex-direction: column;
@@ -70,9 +70,9 @@
   }
 }
 
-@media only screen and (max-width:730px) {
+@media only screen and (max-width:720px) {
   .home__background {
-    height: 70vw;
+    height: 66vw;
   }
   .home__about__description {
     gap: 30px;
@@ -85,9 +85,10 @@
   }
 }
 
-@media only screen and (max-width:650px) {
+@media only screen and (max-width:680px) {
   .home__background {
-    background-position: center top 66px;
+    background-position: center top 60px;
+    height: 68vw;
   }
   .purpose__text {
     font-size: 16px;
@@ -101,7 +102,7 @@
   }
 }
 
-@media only screen and (max-width:550px) {
+@media only screen and (max-width:570px) {
   .home__background {
     background-position: center top 50px;
   }
@@ -154,6 +155,12 @@
   .purpose__text {
     font-size: 12px;
     padding-left: 10px;
+  }
+}
+
+@media only screen and (max-width:380px) {
+  .home__about {
+    padding: 0 20px;
   }
 }
 
