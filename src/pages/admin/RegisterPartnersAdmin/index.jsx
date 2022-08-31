@@ -13,7 +13,7 @@ export function RegisterPartnersAdmin() {
   const [form, setForm] = useState(
     {
       slug: "",
-      urlToImage: "",
+      image: "",
       title: "",
       subtitle: "",
       description: "",
