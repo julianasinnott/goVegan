@@ -9,10 +9,11 @@ import { SuccessRegister } from "../../../components/SuccessRegister";
 export function RegisterRecipesAdmin() {
   const [loading, setLoading] = useState('')
   const [successMessage, setSuccessMessage] = useState(false)
+  const [urlWarning, setUrlWarning] = useState('');
   const [form, setForm] = useState(
     {
       slug: "",
-      urlToImage: "",
+      image: "",
       title: "",
       subtitle: "",
       ingredients: "",
@@ -22,17 +23,67 @@ export function RegisterRecipesAdmin() {
   )
 
   function handleChange(e) {
-    setForm({
-      ...form,
-      "slug": form.title.toLowerCase().replace(/ /g,"-"),
-      [e.target.name]: e.target.value,
-    });    
+    if (e.target.value.length > 0 && e.target.value !== '') {
+      setForm({
+        ...form,
+        "slug": form.title.toLowerCase().replace(/ /g, "-"),
+        [e.target.name]: e.target.value,
+      });
+    } else {
+      setForm({
+        ...form,
+        [e.target.name]: '',
+      });
+    }
+
+    if (e.target.name === 'image' && !e.target.value.includes('https://')) {
+      setUrlWarning('A url precisa incluir "https://"')
+    } else {
+      setUrlWarning('');
+    }
+
+    if (e.target.value === ' ') {
+      setForm({
+        ...form,
+        [e.target.name]: '',
+      });
+    }
+
+  }
+
+  const validationForm = (data) => {
+    for (const key in form) {
+      if (['', 0, null].includes(data[key])) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  const validateURL = () => {
+    if ((form.image).includes('https://')) {
+      return true
+    };
+    return false;
   }
 
   async function handleSubmit(e) {
     e.preventDefault();
-    await postRecipes()
-    e.target.reset()
+
+    if (validationForm(form) && validateURL()) {
+      setUrlWarning('');
+      await postRecipes();
+      e.target.reset();
+      for (const key in form) {
+        form[key] = '';
+      }
+
+    } else if (!validateURL()) {
+      setUrlWarning('A url precisa incluir "https://"');
+    } else {
+      setUrlWarning('Preencha todos os campos!');
+    }
+
   }
 
   async function postRecipes() {
@@ -47,12 +98,12 @@ export function RegisterRecipesAdmin() {
     finally {
       setLoading(false)
       setTimeout(() => {
-        setSuccessMessage(false); 
+        setSuccessMessage(false);
       }, 4000);
     }
   }
 
-  return(
+  return (
     <AdminTemplate colorRecipes='--tertiary'>
       <main className="main_RegisterRecipes">
         <div className="content_RegisterRecipes">
@@ -61,18 +112,20 @@ export function RegisterRecipesAdmin() {
             onSubmit={handleSubmit}
             className="form_RegisterRecipes">
             <input
-              name="urlToImage"
+              name="image"
               className="input_RegisterRecipes"
               type="text"
               placeholder="URL da Imagem"
+              value={form.image}
               onChange={handleChange}
-              required  
+              required
             />
             <input
               name="title"
               className="input_RegisterRecipes"
               type="text"
               placeholder="Título"
+              value={form.title}
               onChange={handleChange}
               required
             />
@@ -81,6 +134,7 @@ export function RegisterRecipesAdmin() {
               className="input_RegisterRecipes"
               type="text"
               placeholder="Subtítulo"
+              value={form.subtitle}
               onChange={handleChange}
               required
             />
@@ -88,6 +142,7 @@ export function RegisterRecipesAdmin() {
               name="ingredients"
               className="text-area_RegisterRecipes"
               placeholder="Ingredientes"
+              value={form.ingredients}
               onChange={handleChange}
               required
             ></textarea>
@@ -95,6 +150,7 @@ export function RegisterRecipesAdmin() {
               name="phases"
               className="text-area_RegisterRecipes"
               placeholder="Modo de fazer"
+              value={form.phases}
               onChange={handleChange}
               required
             ></textarea>
@@ -109,15 +165,16 @@ export function RegisterRecipesAdmin() {
               <option value="DOCES"> Doce </option>
               <option value="SALGADAS"> Salgada </option>
             </select>
+            <p className="url-warning_RegisterRecipes">{urlWarning}</p>
             <button className="btn_RegisterRecipes" type="submit">
-              {loading? 'Enviando...' : 'Enviar'}
+              {loading ? 'Enviando...' : 'Enviar'}
             </button>
             {
-              successMessage && 
+              successMessage &&
               <SuccessRegister
                 title='Receita cadastrada com sucesso!'
               />
-            }            
+            }
           </form>
         </div>
       </main>

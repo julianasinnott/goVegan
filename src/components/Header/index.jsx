@@ -4,8 +4,12 @@ import './responsive.css'
 import { Link } from "react-router-dom";
 import { routes } from './routes'
 import headerLogo from '/assets/white-logo.png'
+import { List, X } from 'phosphor-react';
+import { useState } from 'react';
 
 export function Header({ type }) {
+  const [showMenu, setShowMenu] = useState(false)
+  
   function handleLogout() {
     type === 'ADMIN' && localStorage.removeItem('token')
   }
@@ -13,12 +17,31 @@ export function Header({ type }) {
   return(
     <header className="header">
         <img className="header__logo" src={headerLogo} alt="Logo GoVegan"/>
-        <nav className="header__navbar">
+        {
+          showMenu?
+          <X 
+            onClick={()=> setShowMenu(!showMenu)}
+            className='header__navbar-icon'
+          />
+          :
+          <List 
+            onClick={()=> setShowMenu(!showMenu)}
+            className='header__navbar-icon'
+          />
+        }          
+        <nav className=
+        {
+          showMenu ?
+          "header__navbar navbar-mobile"
+          :
+          "header__navbar"
+        }
+        >
           <div className="header__navbar-section">
             {routes[type].routes.map(route => (              
               <button 
                 key={route.path} 
-                className="header__navbar__item"
+                className="header__navbar__item gradient"
                 style={
                   route.path === window.location.pathname ?
                   {'color':'var(--secundary)', 'borderBottom':'2px solid var(--secundary)'}
@@ -33,7 +56,7 @@ export function Header({ type }) {
           <div className="header__navbar__purple-btn">
             <button
               onClick={handleLogout}
-              className="header__navbar__item purple-btn">
+              className="header__navbar__item purple-btn btn-register">
              <Link to={routes[type].featured.path}>{routes[type].featured.name}</Link>              
             </button>
           </div>   
