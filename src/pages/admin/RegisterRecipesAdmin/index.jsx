@@ -9,6 +9,7 @@ import { SuccessRegister } from "../../../components/SuccessRegister";
 export function RegisterRecipesAdmin() {
   const [loading, setLoading] = useState('')
   const [successMessage, setSuccessMessage] = useState(false)
+  const [urlWarning, setUrlWarning] = useState('');
   const [form, setForm] = useState(
     {
       slug: "",
@@ -22,17 +23,70 @@ export function RegisterRecipesAdmin() {
   )
 
   function handleChange(e) {
-    setForm({
-      ...form,
-      "slug": form.title.toLowerCase().replace(/ /g,"-"),
-      [e.target.name]: e.target.value,
-    });    
+    if (e.target.value.length > 0 && e.target.value !== '') {
+      setForm({
+        ...form,
+        "slug": form.title.toLowerCase().replace(/ /g, "-"),
+        [e.target.name]: e.target.value,
+      });
+    } else {
+      setForm({
+        ...form,
+        "slug": form.title.toLowerCase().replace(/ /g, "-"),
+        [e.target.name]: '',
+      });
+    }
+
+    if (e.target.name === 'urlToImage' && !e.target.value.includes('https://')) {
+      setUrlWarning('A url precisa incluir "https://"')
+    } else {
+      setUrlWarning('');
+    }
+
+    if (e.target.value === ' ') {
+      setForm({
+        ...form,
+        "slug": form.title.toLowerCase().replace(/ /g, "-"),
+        [e.target.name]: '',
+      });
+    }
+
+  }
+  console.log(form);
+
+  const validationForm = (data) => {
+    for (const key in form) {
+      if (['', 0, null].includes(data[key])) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  const validateURL = () => {
+    if ((form.urlToImage).includes('https://')) {
+      return true
+    };
+    return false;
   }
 
   async function handleSubmit(e) {
     e.preventDefault();
-    await postRecipes()
-    e.target.reset()
+
+    if (validationForm(form) && validateURL()) {
+      setUrlWarning('');
+      await postRecipes();
+      e.target.reset();
+      for (const key in form) {
+        form[key] = '';
+      }
+
+    } else if (!validateURL()) {
+      setUrlWarning('A url precisa incluir "https://"');
+    } else {
+      setUrlWarning('Preencha todos os campos!');
+    }
+
   }
 
   async function postRecipes() {
@@ -47,12 +101,12 @@ export function RegisterRecipesAdmin() {
     finally {
       setLoading(false)
       setTimeout(() => {
-        setSuccessMessage(false); 
+        setSuccessMessage(false);
       }, 4000);
     }
   }
 
-  return(
+  return (
     <AdminTemplate colorRecipes='--tertiary'>
       <main className="main_RegisterRecipes">
         <div className="content_RegisterRecipes">
@@ -65,59 +119,65 @@ export function RegisterRecipesAdmin() {
               className="input_RegisterRecipes"
               type="text"
               placeholder="URL da Imagem"
+              value={form.urlToImage}
               onChange={handleChange}
-              required  
+            /* required */
             />
             <input
               name="title"
               className="input_RegisterRecipes"
               type="text"
               placeholder="Título"
+              value={form.title}
               onChange={handleChange}
-              required
+            /* required */
             />
             <input
               name="subtitle"
               className="input_RegisterRecipes"
               type="text"
               placeholder="Subtítulo"
+              value={form.subtitle}
               onChange={handleChange}
-              required
+            /* required */
             />
             <textarea
               name="ingredients"
               className="text-area_RegisterRecipes"
               placeholder="Ingredientes"
+              value={form.ingredients}
               onChange={handleChange}
-              required
+            /* required */
             ></textarea>
             <textarea
               name="phases"
               className="text-area_RegisterRecipes"
               placeholder="Modo de fazer"
+              value={form.phases}
               onChange={handleChange}
-              required
+            /* required */
             ></textarea>
             <select
               name="type"
               className="input_RegisterRecipes"
               defaultValue="Tipo"
               onChange={handleChange}
-              required
+            /* required */
             >
               <option value="Tipo" disabled> Tipo </option>
               <option value="DOCES"> Doce </option>
               <option value="SALGADAS"> Salgada </option>
             </select>
+            <p className="url-warning_RegisterRecipes">{urlWarning}</p>
             <button className="btn_RegisterRecipes" type="submit">
-              {loading? 'Enviando...' : 'Enviar'}
+              {loading ? 'Enviando...' : 'Enviar'}
             </button>
             {
-              successMessage && 
+              successMessage &&
               <SuccessRegister
                 title='Receita cadastrada com sucesso!'
               />
-            }            
+            }
           </form>
         </div>
       </main>
