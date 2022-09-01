@@ -14,13 +14,14 @@ export function BlogPage() {
   const [newsArray, setNewsArray] = useState([]);
   const [pageSize, setPageSize] = useState(3)
   const [loading, setLoading] = useState(false)
-  const [key, setKey] = useState('')
+  const [key, setKey] = useState('vegan')
+  const [word, setWord] = useState('')
 
   useEffect(()=> {
     async function getNews() {
       try {
         setLoading(true)        
-        const response = await axios.get(`https://gnews.io/api/v4/search?q=(vegan OR veganismo OR vegano OR vegetariano OR vegetariana OR vegana NOT pediatra NOT prisao NOT xuxa NOT pobre NOT mato NOT aspargo NOT irrita NOT onVeg NOT FOLHAPRESS)${key && `AND ${key}`}&lang=pt&max=${pageSize}&token=2559bbabb022e56c41938b55f3e57df1`);
+        const response = await axios.get(`https://gnews.io/api/v4/search?q=(vegan OR veganismo OR vegano OR vegetariano OR vegetariana OR vegana NOT pediatra NOT contra NOT prisao NOT xuxa NOT pobre NOT mato NOT aspargo NOT irrita NOT onVeg NOT FOLHAPRESS) AND ${key}&lang=pt&max=${pageSize}&token=2559bbabb022e56c41938b55f3e57df1`);
         setNewsArray(response.data.articles)
       } catch (err) {
         console.error(err);
@@ -31,6 +32,17 @@ export function BlogPage() {
     getNews()
   }, [pageSize, key])
 
+  function handleChange(value) {
+    value?
+    setWord(value)
+    :
+    setKey('vegan')
+  }
+
+  function handleSearchBlog() {
+    setKey(word)
+  }
+
   return(
     <>
       <Header type={"USER"}/>
@@ -38,7 +50,9 @@ export function BlogPage() {
         <h1 className="h1_blog">
           Noticias sobre veganismo
         </h1>
-        <SearchInput handleSearch={(value)=> setKey(value)} />
+        <SearchInput
+        handleSearch={handleChange}
+        handleSearchBlog={handleSearchBlog} />
         <div className="group_news">
         {newsArray.length > 0 ?
          newsArray.map((news, index) => (
