@@ -31,3 +31,8 @@
   border-radius: 50%;  
   box-shadow: var(--shadow)
 }
+
+.search-icon:hover {
+  scale: 1.09;
+  transition: all .2s ease-in-out;
+}

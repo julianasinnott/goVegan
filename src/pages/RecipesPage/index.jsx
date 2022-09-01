@@ -85,12 +85,12 @@ export function RecipesPage() {
           Escolha uma das opções abaixo e mostraremos para você seleções
           incríveis!
         </h1>
-        <SearchInput handleSearch={(value)=> setKey(value)} />
         <div className="recipes__select-section">
           <Button handleClick={setType} value="SALGADAS" color={type === 'SALGADAS' ? theme.colors.secundary : theme.colors.primary} />
           <div className="options-divisor">|</div>
           <Button handleClick={setType} value="DOCES" color={type === 'DOCES' ? theme.colors.secundary : theme.colors.primary} />
         </div>
+        <SearchInput handleSearch={(value)=> setKey(value)} />
         <section className="recipes-section">
           {render}
         </section>

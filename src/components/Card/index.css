@@ -15,6 +15,7 @@
 .card:hover{
   transform: scale(1.04);
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+  transition: all .3s ease-in-out;
 }
 
 .card__img {
