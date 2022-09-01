@@ -10,9 +10,12 @@
   }
 
   .gradient {
-    padding: 10px 30px;
-    border-radius: 6px;
+    padding: 10px 20px 10px 10px;
+    text-align: left;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
     background-image: linear-gradient(to right, var(--btnNavMobile), var(--primary));
+    width: 100%;
   }
 
   .header__navbar-icon {
