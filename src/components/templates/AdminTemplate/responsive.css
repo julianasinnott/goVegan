@@ -13,9 +13,11 @@
     justify-content: space-between;
     flex-wrap: nowrap;
     padding: 90px 50px 20px;
+    /* z-index: 1; */
   }
 
-  .column_recipes, .column_partners { 
+  .column_recipes,
+  .column_partners {
     width: 49%;
     border-radius: 6px;
   }
@@ -25,13 +27,20 @@
     padding-top: 40px;
 
   }
+
+  .column_recipes,
+  .column_partners {
+    z-index: 0;
+  }
 }
 
 @media only screen and (max-width: 600px) {
   .main-adm__navbar {
     padding: 80px 20px 10px;
   }
-  .column_recipes, .column_partners { 
-   font-size: 18px;
+
+  .column_recipes,
+  .column_partners {
+    font-size: 18px;
   }
 }
