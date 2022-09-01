@@ -3,7 +3,7 @@
 }
 
 .footer__idealizers-section {
-  background: url(/assets/background-footer.png);
+  background: url(/assets/background-footer.png) no-repeat center/100% 100%;
   padding: 20px 50px;
   display: flex;
   min-height: 140px;
@@ -15,7 +15,7 @@
   margin-top: 50px;
   display: flex;
   justify-content: space-between;
-  padding: 0px cd 20px;
+  margin-right: 20px;
 }
 
 .footer__idealizers-title {

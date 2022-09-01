@@ -24,7 +24,7 @@ export function Footer({
           <>
             <div className="footer__top">
               <p className="footer__idealizers-title">IDEALIZADORES</p>
-              <p className="footer__idealizers-title">COLABORADORES</p>
+              <p className="footer__idealizers-title">APOIADORES</p>
               <div className='footer__contact'>
                 <button className="contact-btn purple-btn" onClick={() => handleModal()} >
                   FALE CONOSCO
