@@ -31,7 +31,6 @@ export function RegisterPartnersAdmin() {
     } else {
       setForm({
         ...form,
-        "slug": form.title.toLowerCase().replace(/ /g, "-"),
         [e.target.name]: '',
       });
     }
@@ -41,6 +40,14 @@ export function RegisterPartnersAdmin() {
     } else {
       setUrlWarning('');
     }
+
+    if (e.target.value === ' ') {
+      setForm({
+        ...form,
+        [e.target.name]: '',
+      });
+    }
+
   }
 
   const validationForm = (data) => {

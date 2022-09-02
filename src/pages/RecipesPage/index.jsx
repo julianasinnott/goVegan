@@ -8,18 +8,20 @@ import { theme } from "../../utils/theme";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import api from '../../services/api'
+import { SearchInput } from "../../components/SearchInput";
 
 export function RecipesPage() {
   const recipesArray = []
-  const [pageSizeSalgado, setPageSizeSalgado] = useState(5)
-  const [pageSizeDoce, setPageSizeDoce] = useState(5)
+  const [pageSizeSalgado, setPageSizeSalgado] = useState(3)
+  const [pageSizeDoce, setPageSizeDoce] = useState(3)
   const [type, setType] = useState('SALGADAS')
   const [recipes, setRecipes] = useState([])
+  const [key, setKey] = useState('')
 
   useEffect(()=> {
     async function getRecipes() {
       try {
-        const response = await api.get('/recipes')
+        const response = await api.get(`/recipes?_sort=id&_order=desc&q=${key}`)
         setRecipes(response.data)
       }
       catch (err) {
@@ -27,7 +29,7 @@ export function RecipesPage() {
       }
     }
     getRecipes()
-  },[]) 
+  },[key]) 
 
   function handlePageSize() {
     if (type === 'SALGADAS') {
@@ -51,9 +53,9 @@ export function RecipesPage() {
 
   function upadetArray() {
     if (type === 'SALGADAS') {
-      setPageSizeSalgado(pageSizeSalgado + 5);
+      setPageSizeSalgado(pageSizeSalgado + 3);
     } else {
-      setPageSizeDoce(pageSizeDoce + 5);
+      setPageSizeDoce(pageSizeDoce + 3);
     }
   }
 
@@ -64,8 +66,8 @@ export function RecipesPage() {
         key={index}
         item={recipe}
         color={theme.colors.quaternary}
-        width={200}
-        height={250}
+        width={300}
+        height={320}
       />
     </Link>
   ))
@@ -88,6 +90,7 @@ export function RecipesPage() {
           <div className="options-divisor">|</div>
           <Button handleClick={setType} value="DOCES" color={type === 'DOCES' ? theme.colors.secundary : theme.colors.primary} />
         </div>
+        <SearchInput handleSearch={(value)=> setKey(value)} />
         <section className="recipes-section">
           {render}
         </section>

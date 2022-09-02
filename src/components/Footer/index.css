@@ -3,7 +3,7 @@
 }
 
 .footer__idealizers-section {
-  background: url(/assets/background-footer.png);
+  background: url(/assets/background-footer.png) no-repeat center/100% 100%;
   padding: 20px 50px;
   display: flex;
   min-height: 140px;
@@ -15,6 +15,7 @@
   margin-top: 50px;
   display: flex;
   justify-content: space-between;
+  margin-right: 20px;
 }
 
 .footer__idealizers-title {
@@ -24,9 +25,13 @@
   margin-left: 20px;
 }
 
-.contact-btn {
-  position: relative;
+.footer__contact {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+}
 
+.contact-btn {
   color: var(--white);
   height: min-content;
   cursor: pointer;
@@ -35,13 +40,14 @@
 
 .footer__idealizers-section__imgs {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .idealizers-img {
   width: 80px;
   height: 80px;
   border-radius: 50%;
+  margin: 0px 10px;
 }
 
 .footer__logo {
@@ -62,4 +68,9 @@
 .footer__copyright {
   font-size: 12px;
   color: var(--secundary)
+}
+
+.aling{
+  display: flex;
+  justify-content: space-between;
 }

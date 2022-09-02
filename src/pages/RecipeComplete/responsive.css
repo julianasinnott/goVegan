@@ -1,4 +1,8 @@
 @media only screen and (max-width:600px) {
+  .recipe-complete__image {
+    background-position: bottom 30px;
+  }
+
   .recipe-complete__title {
     font-size: 30px;
   }

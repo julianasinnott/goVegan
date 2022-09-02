@@ -73,7 +73,7 @@
 
 .btn_RegisterRecipes {
     all: unset;
-    width: 100%;    
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -92,4 +92,8 @@
 
 .btn_RegisterRecipes:hover {
     opacity: 0.9;
+}
+
+.url-warning_RegisterRecipes {
+    color: red;
 }

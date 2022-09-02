@@ -11,6 +11,7 @@
 
 .header__logo {
   width: 120px;
+  height: 105px;
   padding: 20px 0 10px 20px;
 }
 
@@ -22,6 +23,11 @@
   margin-top: -10px;
 }
 
+.header__navbar-icon {
+  color: var(--secundary);
+  display: none;
+}
+
 .header__navbar-section {
   display: flex;
   align-items: center;
@@ -30,7 +36,7 @@
 
 .header__navbar__item {
   cursor: pointer;
-  font-size: 16px; 
+  font-size: 16px;
   color: var(--white);
   padding-bottom: 2px;
 }

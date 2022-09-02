@@ -12,21 +12,17 @@ import axios from "axios";
 
 export function BlogPage() { 
   const [newsArray, setNewsArray] = useState([]);
-  const [Array, setArray] = useState([]);
-  const [pageSize, setPageSize] = useState(9)
+  const [pageSize, setPageSize] = useState(3)
   const [loading, setLoading] = useState(false)
+  const [key, setKey] = useState('vegan')
+  const [word, setWord] = useState('')
 
-  function handlePageSize() {
-    setPageSize(pageSize + 9)
-  }
-  
   useEffect(()=> {
     async function getNews() {
       try {
-        setLoading(true)
-        const response = await axios.get(`https://newsapi.org/v2/everything?q=VEG%20OR%20veganismo%20NOT%20MELANC%C3%93LICO%20NOT%20lexi%20NOT%20ANCA%20OR%20VEGETARIANA%20OR%20VEGANA%20OR%20vegano%20OR%20VEGETARIAN%20OR%20VEGAN%20OR%20VEGETARIANO&sortBy=POPULARITY&language=pt&pageSize=${pageSize}&apiKey=3499002376e14cdcb8fbe55906c464fc`);
+        setLoading(true)        
+        const response = await axios.get(`https://gnews.io/api/v4/search?q=(vegan OR veganismo OR vegano OR vegetariano OR vegetariana OR vegana NOT pediatra NOT contra NOT prisao NOT xuxa NOT pobre NOT mato NOT aspargo NOT irrita NOT onVeg NOT FOLHAPRESS) AND ${key}&lang=pt&max=${pageSize}&token=2559bbabb022e56c41938b55f3e57df1`);
         setNewsArray(response.data.articles)
-        setArray(response.data.articles)
       } catch (err) {
         console.error(err);
       } finally {
@@ -34,15 +30,17 @@ export function BlogPage() {
       }
     }
     getNews()
-  }, [pageSize])
+  }, [pageSize, key])
 
-  function handleSearch(value) {
-    value ? filterNews(value.toLowerCase()) : setNewsArray(newsArray.slice(0, pageSize))
+  function handleChange(value) {
+    value?
+    setWord(value)
+    :
+    setKey('vegan')
   }
-  
-  function filterNews(value) {
-    const filteredNews = newsArray.filter(news => news.title.toLowerCase().includes(value))
-    setArray(filteredNews)
+
+  function handleSearchBlog() {
+    setKey(word)
   }
 
   return(
@@ -52,17 +50,19 @@ export function BlogPage() {
         <h1 className="h1_blog">
           Noticias sobre veganismo
         </h1>
-        <SearchInput handleSearch={handleSearch} />
+        <SearchInput
+        handleSearch={handleChange}
+        handleSearchBlog={handleSearchBlog} />
         <div className="group_news">
         {newsArray.length > 0 ?
-         Array.map((news, index) => (
+         newsArray.map((news, index) => (
           <a key={index} target='blank' href={news.url}>
             <Card 
               key={index} 
               item={news} 
               color={theme.colors.white} 
               width={300} 
-              height={430} />
+              height={500} />
          </a>
         ))
         :
@@ -70,15 +70,15 @@ export function BlogPage() {
         }
         </div>
         <Button
-          value={loading ? 'Carregando...' : "Carregar mais"}
+          value={
+            loading ?
+            'Carregando...' 
+            :
+            "Carregar mais"
+          }
           color={theme.colors.tertiary}
-          handleClick={handlePageSize}
+          handleClick={()=> setPageSize(pageSize + 3)}
         />
-          {/* <div className="banner_blog">
-            <h3 className="banner_title">Notícias mais recentes</h3>
-            <p className="banner_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus consectetur sint mollitia numquam tempora, possimus tempore iste molestias similique culpa dolores harum doloribus tenetur a totam illum, esse optio cum.</p>
-            <p className="banner_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus consectetur sint mollitia numquam tempora, possimus tempore iste molestias similique culpa dolores harum doloribus tenetur a totam illum, esse optio cum.</p>
-          </div> */}
       </main>
       <Footer />
     </>
