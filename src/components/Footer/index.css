@@ -3,10 +3,11 @@
 }
 
 .footer__idealizers-section {
+  min-height: 100px;
   background: url(/assets/background-footer.png) no-repeat center/100% 100%;
   padding: 20px 50px;
   display: flex;
-  min-height: 140px;
+  padding-bottom: 10px;
   flex-direction: column;
   gap: 30px;
 }
