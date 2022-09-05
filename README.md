@@ -10,7 +10,8 @@
   </a>
 </p>
 
-![image](https://user-images.githubusercontent.com/100887684/185830699-a2fbd6bd-4867-46a2-9635-7978c3f7ff83.png)
+![image](https://user-images.githubusercontent.com/100887684/188520225-bdb233c0-495a-438a-a540-40a2c6d689f1.png)
+
 
 
 
@@ -22,7 +23,7 @@ Site desenvolvido com o objetivo de facilitar o acesso a informações sobre veg
 
 ## | Visualize o projeto |
 
-🚧 Ainda não disponível 🚧
+https://go-vegan-vert.vercel.app/
 
 ## | Create App |
 
@@ -51,7 +52,7 @@ Acesso:
 
 🔗 https://www.figma.com/file/Sxdwav78lwnCfy2E4Pmvbx/GoVegan?node-id=0%3A1 🔗
 
-## API fake - JSON Server
+## API simulada - JSON Server
 
 Deploy:
 
