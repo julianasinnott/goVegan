@@ -58,3 +58,7 @@
   padding: 4px 10px;
   box-shadow: var(--shadow)
 }
+
+.header__navbar__item__icon {
+  display: none;
+}

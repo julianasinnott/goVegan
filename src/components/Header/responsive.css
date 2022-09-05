@@ -19,6 +19,7 @@
     padding: 10px 10px 10px 20px;
     text-align: right;
     border-radius: 6px;
+    box-shadow: var(--shadow);
     background-image: linear-gradient(to right, var(--btnNavMobile), var(--primary));
     width: 100%;
   }
@@ -44,6 +45,7 @@
     box-shadow: -2px 44px 4px 0px #00000040;  
   }
   .header__navbar__item__icon {
+    display: block;
     color: var(--secundary);
     width: 20px;
     height: 20px;
@@ -111,6 +113,7 @@
     top: 40px;
     right: 0;
     box-shadow: -2px 20px 4px 0px #00000040;
+    padding-top: 40px;
   }
 }
 
