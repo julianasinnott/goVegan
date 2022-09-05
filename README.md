@@ -34,6 +34,7 @@ Este App foi criado com [Vite](https://vitejs.dev/) <br>
 [ReactJS](https://reactjs.org/) <br>
 [NodeJS](https://nodejs.org/en/) <br>
 [React Router](https://reactrouter.com/) <br>
+[Axios](https://axios-http.com/ptbr/) <br>
 [JSON Server](https://github.com/typicode/json-server#getting-started) <br>
 [Phospor Icons](https://phosphoricons.com/) <br>
 [CSS](https://www.w3.org/Style/CSS/Overview.en.html) <br>
