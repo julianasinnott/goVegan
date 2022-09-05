@@ -67,10 +67,29 @@ export function App() {
           </div>
           <div className="home__purpose__text">
             <p className="purpose__text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-              mollitia, molestiae quas vel sint commodi repudiandae consequuntur
-              voluptatum laborum numquam blanditiis harum quisquam eius sed odit
-              fugiat iusto fuga praesentium optio, eaque rerum!
+              Deixando produtos de origem animal fora do prato por UM DIA, você: 
+            </p>
+            <p className="purpose__text">
+              Salva a vida de um animal. 
+            </p>
+            <p className="purpose__text">
+              Deixa de emitir 14kg de CO₂
+            </p>
+            <p className="purpose__text">
+              Economiza 3400 litros de água
+            </p>
+            <p className="purpose__text">
+              Poupa 24 m2 de terras
+            </p>
+            <p className="purpose__text">
+              Poupa 7 Kg de grãos.
+            </p>
+            <p className="purpose__text">
+              Imagine o impacto positivo se repetido todos os dias!
+            </p>
+            <p className="purpose__text">
+              POR UM MUNDO MELHOR... 
+              CONSIDERE O VEGANISMO. ♥
             </p>
           </div>
         </section>

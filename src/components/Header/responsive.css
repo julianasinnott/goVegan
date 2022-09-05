@@ -4,16 +4,24 @@
   }
 
   .header__navbar-section {
+    width: 100%;
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
+    padding: 40px 0;
+    border-bottom: 1px solid var(--secundary);
+    border-top: 1px solid var(--secundary);
   }
 
   .gradient {
-    padding: 10px 20px 10px 10px;
-    text-align: left;
-    border-top-left-radius: 6px;
-    border-bottom-left-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 10px 10px 10px 20px;
+    text-align: right;
+    border-radius: 6px;
+    box-shadow: var(--shadow);
     background-image: linear-gradient(to right, var(--btnNavMobile), var(--primary));
     width: 100%;
   }
@@ -32,15 +40,20 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-end;
     position: fixed;
     top: 80px;
     right: 0;
-    padding: 70px 16px;
+    padding: 20px 16px;
     background-color: var(--primary);
     box-shadow: -2px 44px 4px 0px #00000040;
   }
-
+  .header__navbar__item__icon {
+    display: block;
+    color: var(--secundary);
+    width: 20px;
+    height: 20px;
+  }
   .btn-register {
     padding: 10px 54px;
     border-radius: 6px;
@@ -111,6 +124,7 @@
     top: 40px;
     right: 0;
     box-shadow: -2px 20px 4px 0px #00000040;
+    padding-top: 40px;
   }
 }
 
