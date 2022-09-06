@@ -12,12 +12,9 @@
 
 ![image](https://user-images.githubusercontent.com/100887684/188520225-bdb233c0-495a-438a-a540-40a2c6d689f1.png)
 
-
-
-
-
-
 ## | Descrição |
+
+Projeto Integrador realizado durante o curso de Desenvolvimento Front-End da [Digital House](https://www.digitalhouse.com/br), financiado pelo [iFood](https://www.ifood.com.br/) ♥
 
 Site desenvolvido com o objetivo de facilitar o acesso a informações sobre veganismo e  gerar adesão a causa.
 
