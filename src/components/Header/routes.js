@@ -1,3 +1,5 @@
+import { HouseLine, NewspaperClipping, ForkKnife, Heart, AppleLogo } from "phosphor-react"
+
 export const routes = {
   USER: {
     featured: {
@@ -7,23 +9,28 @@ export const routes = {
     routes: [
       {
         path: '/',
-        name: 'Início'
+        name: 'Início',
+        icon: HouseLine
       },
       {
         path: '/blog',
-        name: 'Blog'
+        name: 'Blog',
+        icon: NewspaperClipping
       },
       {
         path: '/receitas',
-        name: 'Receitas'
+        name: 'Receitas',
+        icon: ForkKnife
       },
       {
         path: '/parceiros',
-        name: 'Parceiros'
+        name: 'Parceiros',
+        icon: Heart
       },
       {
         path: '/nutricao',
-        name: 'Nutrição'
+        name: 'Nutrição',
+        icon: AppleLogo
       },
     ]
   },
