@@ -16,7 +16,7 @@ export function Header({ type }) {
 
   return(
     <header className="header">
-        <img className="header__logo" src={headerLogo} alt="Logo GoVegan"/>
+        <img className="header__logo" src={headerLogo} alt="Logo GoVegan branco"/>
         {showMenu?
           <X 
             onClick={()=> setShowMenu(!showMenu)}
@@ -42,11 +42,9 @@ export function Header({ type }) {
                   } 
                 >
                   <Link to={route.path}>{route.name}</Link>
-                  {route.name === 'Início' && < HouseLine weight='bold' className='header__navbar__item__icon' />}
-                  {route.name === 'Blog' && < NewspaperClipping weight='bold' className='header__navbar__item__icon' />}
-                  {route.name === 'Receitas' && < ForkKnife weight='bold' className='header__navbar__item__icon' />}
-                  {route.name === 'Parceiros' && < Heart weight='bold' className='header__navbar__item__icon' />}
-                  {route.name === 'Nutrição' && < AppleLogo weight='bold' className='header__navbar__item__icon' />}
+                  {
+                    route.icon && <route.icon weight='bold' className='header__navbar__item__icon'/>
+                  }
                 </button>
             ))}   
           </div>
