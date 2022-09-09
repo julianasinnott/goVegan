@@ -35,21 +35,21 @@ export function Footer({
             <div className='aling'>
               <div className="footer__idealizers-section__imgs">
                 <a href="https://www.linkedin.com/in/julianasinnott/" target="_blank" rel="noopener noreferrer">
-                  <img className="idealizers-img" src={juliana} alt="" />
+                  <img className="idealizers-img" src={juliana} alt="Imagem da Idealizadora Juliana" />
                 </a>
                 <a href="https://www.linkedin.com/in/larissa-lav%C3%ADnia-4282aa238/" target="_blank" rel="noopener noreferrer">
-                <img className="idealizers-img" src={lavinia} alt="" />
+                <img className="idealizers-img" src={lavinia} alt="Imagem da Idealizadora Larissa" />
                 </a>
                 <a href="https://www.linkedin.com/in/edilson-santos-982338234/" target="_blank" rel="noopener noreferrer">
-                  <img className="idealizers-img" src={edilson} alt="" />
+                  <img className="idealizers-img" src={edilson} alt="Imagem do Idealizador Edilson" />
                   </a>
               </div>
               <div >
                 <a href="https://www.linkedin.com/company/ifood-/" target="_blank" rel="noopener noreferrer">
-                  <img className="idealizers-img" src={ifood} alt="" />
+                  <img className="idealizers-img" src={ifood} alt="Logo do Ifood" />
                 </a>
                 <a href="https://www.linkedin.com/school/digital-house-brasil/" target="_blank" rel="noopener noreferrer">
-                  <img className="idealizers-img" src={dh} alt="" />
+                  <img className="idealizers-img" src={dh} alt="Logo da Digital House" />
                 </a>
               </div>
             </div>
@@ -57,7 +57,7 @@ export function Footer({
         )}
       </section>
       <div className="footer__logo">
-        <img className="footer__logo-img" src="/assets/green-logo.png" alt="" />
+        <img className="footer__logo-img" src="/assets/green-logo.png" alt="Logo GoVegan verde" />
         <p className="footer__copyright">
           © Copyright 2022 - GoVegan
         </p>
