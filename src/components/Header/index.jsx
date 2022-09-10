@@ -4,7 +4,7 @@ import './responsive.css'
 import { Link } from "react-router-dom";
 import { routes } from './routes'
 import headerLogo from '/assets/white-logo.png'
-import { AppleLogo, ForkKnife, Heart, HouseLine, List, Newspaper, NewspaperClipping, X } from 'phosphor-react';
+import { List, X } from 'phosphor-react';
 import { useState } from 'react';
 
 export function Header({ type }) {
@@ -30,7 +30,11 @@ export function Header({ type }) {
         }          
         <nav className={showMenu ? "header__navbar navbar-mobile" : "header__navbar"}>
           <div className="header__navbar-section">
-            {routes[type].routes.map(route => (           
+            {routes[type].routes.map(route => (    
+              <Link
+                key={route.path}
+                className='header__navbar__link'
+                to={route.path}>       
                 <button 
                   key={route.path} 
                   className="header__navbar__item gradient"
@@ -41,19 +45,23 @@ export function Header({ type }) {
                     {'color':'var(--white)'}
                   } 
                 >
-                  <Link to={route.path}>{route.name}</Link>
+                  {route.name}
                   {
                     route.icon && <route.icon weight='bold' className='header__navbar__item__icon'/>
                   }
                 </button>
+              </Link>
             ))}   
           </div>
           <div className="header__navbar__purple-btn">
-            <button
-              onClick={handleLogout}
-              className="header__navbar__item purple-btn btn-register">
-             <Link to={routes[type].featured.path}>{routes[type].featured.name}</Link>              
-            </button>
+            <Link to={routes[type].featured.path}>
+              <button
+                onClick={handleLogout}
+                className="header__navbar__item purple-btn btn-register"
+              >
+                {routes[type].featured.name}              
+              </button>
+            </Link>
           </div>   
         </nav>
       </header>
