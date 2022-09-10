@@ -20,7 +20,7 @@ export function PartnersPage() {
     async function getPartners() {
       try {
         setLoading(true)
-        const response = await api.get(`/partners?_sort=id&_order=desc&_page=1&_limit=${pageSize}&q=${key}`)
+        const response = await api.get(`/partners?_sort=id&_order=desc&q=${key}`)
         setPartners(response.data)
       } catch (err) {
         console.error(err);
@@ -29,7 +29,7 @@ export function PartnersPage() {
       }
     }
     getPartners()
-  }, [key, pageSize])
+  }, [key])
 
   return (
     <div>
@@ -39,28 +39,33 @@ export function PartnersPage() {
         <h1 className="partners__title"> Parceiros na sua cidade</h1>
         <SearchInput handleSearch={(value)=> setKey(value)} />
         <section className="partners__section">
-          {partners.length > 0 ? partners.map((partner, index) => (
-            <Card
-              key={index}
-              item={partner}
-              color={theme.colors.quaternary}
-              width={300}
-              height={374}
-            />
-          )) :
+          {partners.length > 0 ?
+            partners.slice(0,pageSize).map((partner, index) => (
+              <Card
+                key={index}
+                item={partner}
+                color={theme.colors.quaternary}
+                width={300}
+                height={374}
+              />
+            ))
+             :
             <p> Nenhum parceiro encontrado :( </p>
           }
         </section>
-        <Button
-          value={
-            loading ?
-            'Carregando...' 
-            :
-            "Carregar mais"
-          }
-          color={theme.colors.secundary}
-          handleClick={()=> setPageSize(pageSize + 3)}
-        />
+        {
+          partners.slice(0,pageSize).length < partners.length &&
+            <Button
+              value={
+                loading ?
+                'Carregando...' 
+                :
+                "Carregar mais"
+              }
+              color={theme.colors.secundary}
+              handleClick={()=> setPageSize(pageSize + 3)}
+            />
+        }        
       </main>
       <Footer />
     </div>
