@@ -32,6 +32,7 @@ export function Header({ type }) {
           <div className="header__navbar-section">
             {routes[type].routes.map(route => (    
               <Link
+                key={route.path}
                 className='header__navbar__link'
                 to={route.path}>       
                 <button 
