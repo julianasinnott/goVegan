@@ -31,6 +31,11 @@ export function RecipesPage() {
     getRecipes()
   },[key]) 
 
+  function getRecipesLength() {    
+    const recipesLength = recipes.filter(recipe => recipe.type == type).length
+    return recipesLength
+  }
+  
   function handlePageSize() {
     if (type === 'SALGADAS') {
       recipes.map(recipe => {
@@ -94,7 +99,10 @@ export function RecipesPage() {
         <section className="recipes-section">
           {render}
         </section>
-        <Button handleClick={upadetArray} value="Carregar mais" color={theme.colors.secundary} />
+        {
+          recipesArray.length < getRecipesLength() && 
+          <Button handleClick={upadetArray} value="Carregar mais" color={theme.colors.secundary} />
+        }        
       </main>
       <Footer />
     </div>
