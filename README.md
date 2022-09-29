@@ -22,6 +22,17 @@ Site desenvolvido com o objetivo de facilitar o acesso a informações sobre veg
 
 https://go-vegan-vert.vercel.app/
 
+--> Para visualizar a área administrativa acesse a rota '/login'
+
+Ou acesse o link:
+
+https://go-vegan-vert.vercel.app/login
+
+-- Credenciais --
+
+email: testeadmin@teste.com <br>
+senha: 123456
+
 ## | Create App |
 
 Este App foi criado com [Vite](https://vitejs.dev/) <br>
@@ -80,4 +91,10 @@ $ `npm run dev`
 <hr>
 
 #### Abra http://localhost:5173/ em seu navegador 
+#### Para a área administrativa acesse http://localhost:5173/admin
+
+-- Credenciais --
+
+email: testeadmin@teste.com <br>
+senha: 123456
 
